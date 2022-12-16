@@ -7,7 +7,6 @@ FPS = 60
 # paths
 RESOUCES = 'resources/'
 STATIC = f'{RESOUCES}static/'
-STATIC_CONFIG = f'{STATIC}static_config.json'
 MAPS = f'{RESOUCES}maps/'
 CURRENT_MAP = f'{MAPS}map1.json'
 

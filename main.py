@@ -1,5 +1,5 @@
 import pygame as pg
-from map import Map
+from object_handler import ObjectHandler
 from config import *
 
 
@@ -12,7 +12,7 @@ class Game:
         self.start()
 
     def start(self):
-        self.map = Map(self)
+        self.object_handler = ObjectHandler(self)
 
     def run(self):
         while self.running:
@@ -20,7 +20,7 @@ class Game:
             [exit() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE else None for event in pg.event.get()]
 
             self.sc.fill('black')
-            self.map.draw_world()
+            self.object_handler.draw_world()
             pg.display.flip()
 
 

@@ -1,5 +1,26 @@
 [
-  ["G-TL", "G-T", "G-TR"],
-  ["G-L", "S", "G-R"],
-  ["G-BL", "G-B", "G-BR"]
+  {
+    "type": "static",
+    "name": "grass-topleft.png",
+    "pos": [32, 32],
+    "size": [64, 64],
+    "alpha": true,
+    "z-index": 1
+  },
+  {
+    "type": "static",
+    "name": "grass-center.png",
+    "pos": [32, 32],
+    "size": [64, 64],
+    "alpha": false,
+    "z-index": 0
+  },
+  {
+    "type": "static",
+    "name": "grass-bottomright.png",
+    "pos": [32, 32],
+    "size": [64, 64],
+    "alpha": true,
+    "z-index": 1
+  }
 ]
