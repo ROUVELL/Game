@@ -1,0 +1,52 @@
+{
+  "S": {
+    "name": "stone-floor.png",
+    "scale": 2,
+    "is_alpha": false
+  },
+  "G-C": {
+    "name": "grass-center.png",
+    "scale": 2,
+    "is_alpha": false
+  },
+  "G-TL": {
+    "name": "grass-topleft.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-T": {
+    "name": "grass-top.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-TR": {
+    "name": "grass-topright.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-R": {
+    "name": "grass-right.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-BR": {
+    "name": "grass-bottomright.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-B": {
+    "name": "grass-bottom.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-BL": {
+    "name": "grass-bottomleft.png",
+    "scale": 2,
+    "is_alpha": true
+  },
+  "G-L": {
+    "name": "grass-left.png",
+    "scale": 2,
+    "is_alpha": true
+  }
+}
