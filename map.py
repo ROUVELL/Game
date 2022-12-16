@@ -7,7 +7,7 @@ class Map:
     def __init__(self, game):
         self.game = game
         with open(CURRENT_MAP) as map_:
-            map_ = json.load(map_)['map']
+            map_ = json.load(map_)
             self.world = self.get_world(map_)
 
     @staticmethod
@@ -29,13 +29,11 @@ class Map:
                         config = static_config[char]
                         img = self.load_image(config['name'], config['is_alpha'])
                         if config.get('size'):
-                            size = config['size']
-                            img = self.scale_image(img, size)
-                        if config.get('scale'):
-                            scale = config['scale']
-                            w, h = img.get_size()
-                            size = int(w * scale), int(h * scale)
-                            img = self.scale_image(img, size)
+                            img = self.scale_image(img, config['size'])
+                        w, h = img.get_size()
+                        scale = config.get('scale', IMG_SCALE)
+                        size = int(w * scale), int(h * scale)
+                        img = self.scale_image(img, size)
                         w, h = img.get_size()
                         pos = x * w, y * h
                         world[pos] = img
