@@ -8,6 +8,5 @@ class Config:
     # paths
     RESOUCES = 'resources/'
     STATIC = f'{RESOUCES}static/'
-    STATIC_ID = f'{RESOUCES}static_id.json'
     MAPS = f'{RESOUCES}maps/'
     CURRENT_MAP = f'{MAPS}map1.json'
