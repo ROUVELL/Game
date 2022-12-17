@@ -3,7 +3,7 @@ import json
 from config import Config
 
 
-def __ganerate_new_map():
+def __generate_new_map():
     offset = 32
     tile_size = 64
     w_count, h_count = Config.WIDTH // tile_size - 1, Config.HEIGHT // tile_size - 1
@@ -45,7 +45,7 @@ def __ganerate_new_map():
         new_map = json.dumps(new_world, indent=2)
         map_.write(new_map)
 
-# __ganerate_new_map()
+# __generate_new_map()
 
 
 class Texture:
