@@ -1,5 +1,6 @@
 import pygame as pg
 from object_handler import ObjectHandler
+from map_editor.editor import Editor
 from config import *
 
 
@@ -12,6 +13,7 @@ class Game:
         self.start()
 
     def start(self):
+        # Editor(self).run()
         self.object_handler = ObjectHandler(self)
 
     def run(self):
