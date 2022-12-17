@@ -1,14 +1,20 @@
 import pygame as pg
 import json
-from object import StaticObject
 from config import *
+
+
+class Texture:
+    def __init__(self, img: pg.Surface, **config):
+        self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), config['size'])
+        self.rect = pg.Rect(self.image.get_rect(center=config['pos']))
+        self.zindex = config['z-index']
 
 
 class ObjectHandler:
     def __init__(self, game):
         self.sc = game.sc
         self.cached_images = dict()
-        self.static_objs_list = set()
+        self.world = set()
         self._parse_world()
 
     @staticmethod
@@ -25,10 +31,10 @@ class ObjectHandler:
                     if not img:
                         img = self.load_image(Config.STATIC + name)
                         self.cached_images[name] = img
-                    self.static_objs_list.add(StaticObject(img, **obj))
-        self.static_objs_list = sorted(self.static_objs_list, key=lambda obj: obj.zindex)
+                    self.world.add(Texture(img, **obj))
+        self.world = sorted(self.world, key=lambda obj: obj.zindex)
 
     def draw_world(self):
-        [self.sc.blit(obj.image, obj.rect) for obj in self.static_objs_list]
+        [self.sc.blit(obj.image, obj.rect) for obj in self.world]
 
 
