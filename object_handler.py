@@ -7,34 +7,28 @@ from config import *
 class ObjectHandler:
     def __init__(self, game):
         self.sc = game.sc
+        self.cached_images = dict()
+        self.static_objs_list = set()
         self._parse_world()
 
     @staticmethod
-    def load_image(path: str, alpha: bool) -> pg.Surface:
-        img = pg.image.load(path)
-        return img.convert_alpha() if alpha else img.convert()
-
-    @staticmethod
-    def resize_image(img: pg.Surface, size: list) -> pg.Surface:
-        return pg.transform.scale(img, size)
+    def load_image(path: str) -> pg.Surface:
+        return pg.image.load(path)
 
     def _parse_world(self):
-        world = set()
-        with open(CURRENT_MAP) as map_:
+        with open(Config.CURRENT_MAP) as map_:
             map_ = json.load(map_)
             for obj in map_:
-                obj_type = obj['type']
-                # if obj_type == 'static':
-                name = obj['name']
-                size = obj['size']
-                alpha = obj['alpha']
-                img = self.resize_image(self.load_image(f'{STATIC}{name}', alpha), size)
-                pos = obj['pos']
-                z = obj['z-index']
-                world.add(StaticObject(img, pos, z))
-            self.world = sorted(world, key=lambda obj: obj.zindex)
+                if obj['type'] == 'static':
+                    name = obj['name']
+                    img = self.cached_images.get(name)
+                    if not img:
+                        img = self.load_image(Config.STATIC + name)
+                        self.cached_images[name] = img
+                    self.static_objs_list.add(StaticObject(img, **obj))
+        self.static_objs_list = sorted(self.static_objs_list, key=lambda obj: obj.zindex)
 
     def draw_world(self):
-        [self.sc.blit(obj.image, obj.rect) for obj in self.world]
+        [self.sc.blit(obj.image, obj.rect) for obj in self.static_objs_list]
 
 
