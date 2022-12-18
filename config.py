@@ -17,3 +17,6 @@ class Config:
     PLAYER_ANIM = f'{ANIMATION}player/'
     MAPS = f'{RESOUCES}maps/'
     CURRENT_MAP = f'{MAPS}map1.json'
+    # debug
+    DRAW_PLAYER_RECT = True
+    DRAW_TEXTURE_RECT = True
