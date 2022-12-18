@@ -42,11 +42,3 @@ class Parser:
 
     def offset(self, dx: int, dy: int):
         [obj.rect.move_ip(dx, dy) for obj in self.current_world]
-
-    def select_element(self, pos):
-        for obj in self.current_world:
-            if obj.rect.collidepoint(*pos):
-                if self.engine.selected_object:
-                    self.engine.selected_object.selected = False
-                obj.selected = False
-                return obj

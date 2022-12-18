@@ -11,7 +11,6 @@ class App:
         self.clock = pg.time.Clock()
         self.draw = Drawing(self)
         self.engine = Engine(self)
-        self.engine.init()
 
     def run(self):
         while True:

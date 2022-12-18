@@ -15,11 +15,6 @@ class Drawing:
     def world(self):
         [self.sc.blit(obj.image, obj.rect) for obj in self.app.engine.world.current_world]
 
-    def editing(self):
-        if self.app.engine.selected_object:
-            pg.draw.rect(self.sc, 'grey', self.app.engine.selected_object.rect, 1)
-        self.app.engine.editor.draw()
-
     def fps(self):
         fps = self.fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
         self.sc.blit(fps, Config.FPS_POS)
@@ -27,5 +22,4 @@ class Drawing:
     def all(self):
         self.bg()
         self.world()
-        self.editing()
         self.fps()
