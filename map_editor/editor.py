@@ -1,6 +1,5 @@
 import pygame as pg
 from drawing import Drawing
-from parser import Parser
 from engine import Engine
 from config import Config
 
@@ -10,7 +9,6 @@ class Editor:
         pg.init()
         self.sc = pg.display.set_mode(Config.SCREEN, pg.NOFRAME)
         self.clock = pg.time.Clock()
-        self.parser = Parser()
         self.draw = Drawing(self)
         self.engine = Engine(self)
 

@@ -10,8 +10,15 @@ class Texture:
         self.zindex = config['z-index']
 
 
+class Object(Texture):
+    def __init__(self, img, **config):
+        super().__init__(img, **config)
+        self.selected = False
+
+
 class Parser:
-    def __init__(self):
+    def __init__(self, engine):
+        self.engine = engine
         self.cached_images = dict()
         self.current_world = set()
         self.parse_world()
@@ -29,9 +36,17 @@ class Parser:
                 if not img:
                     img = self.load_image(Config.STATIC + name)
                     self.cached_images[name] = img
-                textere = Texture(img, **obj)
+                textere = Object(img, **obj)
                 self.current_world.add(textere)
         self.current_world = sorted(self.current_world, key=lambda obj: obj.zindex)
 
     def offset(self, dx: int, dy: int):
         [obj.rect.move_ip(dx, dy) for obj in self.current_world]
+
+    def select_element(self, x, y):
+        for obj in self.current_world:
+            if obj.rect.collidepoint(x, y):
+                if self.engine.select_object:
+                    self.engine.select_object.selected = False
+                obj.selected = False
+                return obj

@@ -13,7 +13,11 @@ class Drawing:
         self.sc.fill('black')
 
     def world(self):
-        [self.sc.blit(obj.image, obj.rect) for obj in self.editor.parser.current_world]
+        [self.sc.blit(obj.image, obj.rect) for obj in self.editor.engine.world.current_world]
+
+    def editing(self):
+        if self.editor.engine.select_object:
+            pg.draw.rect(self.sc, 'grey', self.editor.engine.select_object.rect, 1)
 
     def fps(self):
         fps = self.fps_font.render(f'{self.editor.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
@@ -22,4 +26,5 @@ class Drawing:
     def all(self):
         self.bg()
         self.world()
+        self.editing()
         self.fps()
