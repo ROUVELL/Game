@@ -1,5 +1,6 @@
 import pygame as pg
 from world import World
+from player import Player
 from config import Config
 
 
@@ -13,6 +14,7 @@ class Game:
 
     def start(self):
         self.world = World(self)
+        self.player = Player(self)
 
     def run(self):
         while self.running:
@@ -21,6 +23,7 @@ class Game:
 
             self.sc.fill('black')
             self.world.draw_world()
+            self.player.draw()
             pg.display.flip()
 
 
