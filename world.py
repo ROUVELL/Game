@@ -1,5 +1,6 @@
 import pygame as pg
 import json
+import os
 from config import Config
 
 
@@ -59,23 +60,23 @@ class World:
     def __init__(self):
         self.cached_images = dict()
         self.world = set()
+        self.cache_images()
         self.parse_world()
 
     @staticmethod
     def load_image(path: str) -> pg.Surface:
         return pg.image.load(path)
 
+    def cache_images(self):
+        for name in os.listdir(Config.STATIC):
+            self.cached_images[name] = self.load_image(Config.STATIC + name)
+
     def parse_world(self, path: str = Config.CURRENT_MAP):
         with open(path) as map_:
             map_ = json.load(map_)
             for obj in map_:
-                name = obj['name']
-                img = self.cached_images.get(name)
-                if not img:
-                    img = self.load_image(Config.STATIC + name)
-                    self.cached_images[name] = img
-                textere = Texture(img, **obj)
-                self.world.add(textere)
+                img = self.cached_images[obj['name']]
+                self.world.add(Texture(img, **obj))
         self.world = sorted(self.world, key=lambda obj: obj.zindex)
 
     def offset(self, dx: int, dy: int):
