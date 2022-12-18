@@ -80,5 +80,7 @@ class World:
 
     def draw_world(self):
         [self.sc.blit(obj.image, obj.rect) for obj in self.world]
+        if Config.DRAW_TEXTURE_RECT:
+            [pg.draw.rect(self.sc, 'grey', obj.rect, 1) for obj in self.world]
 
 
