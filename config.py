@@ -1,3 +1,5 @@
+import os
+
 
 class Config:
     # window
@@ -15,7 +17,8 @@ class Config:
     PLAYER_SIZE = (42, 72)
     PLAYER_SPEED = 4  # 4
     # paths
-    RESOUCES = 'resources/'
+    DIR = os.path.dirname(__file__)
+    RESOUCES = f'{DIR}/resources/'
     STATIC = f'{RESOUCES}static/'
     ANIMATION = f'{RESOUCES}animation/'
     PLAYER_ANIM = f'{ANIMATION}player/'
