@@ -26,6 +26,7 @@ class Game:
         self.sc.fill('black')
         self.world.draw_world()
         self.player.draw()
+        self.camera.draw()
 
     def run(self):
         while self.running:
