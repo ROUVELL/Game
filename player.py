@@ -6,6 +6,7 @@ class Player:
     def __init__(self, game):
         self.game = game
         self.front_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}front-{i}.png') for i in range(9)]
+        self.back_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}back-{i}.png') for i in range(9)]
         self.last_time = pg.time.get_ticks()
         self.frame = 0
         self.image = self.front_animation[self.frame]
@@ -20,7 +21,7 @@ class Player:
     def animate(self):
         if self.moving:
             now = pg.time.get_ticks()
-            if now - self.last_time >= 80:
+            if now - self.last_time >= 70:
                 self.last_time = now
                 self.frame += 1
                 if self.frame > 8:
@@ -30,6 +31,8 @@ class Player:
         match self.direction:
             case 'down':
                 self.image = self.front_animation[self.frame]
+            case 'up':
+                self.image = self.back_animation[self.frame]
 
     def movement(self):
         dx = dy = 0
