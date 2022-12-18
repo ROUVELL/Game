@@ -5,9 +5,10 @@ from config import Config
 class Player:
     def __init__(self, game):
         self.game = game
-        self.front_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}front-{i}.png') for i in range(9)]
-        self.back_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}back-{i}.png') for i in range(9)]
-        self.left_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}left-{i}.png') for i in range(9)]
+        self.front_animation = [self._load_and_scale_img(f'front-{i}.png') for i in range(9)]
+        self.back_animation = [self._load_and_scale_img(f'back-{i}.png') for i in range(9)]
+        self.left_animation = [self._load_and_scale_img(f'left-{i}.png') for i in range(9)]
+        self.right_animation = [self._load_and_scale_img(f'right-{i}.png') for i in range(9)]
         self.last_time = pg.time.get_ticks()
         self.frame = 0
         self.image = self.front_animation[self.frame]
@@ -16,17 +17,17 @@ class Player:
         self.moving = False
         self.speed = Config.PLAYER_SPEED
 
-    def _load_and_scale_img(self, path: str):
-        return pg.transform.scale(pg.image.load(path).convert_alpha(), Config.PLAYER_SIZE)
+    def _load_and_scale_img(self, name: str):
+        return pg.transform.scale(pg.image.load(f'{Config.PLAYER_ANIM}{name}').convert_alpha(), Config.PLAYER_SIZE)
 
     def animate(self):
         if self.moving:
             now = pg.time.get_ticks()
-            if now - self.last_time >= 70:
+            if now - self.last_time >= 70:  # 70
                 self.last_time = now
                 self.frame += 1
                 if self.frame > 8:
-                    self.frame = 0
+                    self.frame = 1
         else:
             self.frame = 0
         match self.direction:
@@ -36,6 +37,8 @@ class Player:
                 self.image = self.back_animation[self.frame]
             case 'left':
                 self.image = self.left_animation[self.frame]
+            case 'right':
+                self.image = self.right_animation[self.frame]
 
     def movement(self):
         dx = dy = 0
