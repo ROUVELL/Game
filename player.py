@@ -17,7 +17,8 @@ class Player:
         self.moving = False
         self.speed = Config.PLAYER_SPEED
 
-    def _load_and_scale_img(self, name: str):
+    @staticmethod
+    def _load_and_scale_img(name: str):
         return pg.transform.scale(pg.image.load(f'{Config.PLAYER_ANIM}{name}').convert_alpha(), Config.PLAYER_SIZE)
 
     def animate(self):
