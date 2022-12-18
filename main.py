@@ -16,14 +16,22 @@ class Game:
         self.world = World(self)
         self.player = Player(self)
 
+    def update(self):
+        self.player.update()
+
+    def draw(self):
+        self.sc.fill('black')
+        self.world.draw_world()
+        self.player.draw()
+
     def run(self):
         while self.running:
             self.clock.tick(Config.FPS)
             [exit() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE else None for event in pg.event.get()]
 
-            self.sc.fill('black')
-            self.world.draw_world()
-            self.player.draw()
+            self.update()
+            self.draw()
+
             pg.display.flip()
 
 
