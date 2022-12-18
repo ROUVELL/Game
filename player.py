@@ -48,9 +48,6 @@ class Player:
             case 'right':
                 self.image = self.right_animation[self.frame]
 
-    def check_collide_with_textures(self, dx: int, dy: int) -> tuple[int | float, int | float]:
-        return dx, dy
-
     def movement(self):
         dx = dy = 0
         keys = pg.key.get_pressed()
@@ -72,7 +69,6 @@ class Player:
             self.moving = True
             self.direction = 'right'
 
-        dx, dy = self.check_collide_with_textures(dx, dy)
         self.rect.x += dx
         self.rect.y += dy
 
