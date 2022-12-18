@@ -15,7 +15,7 @@ class Game:
         self.start()
 
     def start(self):
-        self.world = World(self)
+        self.world = World()
         self.player = Player(self)
         self.camera = Camera(self)
         self.draw = Drawing(self)
