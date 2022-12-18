@@ -59,14 +59,14 @@ class World:
     def __init__(self):
         self.cached_images = dict()
         self.world = set()
-        self._parse_world()
+        self.parse_world()
 
     @staticmethod
     def load_image(path: str) -> pg.Surface:
         return pg.image.load(path)
 
-    def _parse_world(self):
-        with open(Config.CURRENT_MAP) as map_:
+    def parse_world(self, path: str = Config.CURRENT_MAP):
+        with open(path) as map_:
             map_ = json.load(map_)
             for obj in map_:
                 name = obj['name']
