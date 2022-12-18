@@ -3,9 +3,9 @@ from config import Config
 
 
 class Drawing:
-    def __init__(self, editor):
-        self.editor = editor
-        self.sc = editor.sc
+    def __init__(self, app):
+        self.app = app
+        self.sc = app.sc
         ##############
         self.fps_font = pg.font.SysFont('arial', 30)
 
@@ -13,14 +13,15 @@ class Drawing:
         self.sc.fill('black')
 
     def world(self):
-        [self.sc.blit(obj.image, obj.rect) for obj in self.editor.engine.world.current_world]
+        [self.sc.blit(obj.image, obj.rect) for obj in self.app.engine.world.current_world]
 
     def editing(self):
-        if self.editor.engine.select_object:
-            pg.draw.rect(self.sc, 'grey', self.editor.engine.select_object.rect, 1)
+        if self.app.engine.selected_object:
+            pg.draw.rect(self.sc, 'grey', self.app.engine.selected_object.rect, 1)
+        self.app.engine.editor.draw()
 
     def fps(self):
-        fps = self.fps_font.render(f'{self.editor.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
+        fps = self.fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
         self.sc.blit(fps, Config.FPS_POS)
 
     def all(self):
