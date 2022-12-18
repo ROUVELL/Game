@@ -7,6 +7,8 @@ class Config:
     SCREEN = (WIDTH, HEIGHT)
     # fps
     FPS = 60
+    FPS_POS = (0, 0)
+    FPS_COLOR = 'orange'
     # camera
     CAMERA_RECT = (WIDTH * .1, HEIGHT * .1, WIDTH * .8, HEIGHT * .8)
     # player
