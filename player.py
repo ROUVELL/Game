@@ -79,7 +79,4 @@ class Player:
     def draw(self):
         self.game.sc.blit(self.image, self.rect)
         if Config.DRAW_PLAYER_RECT:
-            self._draw_rect()
-
-    def _draw_rect(self):
-        pg.draw.rect(self.game.sc, 'green', self.rect, 1)
+            pg.draw.rect(self.game.sc, 'green', self.rect, 1)
