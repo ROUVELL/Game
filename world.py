@@ -56,8 +56,7 @@ class Texture:
 
 
 class World:
-    def __init__(self, game):
-        self.sc = game.sc
+    def __init__(self):
         self.cached_images = dict()
         self.world = set()
         self._parse_world()
@@ -78,7 +77,6 @@ class World:
                 textere = Texture(img, **obj)
                 self.world.add(textere)
         self.world = sorted(self.world, key=lambda obj: obj.zindex)
-        del self.cached_images
 
     def offset(self, dx: int, dy: int):
         [obj.rect.move_ip(dx, dy) for obj in self.world]
