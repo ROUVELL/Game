@@ -9,6 +9,7 @@ class Config:
     FPS = 60
     # player
     PLAYER_SIZE = (42, 72)
+    PLAYER_SPEED = 5
     # paths
     RESOUCES = 'resources/'
     STATIC = f'{RESOUCES}static/'
