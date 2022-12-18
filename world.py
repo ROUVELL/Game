@@ -10,7 +10,6 @@ def __generate_new_map():
     new_world = []
     for y in range(h_count + 1):
         for x in range(w_count + 1):
-            blocked = True
             zindex = 1
             alpha = True
             if not x and not y:
@@ -31,7 +30,6 @@ def __generate_new_map():
                 name = 'grass-bottom.png'
             else:
                 name = 'grass-center.png'
-                blocked = False
                 zindex = 0
                 alpha = False
             pos = x * tile_size + offset, y * tile_size + offset
@@ -41,7 +39,6 @@ def __generate_new_map():
                 'pos': pos,
                 'size': size,
                 'alpha': alpha,
-                'blocked': blocked,
                 'z-index': zindex
             })
     with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
@@ -63,7 +60,6 @@ class World:
         self.sc = game.sc
         self.cached_images = dict()
         self.world = set()
-        self.collide_list = []
         self._parse_world()
 
     @staticmethod
@@ -81,8 +77,6 @@ class World:
                     self.cached_images[name] = img
                 textere = Texture(img, **obj)
                 self.world.add(textere)
-                if obj['blocked']:
-                    self.collide_list.append(textere.rect)
         self.world = sorted(self.world, key=lambda obj: obj.zindex)
         del self.cached_images
 
