@@ -12,7 +12,7 @@ class Player:
         self.rect = self.image.get_rect(center=Config.CENTER)
         self.direction = 'down'
         self.moving = False
-        self.speed = 5
+        self.speed = Config.PLAYER_SPEED
 
     def _load_and_scale_img(self, path: str):
         return pg.transform.scale(pg.image.load(path).convert_alpha(), Config.PLAYER_SIZE)
