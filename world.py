@@ -80,10 +80,3 @@ class World:
 
     def offset(self, dx: int, dy: int):
         [obj.rect.move_ip(dx, dy) for obj in self.world]
-
-    def draw_world(self):
-        [self.sc.blit(obj.image, obj.rect) for obj in self.world]
-        if Config.DRAW_TEXTURE_RECT:
-            [pg.draw.rect(self.sc, 'grey', obj.rect, 1) for obj in self.world]
-
-

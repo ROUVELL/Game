@@ -28,8 +28,3 @@ class Camera:
             self.target.x += ox
             self.target.y += oy
             self.world.offset(ox, oy)
-
-    def draw(self):
-        if Config.DRAW_CAMERA_RECT:
-            pg.draw.rect(self.game.sc, 'orange', self.rect, 2)
-

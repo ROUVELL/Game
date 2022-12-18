@@ -75,8 +75,3 @@ class Player:
     def update(self):
         self.movement()
         self.animate()
-
-    def draw(self):
-        self.game.sc.blit(self.image, self.rect)
-        if Config.DRAW_PLAYER_RECT:
-            pg.draw.rect(self.game.sc, 'green', self.rect, 1)
