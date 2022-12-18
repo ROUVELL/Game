@@ -20,6 +20,7 @@ class Game:
 
     def update(self):
         self.player.update()
+        self.camera.update()
 
     def draw(self):
         self.sc.fill('black')
