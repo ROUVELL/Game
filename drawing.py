@@ -7,6 +7,9 @@ class Drawing:
         ##############
         self.fps_font = pg.font.SysFont('arial', 30)
 
+    def bg(self):
+        pass
+
     def world(self):
         pass
 
@@ -20,6 +23,7 @@ class Drawing:
         pass
 
     def all(self):
+        self.bg()
         self.world()
         self.player()
         self.debug()
