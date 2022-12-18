@@ -1,6 +1,7 @@
 import pygame as pg
 from world import World
 from player import Player
+from camera import Camera
 from config import Config
 
 
@@ -15,6 +16,7 @@ class Game:
     def start(self):
         self.world = World(self)
         self.player = Player(self)
+        self.camera = Camera(self)
 
     def update(self):
         self.player.update()
