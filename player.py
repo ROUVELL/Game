@@ -7,6 +7,7 @@ class Player:
         self.game = game
         self.front_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}front-{i}.png') for i in range(9)]
         self.back_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}back-{i}.png') for i in range(9)]
+        self.left_animation = [self._load_and_scale_img(f'{Config.PLAYER_ANIM}left-{i}.png') for i in range(9)]
         self.last_time = pg.time.get_ticks()
         self.frame = 0
         self.image = self.front_animation[self.frame]
@@ -33,6 +34,8 @@ class Player:
                 self.image = self.front_animation[self.frame]
             case 'up':
                 self.image = self.back_animation[self.frame]
+            case 'left':
+                self.image = self.left_animation[self.frame]
 
     def movement(self):
         dx = dy = 0
@@ -49,11 +52,11 @@ class Player:
         if keys[pg.K_a]:
             dx += -self.speed
             self.moving = True
-            self.direction = 'right'
+            self.direction = 'left'
         if keys[pg.K_d]:
             dx += self.speed
             self.moving = True
-            self.direction = 'left'
+            self.direction = 'right'
 
         self.rect.centerx += dx
         self.rect.centery += dy
