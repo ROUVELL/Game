@@ -78,6 +78,9 @@ class World:
                 self.world.add(Texture(img, **obj))
         self.world = sorted(self.world, key=lambda obj: obj.zindex)
 
+    def offset(self, dx: int, dy: int):
+        [obj.rect.move_ip(dx, dy) for obj in self.world]
+
     def draw_world(self):
         [self.sc.blit(obj.image, obj.rect) for obj in self.world]
         if Config.DRAW_TEXTURE_RECT:
