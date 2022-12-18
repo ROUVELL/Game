@@ -26,7 +26,7 @@ class Config:
     CURRENT_MAP = f'{MAPS}map1.json'
     # editor
     OBJECTS_LIST_POS = (0, 0)
-    OBJECTS_LIST_SIZE = (WIDTH * .20, HEIGHT)
+    OBJECTS_LIST_SIZE = (WIDTH * .05, HEIGHT)
     EDITING_TAB_POS = (WIDTH - WIDTH * .20, 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
     # debug
