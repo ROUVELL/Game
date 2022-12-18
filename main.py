@@ -27,7 +27,7 @@ class Game:
     def run(self):
         while self.running:
             self.clock.tick(Config.FPS)
-            [exit() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE else None for event in pg.event.get()]
+            [exit() for event in pg.event.get() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE]
 
             self.update()
             self.draw.all()
