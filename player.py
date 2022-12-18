@@ -21,16 +21,23 @@ class Player:
     def _load_and_scale_img(name: str):
         return pg.transform.scale(pg.image.load(f'{Config.PLAYER_ANIM}{name}').convert_alpha(), Config.PLAYER_SIZE)
 
+    def check_animation_time(self):
+        now = pg.time.get_ticks()
+        if now - self.last_time >= 70:  # 70
+            self.last_time = now
+            return True
+        return False
+
     def animate(self):
-        if self.moving:
-            now = pg.time.get_ticks()
-            if now - self.last_time >= 70:  # 70
-                self.last_time = now
-                self.frame += 1
-                if self.frame > 8:
-                    self.frame = 1
-        else:
-            self.frame = 0
+        # if moving:
+        #     if self.check_animation_time():
+        #         self.frame += 1
+        # else:
+        #     self.frame = 0
+        self.frame = 0 if not self.moving else self.frame + 1 if self.check_animation_time() else self.frame
+        if self.frame > 8:
+            self.frame = 1
+
         match self.direction:
             case 'down':
                 self.image = self.front_animation[self.frame]
@@ -71,3 +78,8 @@ class Player:
 
     def draw(self):
         self.game.sc.blit(self.image, self.rect)
+        if Config.DRAW_PLAYER_RECT:
+            self._draw_rect()
+
+    def _draw_rect(self):
+        pg.draw.rect(self.game.sc, 'green', self.rect, 1)
