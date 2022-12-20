@@ -25,6 +25,8 @@ class Drawing:
             pg.draw.rect(self.game.sc, 'green', self.game.player.rect, 1)
         if Config.DRAW_CAMERA_RECT:
             pg.draw.rect(self.game.sc, 'skyblue', self.game.camera.rect, 2)
+        if Config.DRAW_SCREEN_CENTER:
+            pg.draw.circle(self.game.sc, 'red', Config.CENTER, 3)
 
     def fps(self):
         fps = self.fps_font.render(f'{self.game.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
