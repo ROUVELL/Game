@@ -15,6 +15,8 @@ class Config:
     CAMERA_RECT = (WIDTH * .1, HEIGHT * .1, WIDTH * .8, HEIGHT * .8)
     # player
     PLAYER_SIZE = (42, 72)
+    PLAYER_RECT = (38, 36)
+    PLAYER_POS = (HALF_WIDTH - PLAYER_RECT[0] * .5, HALF_HEIGHT - PLAYER_RECT[1] * .5)
     PLAYER_SPEED = 4  # 4
     # paths
     DIR = os.path.dirname(__file__)
@@ -31,5 +33,6 @@ class Config:
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
     # debug
     DRAW_PLAYER_RECT = True
-    DRAW_TEXTURE_RECT = False
-    DRAW_CAMERA_RECT = True
+    DRAW_TEXTURE_RECT = True
+    DRAW_CAMERA_RECT = False
+    DRAW_SCREEN_CENTER = True
