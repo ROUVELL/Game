@@ -11,6 +11,9 @@ def __generate_new_map():
     new_world = []
     for y in range(h_count + 1):
         for x in range(w_count + 1):
+            if (y != 0 and y != h_count) and (x != 0 and x != w_count):
+                continue
+            collide = True
             zindex = 1
             alpha = True
             if not x and not y:
@@ -32,6 +35,7 @@ def __generate_new_map():
             else:
                 name = 'grass-center.png'
                 zindex = 0
+                collide = False
                 alpha = False
             pos = x * tile_size + offset, y * tile_size + offset
             size = (tile_size, tile_size)
@@ -40,6 +44,7 @@ def __generate_new_map():
                 'pos': pos,
                 'size': size,
                 'alpha': alpha,
+                'collide': collide,
                 'z-index': zindex
             })
     with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
@@ -52,7 +57,7 @@ def __generate_new_map():
 class Texture:
     def __init__(self, img: pg.Surface, **config):
         self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), config['size'])
-        self.rect = pg.Rect(self.image.get_rect(center=config['pos']))
+        self.rect = self.image.get_rect(center=config['pos'])
         self.zindex = config['z-index']
 
 
@@ -60,6 +65,7 @@ class World:
     def __init__(self):
         self.cached_images = dict()
         self.world = set()
+        self.collide_list = []
         self.cache_images()
         self.parse_world()
 
@@ -76,7 +82,10 @@ class World:
             map_ = json.load(map_)
             for obj in map_:
                 img = self.cached_images[obj['name']]
-                self.world.add(Texture(img, **obj))
+                texture = Texture(img, **obj)
+                self.world.add(texture)
+                if obj['collide']:
+                    self.collide_list.append(texture.rect)
         self.world = sorted(self.world, key=lambda obj: obj.zindex)
 
     def offset(self, dx: int, dy: int):
