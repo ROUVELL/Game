@@ -6,8 +6,8 @@ user32 = ctypes.windll.user32
 
 class Config:
     # window
-    # WIDTH, HEIGHT = (user32.GetSystemMetrics(78), user32.GetSystemMetrics(79))  # always fullscreen
-    WIDTH, HEIGHT = (1100, 600)
+    WIDTH, HEIGHT = (user32.GetSystemMetrics(78), user32.GetSystemMetrics(79))  # always fullscreen
+    # WIDTH, HEIGHT = (1100, 600)
     HALF_WIDTH, HALF_HEIGHT = WIDTH // 2, HEIGHT // 2
     CENTER = (HALF_WIDTH, HALF_HEIGHT)
     SCREEN = (WIDTH, HEIGHT)
