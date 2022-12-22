@@ -2,12 +2,12 @@
   {
     "name": "grass-topleft.png",
     "pos": [
-      32,
-      32
+      18,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -16,12 +16,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      96,
-      32
+      54,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -30,12 +30,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      160,
-      32
+      90,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -44,12 +44,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      224,
-      32
+      126,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -58,12 +58,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      288,
-      32
+      162,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -72,12 +72,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      352,
-      32
+      198,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -86,12 +86,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      416,
-      32
+      234,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -100,12 +100,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      480,
-      32
+      270,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -114,12 +114,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      544,
-      32
+      306,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -128,12 +128,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      608,
-      32
+      342,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -142,12 +142,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      672,
-      32
+      378,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -156,12 +156,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      736,
-      32
+      414,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -170,12 +170,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      800,
-      32
+      450,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -184,12 +184,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      864,
-      32
+      486,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -198,12 +198,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      928,
-      32
+      522,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -212,12 +212,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      992,
-      32
+      558,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -226,12 +226,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1056,
-      32
+      594,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -240,12 +240,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1120,
-      32
+      630,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -254,12 +254,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1184,
-      32
+      666,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -268,12 +268,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1248,
-      32
+      702,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -282,12 +282,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1312,
-      32
+      738,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -296,12 +296,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1376,
-      32
+      774,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -310,12 +310,12 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1440,
-      32
+      810,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -324,12 +324,82 @@
   {
     "name": "grass-top.png",
     "pos": [
-      1504,
-      32
+      846,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-top.png",
+    "pos": [
+      882,
+      18
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-top.png",
+    "pos": [
+      918,
+      18
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-top.png",
+    "pos": [
+      954,
+      18
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-top.png",
+    "pos": [
+      990,
+      18
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-top.png",
+    "pos": [
+      1026,
+      18
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -338,12 +408,12 @@
   {
     "name": "grass-topright.png",
     "pos": [
-      1568,
-      32
+      1062,
+      18
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -352,26 +422,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      96
+      18,
+      55
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      96
+      54,
+      55
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      55
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      55
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -380,26 +842,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      160
+      18,
+      92
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      160
+      54,
+      92
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      92
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      92
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -408,26 +1262,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      224
+      18,
+      129
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      224
+      54,
+      129
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      129
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      129
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -436,26 +1682,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      288
+      18,
+      166
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      288
+      54,
+      166
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      166
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      166
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -464,26 +2102,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      352
+      18,
+      203
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      352
+      54,
+      203
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      203
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      203
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -492,26 +2522,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      416
+      18,
+      240
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      416
+      54,
+      240
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      240
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      240
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -520,26 +2942,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      480
+      18,
+      277
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      480
+      54,
+      277
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      277
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      277
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -548,26 +3362,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      544
+      18,
+      314
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      544
+      54,
+      314
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      314
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      314
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -576,26 +3782,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      608
+      18,
+      351
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      608
+      54,
+      351
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      351
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      351
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -604,26 +4202,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      672
+      18,
+      388
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      672
+      54,
+      388
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      388
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      388
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -632,26 +4622,418 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      736
+      18,
+      425
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      736
+      54,
+      425
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      425
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      425
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -660,26 +5042,1258 @@
   {
     "name": "grass-left.png",
     "pos": [
-      32,
-      800
+      18,
+      462
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
     "z-index": 1
   },
   {
-    "name": "grass-right.png",
+    "name": "grass-center.png",
     "pos": [
-      1568,
-      800
+      54,
+      462
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      462
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-left.png",
+    "pos": [
+      18,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      54,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      499
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-left.png",
+    "pos": [
+      18,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      54,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      90,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      126,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      162,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      198,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      234,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      270,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      306,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      342,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      378,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      414,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      450,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      486,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      522,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      558,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      594,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      630,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      666,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      702,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      738,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      774,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      810,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      846,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      882,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      918,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      954,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      990,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-center.png",
+    "pos": [
+      1026,
+      536
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": false,
+    "collide": false,
+    "z-index": 0
+  },
+  {
+    "name": "grass-right.png",
+    "pos": [
+      1062,
+      536
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -688,12 +6302,12 @@
   {
     "name": "grass-bottomleft.png",
     "pos": [
-      32,
-      864
+      18,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -702,12 +6316,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      96,
-      864
+      54,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -716,12 +6330,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      160,
-      864
+      90,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -730,12 +6344,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      224,
-      864
+      126,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -744,12 +6358,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      288,
-      864
+      162,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -758,12 +6372,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      352,
-      864
+      198,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -772,12 +6386,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      416,
-      864
+      234,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -786,12 +6400,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      480,
-      864
+      270,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -800,12 +6414,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      544,
-      864
+      306,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -814,12 +6428,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      608,
-      864
+      342,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -828,12 +6442,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      672,
-      864
+      378,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -842,12 +6456,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      736,
-      864
+      414,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -856,12 +6470,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      800,
-      864
+      450,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -870,12 +6484,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      864,
-      864
+      486,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -884,12 +6498,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      928,
-      864
+      522,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -898,12 +6512,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      992,
-      864
+      558,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -912,12 +6526,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1056,
-      864
+      594,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -926,12 +6540,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1120,
-      864
+      630,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -940,12 +6554,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1184,
-      864
+      666,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -954,12 +6568,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1248,
-      864
+      702,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -968,12 +6582,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1312,
-      864
+      738,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -982,12 +6596,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1376,
-      864
+      774,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -996,12 +6610,12 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1440,
-      864
+      810,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -1010,12 +6624,82 @@
   {
     "name": "grass-bottom.png",
     "pos": [
-      1504,
-      864
+      846,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-bottom.png",
+    "pos": [
+      882,
+      573
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-bottom.png",
+    "pos": [
+      918,
+      573
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-bottom.png",
+    "pos": [
+      954,
+      573
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-bottom.png",
+    "pos": [
+      990,
+      573
+    ],
+    "size": [
+      36,
+      37
+    ],
+    "alpha": true,
+    "collide": true,
+    "z-index": 1
+  },
+  {
+    "name": "grass-bottom.png",
+    "pos": [
+      1026,
+      573
+    ],
+    "size": [
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
@@ -1024,12 +6708,12 @@
   {
     "name": "grass-bottomright.png",
     "pos": [
-      1568,
-      864
+      1062,
+      573
     ],
     "size": [
-      64,
-      64
+      36,
+      37
     ],
     "alpha": true,
     "collide": true,
