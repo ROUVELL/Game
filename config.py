@@ -1,9 +1,13 @@
 import os
+import ctypes
+
+user32 = ctypes.windll.user32
 
 
 class Config:
     # window
-    WIDTH, HEIGHT = (1600, 900)
+    # WIDTH, HEIGHT = (user32.GetSystemMetrics(78), user32.GetSystemMetrics(79))  # always fullscreen
+    WIDTH, HEIGHT = (1100, 600)
     HALF_WIDTH, HALF_HEIGHT = WIDTH // 2, HEIGHT // 2
     CENTER = (HALF_WIDTH, HALF_HEIGHT)
     SCREEN = (WIDTH, HEIGHT)
@@ -13,11 +17,15 @@ class Config:
     FPS_COLOR = 'orange'
     # camera
     CAMERA_RECT = (WIDTH * .1, HEIGHT * .1, WIDTH * .8, HEIGHT * .8)
+    # tile
+    WIDTH_VALUE = 30
+    HEIGHT_VALUE = 16
+    TILE_SIZE = (WIDTH // WIDTH_VALUE, HEIGHT // HEIGHT_VALUE)  # 64, 64
     # player
-    PLAYER_SIZE = (42, 72)
-    PLAYER_RECT = (38, 36)
-    PLAYER_POS = (HALF_WIDTH - PLAYER_RECT[0] * .5, HALF_HEIGHT - PLAYER_RECT[1] * .5)
-    PLAYER_SPEED = 4  # 4
+    PLAYER_SIZE = (WIDTH * .0219, HEIGHT * .0704)  # 42, 76
+    PLAYER_RECT = (WIDTH * .0198, HEIGHT * .0333)  # 38, 36  # not using
+    PLAYER_POS = (HALF_WIDTH - PLAYER_RECT[0] * .5, HALF_HEIGHT - PLAYER_RECT[1] * .5)  # not using
+    PLAYER_SPEED = WIDTH / 480  # 4
     # paths
     DIR = os.path.dirname(__file__)
     RESOUCES = f'{DIR}/resources/'
@@ -32,7 +40,10 @@ class Config:
     EDITING_TAB_POS = (WIDTH - WIDTH * .20, 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
     # debug
-    DRAW_PLAYER_RECT = True
-    DRAW_TEXTURE_RECT = True
-    DRAW_CAMERA_RECT = False
-    DRAW_SCREEN_CENTER = True
+    DRAW_PLAYER_RECT = False
+    DRAW_TEXTURE_RECT = False
+    DRAW_CAMERA_RECT = True
+    DRAW_SCREEN_CENTER = False
+
+
+del user32
