@@ -4,14 +4,15 @@ import os
 from config import Config
 
 
+# noinspection PyChainedComparisons
 def __generate_new_map():
-    offset = 32
-    tile_size = 64
-    w_count, h_count = Config.WIDTH // tile_size - 1, Config.HEIGHT // tile_size - 1
+    w_count, h_count = Config.WIDTH_VALUE - 1, Config.HEIGHT_VALUE - 1
     new_world = []
+    w = 3
+    w -= 1
     for y in range(h_count + 1):
         for x in range(w_count + 1):
-            if (y != 0 and y != h_count) and (x != 0 and x != w_count):
+            if (w < y < h_count - w) and (w < x < w_count - w):
                 continue
             collide = True
             zindex = 1
@@ -24,25 +25,35 @@ def __generate_new_map():
                 name = 'grass-topright.png'
             elif x == w_count and y == h_count:
                 name = 'grass-bottomright.png'
-            elif not x and 0 < y < h_count:
+
+            elif (not x and 0 < y < h_count) or (x == w_count - w and w < y < h_count - w):
                 name = 'grass-left.png'
-            elif x == w_count and 0 < y < h_count:
+            elif (x == w_count and 0 < y < h_count) or (x == w and w < y < h_count - w):
                 name = 'grass-right.png'
-            elif 0 < x < w_count and not y:
+            elif (0 < x < w_count and not y) or (w < x < w_count - w and y == h_count - w):
                 name = 'grass-top.png'
-            elif 0 < x < w_count and y == h_count:
+            elif (0 < x < w_count and y == h_count) or (w < x < w_count - w and y == w):
                 name = 'grass-bottom.png'
+
+            elif x == w == y:
+                name = 'grass-topleft-reversed.png'
+            elif x == w and y == h_count - w:
+                name = 'grass-bottomleft-reversed.png'
+            elif x == w_count - w and w == y:
+                name = 'grass-topright-reversed.png'
+            elif x == w_count - w and y == h_count - w:
+                name = 'grass-bottomright-reversed.png'
             else:
                 name = 'grass-center.png'
                 zindex = 0
                 collide = False
                 alpha = False
-            pos = x * tile_size + offset, y * tile_size + offset
-            size = (tile_size, tile_size)
+            w, h = Config.TILE_SIZE
+            pos = x * w + w // 2, y * h + h // 2
             new_world.append({
                 'name': name,
                 'pos': pos,
-                'size': size,
+                'size': Config.TILE_SIZE,
                 'alpha': alpha,
                 'collide': collide,
                 'z-index': zindex
@@ -56,7 +67,7 @@ def __generate_new_map():
 
 class Texture:
     def __init__(self, img: pg.Surface, **config):
-        self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), config['size'])
+        self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), Config.TILE_SIZE)
         self.rect = self.image.get_rect(center=config['pos'])
         self.zindex = config['z-index']
 
