@@ -12,7 +12,6 @@ class Game:
         self.sc = pg.display.set_mode(Config.SCREEN, pg.NOFRAME)
         self.clock = pg.time.Clock()
         self.start()
-        print((f'{Config.WIDTH / 4}'))
 
     def start(self):
         self.world = World()
