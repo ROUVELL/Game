@@ -26,14 +26,17 @@ class Menu:
             value += .8
 
         self.actived_func = load_screen_wrap
-        self.run()
+        return self.run()
 
     def run(self):
         while self.actived_func:
             self.clock.tick(Config.FPS)
             for event in pg.event.get():
-                if event.type == pg.KEYUP and event.key == pg.K_ESCAPE:
-                    return False
+                if event.type == pg.KEYUP:
+                    if event.key == pg.K_ESCAPE:
+                        return False
+                    if event.key == pg.K_RETURN:
+                        return True
 
             self.sc.fill('black')
             self.actived_func()
