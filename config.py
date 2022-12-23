@@ -7,7 +7,6 @@ user32 = ctypes.windll.user32
 class Config:
     # window
     WIDTH, HEIGHT = (user32.GetSystemMetrics(78), user32.GetSystemMetrics(79))  # always fullscreen
-    # WIDTH, HEIGHT = (1100, 600)
     HALF_WIDTH, HALF_HEIGHT = WIDTH // 2, HEIGHT // 2
     CENTER = (HALF_WIDTH, HALF_HEIGHT)
     SCREEN = (WIDTH, HEIGHT)
@@ -42,8 +41,5 @@ class Config:
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
-    DRAW_CAMERA_RECT = True
+    DRAW_CAMERA_RECT = False
     DRAW_SCREEN_CENTER = False
-
-
-del user32
