@@ -4,9 +4,9 @@ import os
 from config import Config
 
 
-# noinspection PyChainedComparisons
-def __generate_new_map():
+def generate_new_map():
     w_count, h_count = Config.WIDTH_VALUE - 1, Config.HEIGHT_VALUE - 1
+    width, height = Config.TILE_SIZE
     new_world = []
     w = 3
     w -= 1
@@ -17,7 +17,7 @@ def __generate_new_map():
             collide = True
             zindex = 1
             alpha = True
-            if not x and not y:
+            if not (x or y):
                 name = 'grass-topleft.png'
             elif not x and y == h_count:
                 name = 'grass-bottomleft.png'
@@ -32,7 +32,7 @@ def __generate_new_map():
                 name = 'grass-right.png'
             elif (0 < x < w_count and not y) or (w < x < w_count - w and y == h_count - w):
                 name = 'grass-top.png'
-            elif (0 < x < w_count and y == h_count) or (w < x < w_count - w and y == w):
+            elif (0 < x < w_count and y == h_count) or (w_count - w > x > w == y):
                 name = 'grass-bottom.png'
 
             elif x == w == y:
@@ -48,12 +48,10 @@ def __generate_new_map():
                 zindex = 0
                 collide = False
                 alpha = False
-            w, h = Config.TILE_SIZE
-            pos = x * w + w // 2, y * h + h // 2
+            pos = x * width + width // 2, y * height + height // 2
             new_world.append({
                 'name': name,
                 'pos': pos,
-                'size': Config.TILE_SIZE,
                 'alpha': alpha,
                 'collide': collide,
                 'z-index': zindex
@@ -62,7 +60,8 @@ def __generate_new_map():
         new_map = json.dumps(new_world, indent=2)
         map_.write(new_map)
 
-# __generate_new_map()
+
+# generate_new_map()
 
 
 class Texture:
