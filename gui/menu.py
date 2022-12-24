@@ -41,3 +41,4 @@ class Menu:
             self.sc.fill('black')
             self.actived_func()
             pg.display.flip()
+        return True
