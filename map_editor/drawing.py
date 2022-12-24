@@ -13,7 +13,11 @@ class Drawing:
         self._sc.fill('black')
 
     def world(self):
-        [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.world.current_world]
+        [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+
+    def tabs(self):
+        self.app.engine.objects_list.draw_on_screen()
+        self.app.engine.editor.draw_on_screen()
 
     def fps(self):
         fps = self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
@@ -22,4 +26,5 @@ class Drawing:
     def all(self):
         self.bg()
         self.world()
+        self.tabs()
         self.fps()
