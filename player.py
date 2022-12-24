@@ -28,15 +28,16 @@ class Player:
             return True
         return False
 
-    def texture_collide(self, dx: int, dy: int):
-        target = self.rect.move(dx, dy)
-        collided = target.collidelistall(self.game.world.collide_list)
-        for i in collided:
-            rect = self.game.world.collide_list[i]
-            delta_x = target.left - rect.right
-            delta_y = target.top - rect.bottom
-
-        self.rect.move_ip(dx, dy)
+    # Not using!
+    # def texture_collide(self, dx: int, dy: int):
+    #     target = self.rect.move(dx, dy)
+    #     collided = target.collidelistall(self.game.world.collide_list)
+    #     for i in collided:
+    #         rect = self.game.world.collide_list[i]
+    #         delta_x = target.left - rect.right
+    #         delta_y = target.top - rect.bottom
+    #
+    #     self.rect.move_ip(dx, dy)
 
 
     def animate(self):
@@ -80,7 +81,8 @@ class Player:
             self.moving = True
             self.direction = 'right'
 
-        self.texture_collide(dx, dy)
+        self.rect.move_ip(dx, dy)
+        # self.texture_collide(dx, dy)
 
     def update(self):
         self.movement()
