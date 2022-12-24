@@ -15,7 +15,6 @@ class App:
     def run(self):
         while True:
             self.clock.tick(Config.FPS)
-            [exit() for event in pg.event.get() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE]
 
             self.engine.update()
             self.draw.all()
