@@ -4,42 +4,37 @@ import os
 from config import Config
 
 
-class Texture:
-    def __init__(self, img: pg.Surface, **config):
+class _Object:
+    def __init__(self, img, **config):
         self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), Config.TILE_SIZE)
         self.rect = pg.Rect(self.image.get_rect(center=config['pos']))
         self.zindex = config['z-index']
-
-
-class Object(Texture):
-    def __init__(self, img, **config):
-        super().__init__(img, **config)
-        self.selected = False
+        ################
 
 
 class Parser:
     def __init__(self, engine):
-        self.engine = engine
-        self.cached_images = dict()
+        self._engine = engine
+        self._cached_images = dict()
         self.current_world = set()
         self.cache_images()
         self.parse_world()
 
     @staticmethod
-    def load_image(path: str) -> pg.Surface:
+    def _load_image(path: str) -> pg.Surface:
         return pg.image.load(path)
 
     def cache_images(self):
         for name in os.listdir(Config.STATIC):
-            img = self.load_image(Config.STATIC + name)
-            self.cached_images[name] = img
+            img = self._load_image(Config.STATIC + name)
+            self._cached_images[name] = img
 
     def parse_world(self, path: str = Config.CURRENT_MAP):
         with open(path) as map_:
             map_ = json.load(map_)
             for obj in map_:
-                img = self.cached_images[obj['name']]
-                textere = Object(img, **obj)
+                img = self._cached_images[obj['name']]
+                textere = _Object(img, **obj)
                 self.current_world.add(textere)
         self.current_world = sorted(self.current_world, key=lambda obj: obj.zindex)
 
