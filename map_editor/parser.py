@@ -15,25 +15,25 @@ class _Object:
 class Parser:
     def __init__(self, engine):
         self._engine = engine
-        self._cached_images = dict()
+        self.cached_images = dict()
         self.current_world = set()
-        self.cache_images()
+        self._cache_images()
         self.parse_world()
 
     @staticmethod
     def _load_image(path: str) -> pg.Surface:
         return pg.image.load(path)
 
-    def cache_images(self):
+    def _cache_images(self):
         for name in os.listdir(Config.STATIC):
             img = self._load_image(Config.STATIC + name)
-            self._cached_images[name] = img
+            self.cached_images[name] = img
 
     def parse_world(self, path: str = Config.CURRENT_MAP):
         with open(path) as map_:
             map_ = json.load(map_)
             for obj in map_:
-                img = self._cached_images[obj['name']]
+                img = self.cached_images[obj['name']]
                 textere = _Object(img, **obj)
                 self.current_world.add(textere)
         self.current_world = sorted(self.current_world, key=lambda obj: obj.zindex)

@@ -1,6 +1,6 @@
 import pygame as pg
 from parser import Parser
-from editor import Editor
+from editor import ObjectsList, Editor
 from config import Config
 
 
@@ -8,6 +8,7 @@ class Engine:
     def __init__(self, app):
         self.app = app
         self.current_world = Parser(self)
+        self.objects_list = ObjectsList(self)
         self.editor = Editor(self)
 
     def mouse_control(self):
