@@ -12,7 +12,7 @@ class Game:
         pg.init()
         self.sc = pg.display.set_mode(Config.SCREEN, pg.NOFRAME)
         self.clock = pg.time.Clock()
-        self.running = False
+        self.running = True
         self.start()
 
     def start(self):
@@ -27,7 +27,7 @@ class Game:
         self.camera.update()
 
     def run(self):
-        self.running = self.menu.load_screen()
+        # self.running = self.menu.load_screen()
         while self.running:
             self.clock.tick(Config.FPS)
             [exit() for event in pg.event.get() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE]
