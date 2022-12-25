@@ -27,6 +27,5 @@ class Camera:
         if not self.rect.contains(self.target):  # Чи не виходить ігрок за межі камери
             ox, oy = self.check_collide_and_get_offset()
 
-            self.target.x += ox
-            self.target.y += oy
+            self.target.move_ip(ox, oy)
             self.world.offset(ox, oy)
