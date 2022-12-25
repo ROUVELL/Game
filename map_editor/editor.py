@@ -27,11 +27,11 @@ class ObjectsList(__Tab):
 
     def _get_imgs_and_rects(self):
         # Зберігаємо оригінальні картинки, збільшені та їхні ректи
-        # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку а ректи для відображені на правильній позиції
+        # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
         self.imgs_list = [pg.transform.scale2x(img) for img in self._original_imgs]
         self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * 96 + 96)) for i, img in enumerate(self.imgs_list)]
-        # Список картинок і список ректів співпадають між собою
+        # Список картинок і список ректів збігаються між собою
 
     def slide_list(self, offset: int):
         # Прокручеємо список якщо наведені на нього мишкою
@@ -47,7 +47,7 @@ class ObjectsList(__Tab):
 
     def add_selected_to_world(self, pos: tuple):
         # Додаємо об'єкт до світу якщо ми наведені на нього
-        # Якщо немає вибраного об'єкта то функція не визветься
+        # Якщо немає вибраного об'єкта - функція не визветься
         if not (self.in_focus or self._engine.editor.in_focus):
             img = self._original_imgs[self.selected_obj]
             size = img.get_size()
