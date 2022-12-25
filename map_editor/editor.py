@@ -25,9 +25,9 @@ class ObjectsList(__Tab):
         self.selected_obj = None
         self._get_imgs_and_rects()
 
-    def _get_imgs_and_rects(self):
-        self._original_imgs = self._engine.parser.cached_images
-        self.imgs_list = [pg.transform.scale2x(img) for img in self._original_imgs.values()]
+    def _get_imgs_and_rects(self):  #
+        self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
+        self.imgs_list = [pg.transform.scale2x(img) for img in self._original_imgs]
         self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * 96 + 96)) for i, img in enumerate(self.imgs_list)]
 
     def slide_list(self, offset: int):
@@ -42,7 +42,7 @@ class ObjectsList(__Tab):
 
     def add_selected_to_world(self, pos):
         if not (self.in_focus or self._engine.editor.in_focus):
-            img = self.imgs_list[self.selected_obj]
+            img = self._original_imgs[self.selected_obj]
             size = img.get_size()
             self._engine.parser.add_to_world(
                 img=img,
