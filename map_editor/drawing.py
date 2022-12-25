@@ -7,7 +7,7 @@ class Drawing:
         self.app = app
         self._sc = app.sc
         ##############
-        self._fps_font = pg.font.SysFont('arial', 30)
+        self._fps_font = pg.font.SysFont('arial', 30)  # Можна було б щось гарніше
 
     def bg(self):
         self._sc.fill('black')

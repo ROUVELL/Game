@@ -5,7 +5,7 @@ from config import Config
 
 
 class App:
-    def __init__(self):
+    def __init__(self):  # Потім вікно бути йти з Game
         pg.init()
         self.sc = pg.display.set_mode(Config.SCREEN, pg.NOFRAME)
         self.clock = pg.time.Clock()
@@ -15,7 +15,6 @@ class App:
     def run(self):
         while True:
             self.clock.tick(Config.FPS)
-
             self.engine.update()
             self.draw.all()
             pg.display.flip()

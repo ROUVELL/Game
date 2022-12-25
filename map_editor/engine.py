@@ -19,14 +19,13 @@ class Engine:
             if event.type == pg.MOUSEWHEEL: self.objects_list.slide_list(event.y)
 
     def mouse_control(self):
-        ox, oy = pg.mouse.get_rel()
-        self.objects_list.check_focus()
-        self.editor.check_focus()
+        # Мишка не може бути наведена на два елементи одночасно тому використовую elif
         if self.objects_list.in_focus or self.objects_list.selected_obj is not None:
             self.objects_list.update()
         elif self.editor.in_focus:
             self.objects_list.update()
 
+        ox, oy = pg.mouse.get_rel()
         keys = pg.mouse.get_pressed()
         if keys[1]:
             self.parser.offset(ox, oy)
@@ -34,4 +33,6 @@ class Engine:
 
     def update(self):
         self.check_events()
+        self.objects_list.check_focus()
+        self.editor.check_focus()
         self.mouse_control()
