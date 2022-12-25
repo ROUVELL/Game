@@ -6,9 +6,19 @@ from config import Config
 
 class _Object:
     def __init__(self, img, **config):
+        self.config = config
         self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), config['size'])
         self.rect = self.image.get_rect(center=config['pos'])
         self.zindex = config['zindex']
+
+    def __repr__(self):
+        return {
+            'name': self.config['name'],
+            'size': self.image.get_size(),
+            'pos': self.rect.center,
+            'alpha': self.config['alpha'],
+            'zindex': self.zindex
+        }
 
 
 class Parser:
@@ -47,9 +57,14 @@ class Parser:
         # Зміна позиції всіх тайлів
         [obj.rect.move_ip(dx, dy) for obj in self.current_world]
 
-    def add_to_world(self, img, **config):
+    def add_to_world(self, **config):
         # Додавання новога тайла до світу. Пересортувати для правильного відображення
+        img = self.cached_images[config['name']]
         self.current_world.append(_Object(img, **config))
         self._sort_world()
 
-    # TODO: Функція збереження світу
+    def save_world(self):
+        with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
+            m = json.dumps([tile.__repr__() for tile in self.current_world], indent=2)
+            map_.write(m)
+        print('Saved!')
