@@ -3,65 +3,6 @@ import json
 import os
 from config import Config
 
-def generate_new_map():
-    w_count, h_count = Config.WIDTH_VALUE - 1, Config.HEIGHT_VALUE - 1
-    width, height = Config.TILE_SIZE
-    new_world = []
-    w = 3
-    w -= 1
-    for y in range(h_count + 1):
-        for x in range(w_count + 1):
-            if (w < y < h_count - w) and (w < x < w_count - w):
-                continue
-            collide = True
-            zindex = 1
-            alpha = True
-            if not (x or y):
-                name = 'grass-topleft.png'
-            elif not x and y == h_count:
-                name = 'grass-bottomleft.png'
-            elif x == w_count and not y:
-                name = 'grass-topright.png'
-            elif x == w_count and y == h_count:
-                name = 'grass-bottomright.png'
-
-            elif (not x and 0 < y < h_count) or (x == w_count - w and w < y < h_count - w):
-                name = 'grass-left.png'
-            elif (x == w_count and 0 < y < h_count) or (x == w and w < y < h_count - w):
-                name = 'grass-right.png'
-            elif (0 < x < w_count and not y) or (w < x < w_count - w and y == h_count - w):
-                name = 'grass-top.png'
-            elif (0 < x < w_count and y == h_count) or (w_count - w > x > w == y):
-                name = 'grass-bottom.png'
-
-            elif x == w == y:
-                name = 'grass-topleft-reversed.png'
-            elif x == w and y == h_count - w:
-                name = 'grass-bottomleft-reversed.png'
-            elif x == w_count - w and w == y:
-                name = 'grass-topright-reversed.png'
-            elif x == w_count - w and y == h_count - w:
-                name = 'grass-bottomright-reversed.png'
-            else:
-                name = 'grass-center.png'
-                zindex = 0
-                collide = False
-                alpha = False
-            pos = x * width + width // 2, y * height + height // 2
-            new_world.append({
-                'name': name,
-                'pos': pos,
-                'alpha': alpha,
-                'collide': collide,
-                'z-index': zindex
-            })
-    with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
-        new_map = json.dumps(new_world, indent=2)
-        map_.write(new_map)
-
-
-# generate_new_map()
-
 
 class Texture:
     def __init__(self, img: pg.Surface, **config):
