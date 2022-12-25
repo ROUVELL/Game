@@ -16,7 +16,7 @@ class Drawing:
         [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
 
     def tabs(self):
-        self.app.engine.objects_list.draw_on_screen()
+        self.app.engine.objects_list.draw()
         self.app.engine.editor.draw_on_screen()
 
     def fps(self):
