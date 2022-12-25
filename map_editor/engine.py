@@ -13,7 +13,9 @@ class Engine:
 
     def check_events(self):
         for event in pg.event.get():
-            if event.type == pg.KEYUP and event.key == pg.K_ESCAPE: exit()
+            if event.type == pg.KEYUP:
+                if event.key == pg.K_ESCAPE: exit()
+                if event.key == pg.K_s: self.parser.save_world()
             if event.type == pg.MOUSEBUTTONUP and event.button == 1:
                 if self.objects_list.selected_obj is not None: self.objects_list.add_selected_to_world(event.pos)
             if event.type == pg.MOUSEWHEEL: self.objects_list.slide_list(event.y)
