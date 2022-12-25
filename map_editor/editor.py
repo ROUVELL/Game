@@ -22,34 +22,42 @@ class __Tab:
 class ObjectsList(__Tab):
     def __init__(self, engine):
         super().__init__(engine, Config.OBJECTS_LIST_SIZE, Config.OBJECTS_LIST_POS)
-        self.selected_obj = None
+        self.selected_obj = None  # !!! Tут лежить індекс !!!
         self._get_imgs_and_rects()
 
-    def _get_imgs_and_rects(self):  #
+    def _get_imgs_and_rects(self):
+        # Зберігаємо оригінальні картинки, збільшені та їхні ректи
+        # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
         self.imgs_list = [pg.transform.scale2x(img) for img in self._original_imgs]
         self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * 96 + 96)) for i, img in enumerate(self.imgs_list)]
+        # Список картинок і список ректів співпадають між собою
 
     def slide_list(self, offset: int):
+        # Прокручеємо список якщо наведені на нього мишкою
         if self.in_focus:
             [rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for rect in self.rects_list]
 
     def _select_obj(self):
+        # Вибираємо об'єкт з списка
         x, y = pg.mouse.get_pos()
         for i, rect in enumerate(self.rects_list):
             if rect.collidepoint(x, y):
                 return i
 
-    def add_selected_to_world(self, pos):
+    def add_selected_to_world(self, pos: tuple):
+        # Додаємо об'єкт до світу якщо ми наведені на нього
+        # Якщо немає вибраного об'єкта то функція не визветься
         if not (self.in_focus or self._engine.editor.in_focus):
             img = self._original_imgs[self.selected_obj]
             size = img.get_size()
             self._engine.parser.add_to_world(
                 img=img,
-                size=size,
-                pos=pos,
-                alpha=True,
-                zindex=0)
+                size=size,  # Дефолт, в едіторі можна буде міняти
+                pos=pos,  # Центер картинки == позиція мишки
+                alpha=True,  # Можна відключити в едіторі
+                zindex=0  # TODO: Щось придумати щоб нові об'єкти не були під старими
+            )
 
     def mouse_control(self):
         keys = pg.mouse.get_pressed()
@@ -59,14 +67,12 @@ class ObjectsList(__Tab):
 
     def draw(self):
         self._sc.fill('black')
-        x = Config.OBJECTS_LIST_SIZE[0] // 2
         for i, img in enumerate(self.imgs_list):
             self._sc.blit(img, self.rects_list[i])
         if self.selected_obj is not None:
             pg.draw.rect(self._sc, 'red', self.rects_list[self.selected_obj].inflate(10, 10), 2)
 
         self.draw_on_screen()
-
 
     def update(self):
         self.mouse_control()
