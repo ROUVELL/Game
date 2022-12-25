@@ -12,14 +12,20 @@ class Engine:
         self.editor = Editor(self)
 
     def check_events(self):
-        [exit() for event in pg.event.get() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE]
+        for event in pg.event.get():
+            if event.type == pg.KEYUP and event.key == pg.K_ESCAPE: exit()
+            if event.type == pg.MOUSEBUTTONUP and event.button == 1:
+                if self.objects_list.selected_obj is not None: self.objects_list.add_selected_to_world(event.pos)
+            if event.type == pg.MOUSEWHEEL: self.objects_list.slide_list(event.y)
 
     def mouse_control(self):
-        x, y = pg.mouse.get_pos()
         ox, oy = pg.mouse.get_rel()
-
-        self.objects_list.check_focus(x, y)
-        self.editor.check_focus(x, y)
+        self.objects_list.check_focus()
+        self.editor.check_focus()
+        if self.objects_list.in_focus or self.objects_list.selected_obj is not None:
+            self.objects_list.update()
+        elif self.editor.in_focus:
+            self.objects_list.update()
 
         keys = pg.mouse.get_pressed()
         if keys[1]:
@@ -27,7 +33,5 @@ class Engine:
 
 
     def update(self):
-        self.mouse_control()
         self.check_events()
-        self.objects_list.update()
-        self.editor.update()
+        self.mouse_control()
