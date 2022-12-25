@@ -35,7 +35,8 @@ class Config:
     CURRENT_MAP = f'{MAPS}map1.json'
     # editor
     OBJECTS_LIST_POS = (0, 0)
-    OBJECTS_LIST_SIZE = (WIDTH * .05, HEIGHT)
+    OBJECTS_LIST_SIZE = (WIDTH * .075, HEIGHT)
+    SLIDE_SENSETIVITY = 50  # For sliding imgs list
     EDITING_TAB_POS = (WIDTH - (WIDTH * .20) - 1, 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
     # debug
