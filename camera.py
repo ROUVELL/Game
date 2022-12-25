@@ -10,6 +10,7 @@ class Camera:
         self.rect = pg.Rect(Config.CAMERA_RECT)
 
     def check_collide_and_get_offset(self) -> tuple:
+        # Колізія з камерою і зміщення в залежності від неї
         ox = oy = 0
         if self.rect.left > self.target.left:
             ox = self.rect.left - self.target.left
