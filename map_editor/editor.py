@@ -26,12 +26,13 @@ class ObjectsList(__Tab):
         self._get_imgs_and_rects()
 
     def _get_imgs_and_rects(self):
-        # Зберігаємо оригінальні картинки, збільшені та їхні ректи
+        # Зберігаємо оригінальні картинки, збільшені, їхні імена та ректи
         # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
+        self.names_list = [name for name in self._engine.parser.cached_images.keys()]
         self.imgs_list = [pg.transform.scale2x(img) for img in self._original_imgs]
         self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * 96 + 96)) for i, img in enumerate(self.imgs_list)]
-        # Список картинок і список ректів збігаються між собою
+        # Список імен, картинок і ректів збігаються між собою
 
     def slide_list(self, offset: int):
         # Прокручеємо список якщо наведені на нього мишкою
@@ -52,7 +53,7 @@ class ObjectsList(__Tab):
             img = self._original_imgs[self.selected_obj]
             size = img.get_size()
             self._engine.parser.add_to_world(
-                img=img,
+                name=self.names_list[self.selected_obj],
                 size=size,  # Дефолт, в едіторі можна буде міняти
                 pos=pos,  # Центер картинки == позиція мишки
                 alpha=True,  # Можна відключити в едіторі
