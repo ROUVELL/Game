@@ -7,6 +7,9 @@ class Drawing:
         self.app = app
         self._sc = app.sc
         ##############
+        self.internal_surf = pg.Surface(Config.INTERNAL_SURFACE_SIZE, pg.SRCALPHA)
+        self.internal_rect = self.internal_surf.get_rect(center=Config.CENTER)
+        self.internal_surf_vector = pg.Vector2(Config.INTERNAL_SURFACE_SIZE)
         self._fps_font = pg.font.SysFont('arial', 30)  # Можна було б щось гарніше
         self._info_font = pg.font.SysFont('arial', 20)
 
@@ -14,7 +17,14 @@ class Drawing:
         self._sc.fill('black')
 
     def world(self):
-        [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+        if self.app.engine.preview:
+            [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+            return
+        self.internal_surf.fill((30, 30, 30))
+        [self.internal_surf.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+        scaled_surf = pg.transform.scale(self.internal_surf, self.internal_surf_vector * self.app.engine.parser.zoom_scale)
+        scaled_rect = scaled_surf.get_rect(center=Config.CENTER)
+        self._sc.blit(scaled_surf, scaled_rect)
 
     def tabs(self):
         self.app.engine.objects_list.draw()
@@ -23,7 +33,8 @@ class Drawing:
     def info(self):
         obj_count = len(self.app.engine.parser.current_world)
         pos = pg.mouse.get_pos()
-        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {pos}', True, 'white')
+        zoom = f'{self.app.engine.parser.zoom_scale: .2f}'
+        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {pos}  Zoom coeff: {zoom}', True, 'white')
         x = Config.HALF_WIDTH - (render.get_size()[0] // 2)
         self._sc.blit(render, (x, Config.HEIGHT - 30))
 
