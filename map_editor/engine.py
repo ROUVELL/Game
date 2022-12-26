@@ -10,17 +10,19 @@ class Engine:
         self.parser = Parser(self)
         self.objects_list = ObjectsList(self)
         self.editor = Editor(self)
+        self.preview = False  # Якщо True зум заблоковується, карта малюється без маштабування і набагато швидше
 
     def check_events(self):
         for event in pg.event.get():
             if event.type == pg.KEYUP:
                 if event.key == pg.K_ESCAPE: exit()
                 if event.key == pg.K_s: self.parser.save_world()
+                elif event.key == pg.K_p: self.preview = not self.preview
             if event.type == pg.MOUSEBUTTONUP and event.button == 1:
                 if self.objects_list.selected_obj is not None: self.objects_list.add_selected_to_world(event.pos)
             if event.type == pg.MOUSEWHEEL:
                 if self.objects_list.in_focus: self.objects_list.slide_list(event.y)
-                else: self.parser.scale_coeff += event.y
+                else: self.parser.zoom_world(event.y * Config.ZOOM_SPEED)
 
     def mouse_control(self):
         # Мишка не може бути наведена на два елементи одночасно тому використовую elif
