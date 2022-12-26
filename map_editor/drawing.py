@@ -10,6 +10,9 @@ class Drawing:
         self.internal_surf = pg.Surface(Config.INTERNAL_SURFACE_SIZE, pg.SRCALPHA)
         self.internal_rect = self.internal_surf.get_rect(center=Config.CENTER)
         self.internal_surf_vector = pg.Vector2(Config.INTERNAL_SURFACE_SIZE)
+        x, y = Config.INTERNAL_SURFACE_SIZE[0] // 2 - Config.HALF_WIDTH, Config.INTERNAL_SURFACE_SIZE[1] // 2 - Config.HALF_HEIGHT
+        self.internal_offset = pg.Vector2(x, y)
+        ##############
         self._fps_font = pg.font.SysFont('arial', 30)  # Можна було б щось гарніше
         self._info_font = pg.font.SysFont('arial', 20)
 
@@ -21,7 +24,7 @@ class Drawing:
             [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
             return
         self.internal_surf.fill((30, 30, 30))
-        [self.internal_surf.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+        [self.internal_surf.blit(obj.image, obj.rect.topleft + self.internal_offset) for obj in self.app.engine.parser.current_world]
         scaled_surf = pg.transform.scale(self.internal_surf, self.internal_surf_vector * self.app.engine.parser.zoom_scale)
         scaled_rect = scaled_surf.get_rect(center=Config.CENTER)
         self._sc.blit(scaled_surf, scaled_rect)
