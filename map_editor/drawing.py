@@ -8,12 +8,23 @@ class Drawing:
         self._sc = app.sc
         ##############
         self._fps_font = pg.font.SysFont('arial', 30)  # Можна було б щось гарніше
+        self._world_sc = pg.Surface((Config.DOUBLE_WIDTH, Config.DOUBLE_HEIGHT), pg.SRCALPHA)
+        self._world_sc_rect = self._world_sc.get_rect(center=Config.CENTER)
 
     def bg(self):
         self._sc.fill('black')
 
     def world(self):
-        [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+        self._world_sc.fill('black')
+        [self._world_sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+        scaled_world = self._world_sc
+        if self.app.engine.parser.need_scaling:
+            coeff = self.app.engine.parser.scale_coeff
+            w, h = self._world_sc_rect.width * coeff, self._world_sc_rect.height * coeff
+            scaled_world = pg.transform.scale(self._world_sc, (w, h))
+            self._world_sc_rect = scaled_world.get_rect(center=Config.CENTER)
+            self.app.engine.parser.need_scaling = False
+        self._sc.blit(scaled_world, self._world_sc_rect)
 
     def tabs(self):
         self.app.engine.objects_list.draw()

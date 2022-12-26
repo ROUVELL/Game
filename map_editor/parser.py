@@ -18,9 +18,9 @@ class _Object:
         self.image = pg.transform.scale(self._orig_image.convert_alpha() if self.alpha else img.convert(), size)
         self.rect = self.image.get_rect(center=self.pos)
 
-    def scale(self, offset: float):
-        size = self._orig_rect.width * offset, self._orig_rect.height * offset
-        self._get_image_and_rect(size)
+    # def scale(self, offset: float):
+    #     size = self._orig_rect.width * offset, self._orig_rect.height * offset
+    #     self._get_image_and_rect(size)
 
     def __repr__(self):
         return {
@@ -38,6 +38,7 @@ class Parser:
         self.cached_images = dict()
         self.current_world = []  # Можна set()
         self.scale_coeff = 1
+        self.need_scaling = False
         self._cache_images()
         self.parse_world()
 
@@ -73,14 +74,12 @@ class Parser:
         # Зміна розмірів всіх тайлів
         self.scale_coeff += offset
         self.scale_coeff = min(max(self.scale_coeff, .2), 8)
-        for obj in self.current_world:
-            obj.scale(self.scale_coeff)
+        self.need_scaling = True
 
     def add_to_world(self, **config):
         # Додавання новога тайла до світу. Пересортувати для правильного відображення
         img = self.cached_images[config['name']]
         obj = _Object(img, **config)
-        obj.scale(self.scale_coeff)
         self.current_world.append(obj)
         self._sort_world()
 
