@@ -58,12 +58,6 @@ class ObjectsList(__Tab):
                 zindex=1  # TODO: Щось придумати щоб нові об'єкти не були під старими
             )
 
-    def mouse_control(self):
-        keys = pg.mouse.get_pressed()
-        if keys[0]:
-            if self.in_focus:  # Якщо ми навелись мишою то дивимось що ми вибрали
-                self.selected_obj = self._select_obj()
-
     def draw(self):
         self._sc.fill('black')
         for i, img in enumerate(self.imgs_list):
@@ -74,7 +68,10 @@ class ObjectsList(__Tab):
         self.draw_on_screen()
 
     def update(self):
-        self.mouse_control()
+        keys = pg.mouse.get_pressed()
+        if keys[0]:
+            if self.in_focus:  # Якщо ми навелись мишою то дивимось що ми вибрали
+                self.selected_obj = self._select_obj()
 
 
 class Editor(__Tab):
