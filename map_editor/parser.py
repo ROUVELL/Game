@@ -39,7 +39,7 @@ class Parser:
         self._engine = engine
         self.cached_images = dict()
         self.current_world = []  # Можна set()
-        self.scale_coeff = 1  # not using
+        self.zoom_scale = 1  # not using
         self._cache_images()
         self.parse_world()
 
@@ -70,6 +70,10 @@ class Parser:
     def offset(self, dx: int, dy: int):
         # Зміна позиції всіх тайлів
         [obj.rect.move_ip(dx, dy) for obj in self.current_world]
+
+    def zoom_world(self, offset: int):
+        self.zoom_scale += offset
+        self.zoom_scale = min(max(self.zoom_scale, .2), 3)
 
     def add_to_world(self, **config):
         # Додавання новога тайла до світу. Пересортувати для правильного відображення
