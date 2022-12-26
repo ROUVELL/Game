@@ -36,8 +36,7 @@ class ObjectsList(__Tab):
 
     def slide_list(self, offset: int):
         # Прокручеємо список якщо наведені на нього мишкою
-        if self.in_focus:
-            [rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for rect in self.rects_list]
+        [rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for rect in self.rects_list]
 
     def _select_obj(self):
         # Вибираємо об'єкт з списка
