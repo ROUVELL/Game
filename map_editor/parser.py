@@ -81,6 +81,12 @@ class Parser:
         self.current_world.append(_Object(img, **config))
         self._sort_world()
 
+    def delete_from_world(self, pos: tuple):
+        # Видалення тайла
+        # Перевертаємо список щоб спочатку видялялися верхні
+        for tile in self.current_world[::-1]:
+            if tile.rect.collidepoint(pos): return self.current_world.remove(tile)
+
     def save_world(self):
         # Збереження світу
         with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
