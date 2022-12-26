@@ -16,10 +16,6 @@ class Config:
     FPS_COLOR = 'orange'
     # camera
     CAMERA_RECT = (WIDTH * .1, HEIGHT * .1, WIDTH * .8, HEIGHT * .8)
-    # tile
-    WIDTH_VALUE = 30
-    HEIGHT_VALUE = 16
-    TILE_SIZE = (WIDTH // WIDTH_VALUE, HEIGHT // HEIGHT_VALUE)  # 64, 64
     # player
     PLAYER_SIZE = (WIDTH * .0219, HEIGHT * .0704)  # 42, 76
     PLAYER_RECT = (WIDTH * .0198, HEIGHT * .0333)  # 38, 36  # not using
