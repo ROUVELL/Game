@@ -51,13 +51,12 @@ class ObjectsList(__Tab):
         # Якщо немає вибраного об'єкта - функція не визветься
         if not (self.in_focus or self._engine.editor.in_focus):
             img = self._original_imgs[self.selected_obj]
-            size = img.get_size()
             self._engine.parser.add_to_world(
                 name=self.names_list[self.selected_obj],
-                size=size,  # Дефолт, в едіторі можна буде міняти
+                size=(64, 64),  # Дефолт, в едіторі можна буде міняти
                 pos=pos,  # Центер картинки == позиція мишки
                 alpha=True,  # Можна відключити в едіторі
-                zindex=0  # TODO: Щось придумати щоб нові об'єкти не були під старими
+                zindex=1  # TODO: Щось придумати щоб нові об'єкти не були під старими
             )
 
     def mouse_control(self):
