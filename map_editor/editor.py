@@ -32,22 +32,23 @@ class ObjectsList(__Tab):
         self.names_list = [name for name in self._engine.parser.cached_images.keys()]
         self.imgs_list = [pg.transform.scale2x(img) for img in self._original_imgs]
         self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * 96 + 96)) for i, img in enumerate(self.imgs_list)]
-        # Список імен, картинок і ректів збігаються між собою
+        # Всі списки збігаються між собою
 
     def slide_list(self, offset: int):
         # Прокручеємо список якщо наведені на нього мишкою
         [rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for rect in self.rects_list]
 
     def _select_obj(self):
-        # Вибираємо об'єкт з списка
+        # Беремо індекс вибраного об'єкта зі списка
         x, y = pg.mouse.get_pos()
         for i, rect in enumerate(self.rects_list):
             if rect.collidepoint(x, y):
                 return i
 
     def add_selected_to_world(self, pos: tuple):
-        # Додаємо об'єкт до світу якщо ми наведені на нього
-        # Якщо немає вибраного об'єкта - функція не визветься
+        # Додаємо вибраний об'єкт до світу
+        if self.selected_obj is None: return
+        # якщо не наведені на жодну з вкладок
         if not (self.in_focus or self._engine.editor.in_focus):
             img = self._original_imgs[self.selected_obj]
             self._engine.parser.add_to_world(
