@@ -21,8 +21,9 @@ class Engine:
                 if event.key == pg.K_ESCAPE: exit()
                 if event.key == pg.K_s: self.parser.save_world()
                 elif event.key == pg.K_p: self.preview = not self.preview
-            if event.type == pg.MOUSEBUTTONUP and event.button == 1:
-                if not self.preview: self.objects_list.add_selected_to_world(event.pos)
+            if event.type == pg.MOUSEBUTTONUP and not self.preview:
+                if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
+                elif event.button == 3: self.parser.delete_from_world(event.pos)
             if event.type == pg.MOUSEWHEEL and not self.preview:
                 if self.objects_list.in_focus: self.objects_list.slide_list(event.y)
                 else: self.parser.zoom_world(event.y * Config.ZOOM_SPEED)
