@@ -8,6 +8,7 @@ class Config:
     # window
     WIDTH, HEIGHT = (user32.GetSystemMetrics(78), user32.GetSystemMetrics(79))  # always fullscreen
     HALF_WIDTH, HALF_HEIGHT = WIDTH // 2, HEIGHT // 2
+    DOUBLE_WIDTH, DOUBLE_HEIGHT = WIDTH * 2, HEIGHT * 2
     CENTER = (HALF_WIDTH, HALF_HEIGHT)
     SCREEN = (WIDTH, HEIGHT)
     # fps
