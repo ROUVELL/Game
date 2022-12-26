@@ -51,9 +51,10 @@ class ObjectsList(__Tab):
         # якщо не наведені на жодну з вкладок
         if not (self.in_focus or self._engine.editor.in_focus):
             img = self._original_imgs[self.selected_obj]
+            w, h = img.get_size()
             self._engine.parser.add_to_world(
                 name=self.names_list[self.selected_obj],
-                size=(64, 64),  # Дефолт, в едіторі можна буде міняти
+                size=(w * 2, h * 2),  # Дефолт, в едіторі можна буде міняти
                 pos=pos,  # Центер картинки == позиція мишки
                 alpha=True,  # Можна відключити в едіторі
                 zindex=1  # TODO: Щось придумати щоб нові об'єкти не були під старими
