@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "name": "grass-bottomright-reversed.png",
+    "size": [
+      105,
+      105
+    ],
+    "pos": [
+      400,
+      404
+    ],
+    "alpha": true,
+    "zindex": 0
+  },
+  {
+    "name": "grass-bottomright-reversed.png",
+    "size": [
+      105,
+      105
+    ],
+    "pos": [
+      707,
+      405
+    ],
+    "alpha": true,
+    "zindex": 0
+  },
+  {
+    "name": "grass-bottomleft-reversed.png",
+    "size": [
+      105,
+      105
+    ],
+    "pos": [
+      260,
+      402
+    ],
+    "alpha": true,
+    "zindex": 0
+  },
+  {
+    "name": "grass-topright-reversed.png",
+    "size": [
+      105,
+      105
+    ],
+    "pos": [
+      405,
+      274
+    ],
+    "alpha": true,
+    "zindex": 0
+  },
+  {
+    "name": "grass-topleft-reversed.png",
+    "size": [
+      105,
+      105
+    ],
+    "pos": [
+      258,
+      270
+    ],
+    "alpha": true,
+    "zindex": 0
+  },
+  {
+    "name": "grass-topleft-reversed.png",
+    "size": [
+      105,
+      105
+    ],
+    "pos": [
+      729,
+      414
+    ],
+    "alpha": true,
+    "zindex": 0
+  }
+]
