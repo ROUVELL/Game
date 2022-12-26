@@ -7,6 +7,7 @@ class Drawing:
         self.app = app
         self._sc = app.sc
         ##############
+        # Додаткова поверхня та її параметри
         self.internal_surf = pg.Surface(Config.INTERNAL_SURFACE_SIZE, pg.SRCALPHA)
         self.internal_rect = self.internal_surf.get_rect(center=Config.CENTER)
         self.internal_surf_vector = pg.Vector2(Config.INTERNAL_SURFACE_SIZE)
@@ -20,9 +21,11 @@ class Drawing:
         self._sc.fill('black')
 
     def world(self):
+        # Якщо в режимі прев'ю просто малюємо світ
         if self.app.engine.preview:
             [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
             return
+        # інакше малюємо на додатковому полотні та маштабуємо його
         self.internal_surf.fill((30, 30, 30))
         [self.internal_surf.blit(obj.image, obj.rect.topleft + self.internal_offset) for obj in self.app.engine.parser.current_world]
         scaled_surf = pg.transform.scale(self.internal_surf, self.internal_surf_vector * self.app.engine.parser.zoom_scale)
@@ -30,10 +33,13 @@ class Drawing:
         self._sc.blit(scaled_surf, scaled_rect)
 
     def tabs(self):
-        self.app.engine.objects_list.draw()
-        self.app.engine.editor.draw_on_screen()
+        # Не малюємо менюшки якщо в режимі прев'ю
+        if not self.app.engine.preview:
+            self.app.engine.objects_list.draw()
+            self.app.engine.editor.draw_on_screen()
 
     def info(self):
+        # Виводимо на екран к-сть тайлів, позицію миші та коефіцієнт зближення
         obj_count = len(self.app.engine.parser.current_world)
         pos = pg.mouse.get_pos()
         zoom = f'{self.app.engine.parser.zoom_scale: .2f}'
