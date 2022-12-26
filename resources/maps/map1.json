@@ -6,21 +6,8 @@
       105
     ],
     "pos": [
-      400,
-      404
-    ],
-    "alpha": true,
-    "zindex": 0
-  },
-  {
-    "name": "grass-bottomright-reversed.png",
-    "size": [
-      105,
-      105
-    ],
-    "pos": [
-      707,
-      405
+      950,
+      579
     ],
     "alpha": true,
     "zindex": 0
@@ -32,8 +19,8 @@
       105
     ],
     "pos": [
-      260,
-      402
+      810,
+      577
     ],
     "alpha": true,
     "zindex": 0
@@ -45,8 +32,8 @@
       105
     ],
     "pos": [
-      405,
-      274
+      955,
+      449
     ],
     "alpha": true,
     "zindex": 0
@@ -58,21 +45,8 @@
       105
     ],
     "pos": [
-      258,
-      270
-    ],
-    "alpha": true,
-    "zindex": 0
-  },
-  {
-    "name": "grass-topleft-reversed.png",
-    "size": [
-      105,
-      105
-    ],
-    "pos": [
-      729,
-      414
+      808,
+      445
     ],
     "alpha": true,
     "zindex": 0
