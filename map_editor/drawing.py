@@ -8,27 +8,24 @@ class Drawing:
         self._sc = app.sc
         ##############
         self._fps_font = pg.font.SysFont('arial', 30)  # Можна було б щось гарніше
-        self._world_sc = pg.Surface((Config.DOUBLE_WIDTH, Config.DOUBLE_HEIGHT), pg.SRCALPHA)
-        self._world_sc_rect = self._world_sc.get_rect(center=Config.CENTER)
+        self._info_font = pg.font.SysFont('arial', 20)
 
     def bg(self):
         self._sc.fill('black')
 
     def world(self):
-        self._world_sc.fill('black')
-        [self._world_sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
-        scaled_world = self._world_sc
-        if self.app.engine.parser.need_scaling:
-            coeff = self.app.engine.parser.scale_coeff
-            w, h = self._world_sc_rect.width * coeff, self._world_sc_rect.height * coeff
-            scaled_world = pg.transform.scale(self._world_sc, (w, h))
-            self._world_sc_rect = scaled_world.get_rect(center=Config.CENTER)
-            self.app.engine.parser.need_scaling = False
-        self._sc.blit(scaled_world, self._world_sc_rect)
+        [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
 
     def tabs(self):
         self.app.engine.objects_list.draw()
         self.app.engine.editor.draw_on_screen()
+
+    def info(self):
+        obj_count = len(self.app.engine.parser.current_world)
+        pos = pg.mouse.get_pos()
+        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {pos}', True, 'white')
+        x = Config.HALF_WIDTH - (render.get_size()[0] // 2)
+        self._sc.blit(render, (x, Config.HEIGHT - 30))
 
     def fps(self):
         fps = self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
@@ -38,4 +35,5 @@ class Drawing:
         self.bg()
         self.world()
         self.tabs()
+        self.info()
         self.fps()
