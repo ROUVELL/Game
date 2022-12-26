@@ -50,5 +50,122 @@
     ],
     "alpha": true,
     "zindex": 0
+  },
+  {
+    "name": "paving-stones.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      310,
+      539
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      574,
+      317
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      443,
+      336
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      305,
+      345
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      64,
+      64
+    ],
+    "pos": [
+      342,
+      822
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      64,
+      64
+    ],
+    "pos": [
+      416,
+      824
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      64,
+      64
+    ],
+    "pos": [
+      284,
+      549
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "big-white-stone.png",
+    "size": [
+      64,
+      64
+    ],
+    "pos": [
+      638,
+      415
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "big-white-stone.png",
+    "size": [
+      64,
+      64
+    ],
+    "pos": [
+      618,
+      226
+    ],
+    "alpha": true,
+    "zindex": 1
   }
 ]
