@@ -50,8 +50,7 @@ class Parser:
     def _cache_images(self):
         # Кешуємо всі статичні картинки
         for name in os.listdir(Config.STATIC):
-            img = self._load_image(Config.STATIC + name)
-            self.cached_images[name] = img
+            self.cached_images[name] = self._load_image(Config.STATIC + name)
 
     def _sort_world(self):
         # Сортування по z індексу
