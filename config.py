@@ -36,6 +36,8 @@ class Config:
     SLIDE_SENSETIVITY = 50  # For sliding imgs list
     EDITING_TAB_POS = (WIDTH - (WIDTH * .20) - 1, 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
+    INTERNAL_SURFACE_SIZE = (HALF_WIDTH, HALF_HEIGHT)
+    ZOOM_SPEED = .01
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
