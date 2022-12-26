@@ -20,7 +20,7 @@ class Engine:
                 if self.objects_list.selected_obj is not None: self.objects_list.add_selected_to_world(event.pos)
             if event.type == pg.MOUSEWHEEL:
                 if self.objects_list.in_focus: self.objects_list.slide_list(event.y)
-                else: self.parser.scale(event.y / 10)
+                else: self.parser.scale_coeff += event.y
 
     def mouse_control(self):
         # Мишка не може бути наведена на два елементи одночасно тому використовую elif
