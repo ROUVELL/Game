@@ -8,19 +8,19 @@ class _Object:
     def __init__(self, img: pg.Surface, **config):
         self.name = config['name']
         self._orig_image = img
-        self._orig_rect = img.get_rect()
+        self._orig_rect = img.get_rect(center=config['pos'])
+        self.pos = config['pos']
         self.alpha = config['alpha']
         self.zindex = config['zindex']
-        self._get_image(config['size'])
-        self.rect = self.image.get_rect(center=config['pos'])
+        self._get_image_and_rect(config['size'])
 
-    def _get_image(self, size: tuple):
+    def _get_image_and_rect(self, size: tuple):
         self.image = pg.transform.scale(self._orig_image.convert_alpha() if self.alpha else img.convert(), size)
+        self.rect = self.image.get_rect(center=self.pos)
 
     def scale(self, offset: float):
-        w, h = self._orig_rect.width * offset, self._orig_rect.height * offset
-        self.rect.size = (w, h)
-        self._get_image(self.rect.size)
+        size = self._orig_rect.width * offset, self._orig_rect.height * offset
+        self._get_image_and_rect(size)
 
     def __repr__(self):
         return {
