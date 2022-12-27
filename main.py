@@ -3,7 +3,6 @@ from world import World
 from player import Player
 from camera import Camera
 from drawing import Drawing
-from gui.menu import Menu
 from config import Config
 
 
@@ -20,7 +19,6 @@ class Game:
         self.player = Player(self)
         self.camera = Camera(self)
         self.draw = Drawing(self)
-        self.menu = Menu(self)
 
     def run(self):
         # self.running = self.menu.load_screen()
