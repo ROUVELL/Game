@@ -1,4 +1,5 @@
 import pygame as pg
+from math import sqrt, sin, cos, pi
 from config import Config
 
 
@@ -16,10 +17,13 @@ class Player:
         # Картинка для відображення та рект для контролю позиції і колізій
         self.image = self.front_animation[self.frame]
         self.rect = self.image.get_rect(center=Config.CENTER)
-        # Напрям руху, чи в русі та поточна швидкість
-        self.direction = 'down'
-        self.moving = False
-        self.speed = Config.PLAYER_SPEED
+        #####################
+        self.direction = 'down'  # Напрям руху
+        self.moving = False  # Чи рухаємось
+        self.speed = Config.PLAYER_SPEED  # Початкова швидкість
+        # Корекція руху по діагоналі. Кут руху по діагоналі завжди 45 градусів
+        self.vert_move_corr = sin(pi / 4)
+        self.hor_move_corr = cos(pi / 4)
 
     @staticmethod
     def _load_and_scale_img(name: str):
@@ -84,6 +88,10 @@ class Player:
             dx += self.speed
             self.moving = True
             self.direction = 'right'
+
+        if dx and dy:
+            dx *= self.hor_move_corr
+            dy *= self.vert_move_corr
 
         self.rect.move_ip(dx, dy)
         # self.texture_collide(dx, dy)
