@@ -64,7 +64,7 @@ class Player:
             offset.x += self.speed
             self.direction = 'right'
 
-        if offset.length():
+        if offset:
             self.moving = True
             if offset.length() > self.speed: offset.scale_to_length(self.speed)  # Корекція руху по діагоналі
 
