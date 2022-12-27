@@ -14,19 +14,43 @@ class Drawing:
         self._sc.fill('black')
 
     def world(self):
-        [self._sc.blit(obj.image, obj.rect) for obj in self.app.engine.parser.current_world]
+        for obj in self.app.engine.parser.current_world:
+            self._sc.blit(obj.image, obj.rect)
+            if Config.DRAW_TEXTURE_RECT:
+                pg.draw.rect(self._sc, 'grey', obj.rect, 1)
 
     def tabs(self):
         self.app.engine.objects_list.draw()
         self.app.engine.editor.draw_on_screen()
 
-    def info(self):
-        # Виводимо на екран к-сть тайлів, позицію миші та коефіцієнт зближення
+    def _world_info(self):
         obj_count = len(self.app.engine.parser.current_world)
-        pos = pg.mouse.get_pos()
-        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {pos}', True, 'white')
-        x = Config.HALF_WIDTH - (render.get_size()[0] // 2)
-        self._sc.blit(render, (x, Config.HEIGHT - 30))
+        x, y = pg.mouse.get_pos()
+        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}', True, 'white')
+        dx = Config.HALF_WIDTH - (render.get_size()[0] // 2)
+        self._sc.blit(render, (dx, Config.HEIGHT - 30))
+
+    def _tile_info(self):
+        # Показує інформацію про наведений мишею тайл
+        x, y = pg.mouse.get_pos()
+        # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
+        tiles = sorted([tile for tile in self.app.engine.parser.current_world if tile.rect.collidepoint(x, y)],
+                       key=lambda tile: tile.zindex, reverse=True)
+        if tiles:
+            pg.draw.rect(self._sc, 'green', (x, y, 200, 170), 1)
+            tile = tiles[0]
+            self._sc.blits((
+                (self._info_font.render(tile.name.partition('.')[0], True, 'darkgrey'), (x + 10, y + 15)),
+                (self._info_font.render(f'size: {tile.rect.size}', True, 'white'), (x + 10, y + 45)),
+                (self._info_font.render(f'pos: {tile.rect.center}', True, 'white'), (x + 10, y + 75)),
+                (self._info_font.render(f'alpha: {tile.alpha}', True, 'white'), (x + 10, y + 105)),
+                (self._info_font.render(f'z-index: {tile.zindex}', True, 'white'), (x + 10, y + 135))), doreturn=False)
+
+    def info(self):
+        self._world_info()
+        if self.app.engine.focus_on_world:
+            self._tile_info()
+
 
     def fps(self):
         fps = self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
@@ -35,6 +59,6 @@ class Drawing:
     def all(self):
         self.bg()
         self.world()
-        self.tabs()
         self.info()
+        self.tabs()
         self.fps()
