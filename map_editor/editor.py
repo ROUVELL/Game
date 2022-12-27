@@ -30,9 +30,19 @@ class ObjectsList(__Tab):
         # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
         self.names_list = [name for name in self._engine.parser.cached_images.keys()]
-        # TODO: Нормальне маштабування фоток в списку
-        self.imgs_list = [pg.transform.scale(img, (64, 64)) for img in self._original_imgs]  # Якщо щось придумаю - виправлю, не хочеться лишній раз грузити код
-        self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * (img.get_height() + 20) + img.get_height())) for i, img in enumerate(self.imgs_list)]
+        self.rects_list = []
+        # TODO: Рефоктор цього костиля!
+        offset = 20
+        for i, img in enumerate(self._original_imgs):
+            w, h = img.get_size()
+            coeff = (64 // w)
+            w, h = w * coeff, h * coeff
+            x, y = Config.OBJECTS_LIST_SIZE[0] // 2, offset
+            x, y = x - w // 2, y - h // 2
+            self.rects_list.append(pg.Rect(x, y, w, h))
+            offset += (h // 64 + h * 1.4)
+
+        self.imgs_list = [pg.transform.scale(self._original_imgs[i], rect.size) for i, rect in enumerate(self.rects_list)]  # Якщо щось придумаю - виправлю, не хочеться лишній раз грузити код
         # Всі списки збігаються між собою
 
     def slide_list(self, offset: int):
