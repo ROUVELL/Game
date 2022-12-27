@@ -20,8 +20,6 @@ class Player:
         self.direction = 'down'  # Напрям руху
         self.moving = False  # Чи рухаємось
         self.speed = Config.PLAYER_SPEED  # Початкова швидкість
-        # Корекція руху по діагоналі
-        self.diag_move_corr = .7071067811865476
 
     @staticmethod
     def _load_and_scale_img(name: str):
@@ -67,31 +65,28 @@ class Player:
 
     def movement(self):
         # Рух
-        dx = dy = 0
+        offset = pg.Vector2()
         keys = pg.key.get_pressed()
         self.moving = False
         if keys[pg.K_w]:
-            dy += -self.speed
-            self.moving = True
+            offset.y += -self.speed
             self.direction = 'up'
         if keys[pg.K_s]:
-            dy += self.speed
-            self.moving = True
+            offset.y += self.speed
             self.direction = 'down'
         if keys[pg.K_a]:
-            dx += -self.speed
-            self.moving = True
+            offset.x += -self.speed
             self.direction = 'left'
         if keys[pg.K_d]:
-            dx += self.speed
-            self.moving = True
+            offset.x += self.speed
             self.direction = 'right'
 
-        if dx and dy:
-            dx *= self.diag_move_corr
-            dy *= self.diag_move_corr
+        if offset.length():
+            self.moving = True
+            if offset.length() > self.speed:
+                offset.scale_to_length(self.speed)  # Корекція руху по діагоналі
 
-        self.rect.move_ip(dx, dy)
+        self.rect.move_ip(offset)
         # self.texture_collide(dx, dy)
 
     def update(self):
