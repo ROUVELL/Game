@@ -20,7 +20,6 @@ class Camera:
             oy = self.rect.top - self.target.top
         if self.rect.bottom < self.target.bottom:
             oy = self.rect.bottom - self.target.bottom
-        # TODO: По діагоналі швидкість руху вища
         return ox, oy
 
     def update(self):
