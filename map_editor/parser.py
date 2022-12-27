@@ -9,25 +9,24 @@ class _Object:
         self.name = config['name']
         self._orig_image = img
         self._orig_rect = img.get_rect(center=config['pos'])
-        self.pos = config['pos']
         self.alpha = config['alpha']
         self.zindex = config['zindex']
-        self._get_image_and_rect(config['size'])
+        self._get_image_and_rect(config['size'], config['pos'])
 
-    def _get_image_and_rect(self, size: tuple):
+    def _get_image_and_rect(self, size: tuple, pos: tuple):
         # Після маштабування потрібно оновлювати картинку і позицію
-        self.image = pg.transform.scale(self._orig_image.convert_alpha() if self.alpha else img.convert(), size)
-        self.rect = self.image.get_rect(center=self.pos)
+        self.image = pg.transform.scale(self._orig_image.convert_alpha() if self.alpha else self._orig_image.convert(), size)
+        self.rect = self.image.get_rect(center=pos)  # Щоб розтягувати в якусь одну сторону не міняючи позиції
 
     def scale(self, offset: float):
         # Буде використовуватись в едіторі для маштабування
         size = self._orig_rect.width * offset, self._orig_rect.height * offset
-        self._get_image_and_rect(size)
+        self._get_image_and_rect(size, self.rect.center)
 
     def __repr__(self):
         return {
             'name': self.name,
-            'size': self.image.get_size(),
+            'size': self.rect.size,
             'pos': self.rect.center,
             'alpha': self.alpha,
             'zindex': self.zindex
