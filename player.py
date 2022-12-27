@@ -1,5 +1,4 @@
 import pygame as pg
-from math import sqrt, sin, cos, pi
 from config import Config
 
 
@@ -21,9 +20,8 @@ class Player:
         self.direction = 'down'  # Напрям руху
         self.moving = False  # Чи рухаємось
         self.speed = Config.PLAYER_SPEED  # Початкова швидкість
-        # Корекція руху по діагоналі. Кут руху по діагоналі завжди 45 градусів
-        self.vert_move_corr = sin(pi / 4)
-        self.hor_move_corr = cos(pi / 4)
+        # Корекція руху по діагоналі
+        self.diag_move_corr = .7071067811865476
 
     @staticmethod
     def _load_and_scale_img(name: str):
@@ -90,8 +88,8 @@ class Player:
             self.direction = 'right'
 
         if dx and dy:
-            dx *= self.hor_move_corr
-            dy *= self.vert_move_corr
+            dx *= self.diag_move_corr
+            dy *= self.diag_move_corr
 
         self.rect.move_ip(dx, dy)
         # self.texture_collide(dx, dy)
