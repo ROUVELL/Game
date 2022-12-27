@@ -13,30 +13,22 @@ class Texture:
 
 class World:
     def __init__(self):
-        self.cached_images = dict()
         self.world = set()
-        # self.collide_list = []
-        self.cache_images()
+        self._cache_images()
         self.parse_world()
 
-    @staticmethod
-    def load_image(path: str) -> pg.Surface:
-        return pg.image.load(path)
-
-    def cache_images(self):
-        for name in os.listdir(Config.STATIC):
-            self.cached_images[name] = self.load_image(Config.STATIC + name)
+    def _cache_images(self):
+        # Кешування всіх статичних тайлів
+        self.cached_images = {name: pg.image.load(Config.STATIC + name) for name in os.listdir(Config.STATIC)}
 
     def parse_world(self, path: str = Config.CURRENT_MAP):
+        # Відкриваємь вибрану карту, створюємо список тайлів та відсортовуємо його по z індексу
         with open(path) as map_:
-            map_ = json.load(map_)
-            for obj in map_:
+            for obj in json.load(map_):
                 img = self.cached_images[obj['name']]
-                texture = Texture(img, **obj)
-                self.world.add(texture)
-                # if obj['collide']:
-                #     self.collide_list.append(texture.rect)
+                self.world.add(Texture(img, **obj))
         self.world = sorted(self.world, key=lambda obj: obj.zindex)
 
-    def offset(self, dx: int, dy: int):
+    def offset_world(self, dx: int, dy: int):
+        # Рухаємо весь світ
         [obj.rect.move_ip(dx, dy) for obj in self.world]
