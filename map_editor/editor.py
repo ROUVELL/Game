@@ -30,6 +30,7 @@ class ObjectsList(__Tab):
         # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
         self.names_list = [name for name in self._engine.parser.cached_images.keys()]
+        # TODO: Нормальне маштабування фоток в списку
         self.imgs_list = [pg.transform.scale(img, (64, 64)) for img in self._original_imgs]  # Якщо щось придумаю - виправлю, не хочеться лишній раз грузити код
         self.rects_list = [img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, i * (img.get_height() + 20) + img.get_height())) for i, img in enumerate(self.imgs_list)]
         # Всі списки збігаються між собою
