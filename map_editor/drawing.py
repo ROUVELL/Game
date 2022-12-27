@@ -49,6 +49,7 @@ class Drawing:
     def info(self):
         self._world_info()
         if self.app.engine.focus_on_world:
+            # TODO: Квадрат куда поставиться вибраний тайл
             self._tile_info()
 
 
