@@ -16,6 +16,7 @@ class Player:
         # Картинка для відображення та рект для контролю позиції і колізій
         self.image = self._front_animation[self._frame]
         self.rect = self.image.get_rect(center=Config.CENTER)
+        self.zindex = 10
         #####################
         self.direction = 'down'  # Напрям руху
         self.moving = False  # Чи рухаємось
