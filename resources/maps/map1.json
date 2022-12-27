@@ -1,171 +1,41 @@
 [
   {
-    "name": "grass-bottomright-reversed.png",
+    "name": "bowl.png",
     "size": [
-      105,
-      105
+      64,
+      128
     ],
     "pos": [
-      950,
-      579
+      625,
+      659
     ],
     "alpha": true,
-    "zindex": 0
-  },
-  {
-    "name": "grass-bottomleft-reversed.png",
-    "size": [
-      105,
-      105
-    ],
-    "pos": [
-      810,
-      577
-    ],
-    "alpha": true,
-    "zindex": 0
-  },
-  {
-    "name": "grass-topright-reversed.png",
-    "size": [
-      105,
-      105
-    ],
-    "pos": [
-      955,
-      449
-    ],
-    "alpha": true,
-    "zindex": 0
-  },
-  {
-    "name": "grass-topleft-reversed.png",
-    "size": [
-      105,
-      105
-    ],
-    "pos": [
-      808,
-      445
-    ],
-    "alpha": true,
-    "zindex": 0
-  },
-  {
-    "name": "paving-stones.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      310,
-      539
-    ],
-    "alpha": false,
     "zindex": 1
   },
   {
-    "name": "paving-stones.png",
+    "name": "mushroom-bad.png",
     "size": [
-      128,
-      192
+      64,
+      64
     ],
     "pos": [
-      574,
-      317
+      777,
+      412
     ],
-    "alpha": false,
+    "alpha": true,
     "zindex": 1
   },
   {
-    "name": "paving-stones.png",
+    "name": "mushroom-good.png",
     "size": [
-      128,
-      192
+      64,
+      64
     ],
     "pos": [
-      443,
-      336
+      653,
+      417
     ],
-    "alpha": false,
+    "alpha": true,
     "zindex": 1
-  },
-  {
-    "name": "paving-stones.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      305,
-      345
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "small-white-stone.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      342,
-      822
-    ],
-    "alpha": true,
-    "zindex": 2
-  },
-  {
-    "name": "small-white-stone.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      416,
-      824
-    ],
-    "alpha": true,
-    "zindex": 2
-  },
-  {
-    "name": "small-white-stone.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      284,
-      549
-    ],
-    "alpha": true,
-    "zindex": 2
-  },
-  {
-    "name": "big-white-stone.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      638,
-      415
-    ],
-    "alpha": true,
-    "zindex": 2
-  },
-  {
-    "name": "big-white-stone.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      618,
-      226
-    ],
-    "alpha": true,
-    "zindex": 2
   }
 ]
