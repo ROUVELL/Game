@@ -20,7 +20,7 @@ class Drawing:
 
     def tabs(self):
         self.app.engine.objects_list.draw()
-        self.app.engine.editor.draw_on_screen()
+        self.app.engine.editor.draw()
 
     def _world_info(self):
         # К-сть об'єктів та позиція миші
