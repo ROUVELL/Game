@@ -17,7 +17,7 @@ class Drawing:
         for obj in self.app.engine.parser.current_world:
             self._sc.blit(obj.image, obj.rect)
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
-            if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
+        if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
 
     def tabs(self):
         self.app.engine.objects_list.draw()
