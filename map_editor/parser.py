@@ -74,11 +74,13 @@ class Parser:
         self.current_world.append(_Object(img, **config))
         self._sort_world()
 
-    def delete_from_world(self, pos: tuple):
-        # Видалення тайла
+    def delete_from_world(self, pos: tuple, all_: bool = False):
+        # Видалення одного або всіх тайлів по позиції
         # Перевертаємо список щоб спочатку видялялися верхні
         for tile in self.current_world[::-1]:
-            if tile.rect.collidepoint(pos): return self.current_world.remove(tile)
+            if tile.rect.collidepoint(pos):
+                self.current_world.remove(tile)
+                if not all_: return
 
     def save_world(self):
         # Збереження світу
