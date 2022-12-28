@@ -28,6 +28,7 @@ class ObjectsList(__Tab):
         self._get_imgs_and_rects()
 
     def _get_imgs_and_rects(self):
+        # TODO: Виправити цей мазохізм інакше я поїду кукушкою
         # Зберігаємо оригінальні картинки, збільшені, їхні імена та ректи
         # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
