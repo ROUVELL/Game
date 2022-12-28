@@ -36,6 +36,7 @@ class Config:
     SLIDE_SENSETIVITY = 50  # For sliding imgs list
     EDITING_TAB_POS = (WIDTH - (WIDTH * .20) - 1, 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
+    AUTO_SAVE = False  # Чи зберігати світ при виході
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
