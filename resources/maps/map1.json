@@ -364,6 +364,32 @@
     "zindex": 1
   },
   {
+    "name": "sakura-1.png",
+    "size": [
+      214,
+      256
+    ],
+    "pos": [
+      1362,
+      621
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "sakura-2.png",
+    "size": [
+      178,
+      256
+    ],
+    "pos": [
+      756,
+      897
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
     "name": "bowl.png",
     "size": [
       64,
