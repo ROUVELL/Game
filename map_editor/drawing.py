@@ -16,14 +16,14 @@ class Drawing:
     def world(self):
         for obj in self.app.engine.parser.current_world:
             self._sc.blit(obj.image, obj.rect)
-            if Config.DRAW_TEXTURE_RECT:
-                pg.draw.rect(self._sc, 'grey', obj.rect, 1)
+            if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
 
     def tabs(self):
         self.app.engine.objects_list.draw()
         self.app.engine.editor.draw_on_screen()
 
     def _world_info(self):
+        # К-сть об'єктів та позиція миші
         obj_count = len(self.app.engine.parser.current_world)
         x, y = pg.mouse.get_pos()
         render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}', True, 'white')
@@ -34,8 +34,7 @@ class Drawing:
         # Показує інформацію про наведений мишею тайл
         x, y = pg.mouse.get_pos()
         # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
-        tiles = sorted([tile for tile in self.app.engine.parser.current_world if tile.rect.collidepoint(x, y)],
-                       key=lambda tile: tile.zindex, reverse=True)
+        tiles = [obj for obj in self.app.engine.parser.current_world[::-1] if obj.rect.collidepoint(x, y)]
         if tiles:
             pg.draw.rect(self._sc, 'green', (x, y, 200, 170), 1)
             tile = tiles[0]
@@ -48,14 +47,11 @@ class Drawing:
 
     def info(self):
         self._world_info()
-        if self.app.engine.focus_on_world:
-            # TODO: Квадрат куда поставиться вибраний тайл
-            self._tile_info()
-
+        if self.app.engine.focus_on_world: self._tile_info()
+        # TODO: Квадрат куда поставиться вибраний тайл
 
     def fps(self):
-        fps = self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR)
-        self._sc.blit(fps, Config.FPS_POS)
+        self._sc.blit(self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR), Config.FPS_POS)
 
     def all(self):
         self.bg()

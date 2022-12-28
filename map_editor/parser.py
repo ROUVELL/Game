@@ -85,5 +85,4 @@ class Parser:
     def save_world(self):
         # Збереження світу
         with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
-            m = json.dumps([tile.__repr__() for tile in self.current_world], indent=2)
-            map_.write(m)
+            map_.write(json.dumps([tile.__repr__() for tile in self.current_world], indent=2))
