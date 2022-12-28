@@ -23,7 +23,10 @@ class Engine:
                 if event.key == pg.K_s: self.parser.save_world()
             if event.type == pg.MOUSEBUTTONUP:
                 if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
-                elif event.button == 3: self.parser.delete_from_world(event.pos)
+                elif event.button == 3:
+                    # Shift + RKM - видалити всі об'єкти
+                    if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
+                    else: self.parser.delete_from_world(event.pos)
             if event.type == pg.MOUSEWHEEL:
                 if self.objects_list.in_focus: self.objects_list.slide_list(event.y)
 
