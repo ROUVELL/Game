@@ -54,7 +54,10 @@ class ObjectsList(__Tab):
     def _select_obj(self):
         # Беремо індекс вибраного об'єкта зі списка
         x, y = pg.mouse.get_pos()
-        for i, rect in enumerate(self._rects_list): self.selected_obj = i if rect.collidepoint(x, y) else None
+        for i, rect in enumerate(self._rects_list):
+            if rect.collidepoint(x, y):
+                self.selected_obj = i
+                return
 
     def add_selected_to_world(self, pos: tuple):
         # Додаємо вибраний об'єкт до світу
