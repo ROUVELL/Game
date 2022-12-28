@@ -33,19 +33,13 @@ class ObjectsList(__Tab):
         # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
         self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
         self.names_list = [name for name in self._engine.parser.cached_images.keys()]
+        self.imgs_list = self._original_imgs.copy()
+        offset = 0
         self._rects_list = []
-        # TODO: Рефоктор цього костиля!
-        offset = 20
-        for i, img in enumerate(self._original_imgs):
-            w, h = img.get_size()
-            coeff = (64 // w)
-            w, h = w * coeff, h * coeff
-            x, y = Config.OBJECTS_LIST_SIZE[0] // 2, offset
-            x, y = x - w // 2, y - h // 2
-            self._rects_list.append(pg.Rect(x, y, w, h))
-            offset += (h // 64 + h * 1.4)
-
-        self.imgs_list = [pg.transform.scale(self._original_imgs[i], rect.size) for i, rect in enumerate(self._rects_list)]
+        for img in self.imgs_list:
+            h = img.get_height()
+            offset += h // 2 + 80
+            self._rects_list.append(img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, offset + 20)))
         # Всі списки збігаються між собою
 
     def slide_list(self, offset: int):
@@ -69,7 +63,7 @@ class ObjectsList(__Tab):
             w, h = img.get_size()
             self._engine.parser.add_to_world(
                 name=self.names_list[self.selected_obj],
-                size=(w * 2, h * 2),  # Дефолт, в едіторі можна буде міняти
+                size=(w, h),  # Дефолт, в едіторі можна буде міняти
                 pos=pos,  # Центер картинки == позиція мишки
                 alpha=True,  # Можна відключити в едіторі
                 zindex=1  # TODO: Щось придумати щоб нові об'єкти не були під старими
