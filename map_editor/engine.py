@@ -19,7 +19,9 @@ class Engine:
     def check_events(self):
         for event in pg.event.get():
             if event.type == pg.KEYUP:
-                if event.key == pg.K_ESCAPE: exit()
+                if event.key == pg.K_ESCAPE:
+                    if Config.AUTO_SAVE: self.parser.save_world()
+                    exit()
                 if event.key == pg.K_s: self.parser.save_world()
             if event.type == pg.MOUSEBUTTONUP:
                 if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
