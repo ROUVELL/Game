@@ -1,26 +1,13 @@
 [
   {
-    "name": "bowl.png",
-    "size": [
-      64,
-      128
-    ],
-    "pos": [
-      625,
-      659
-    ],
-    "alpha": true,
-    "zindex": 11
-  },
-  {
     "name": "mushroom-bad.png",
     "size": [
       64,
       64
     ],
     "pos": [
-      777,
-      412
+      692,
+      355
     ],
     "alpha": true,
     "zindex": 1
@@ -32,10 +19,23 @@
       64
     ],
     "pos": [
-      653,
-      417
+      568,
+      360
     ],
     "alpha": true,
     "zindex": 1
+  },
+  {
+    "name": "bowl.png",
+    "size": [
+      64,
+      128
+    ],
+    "pos": [
+      540,
+      602
+    ],
+    "alpha": true,
+    "zindex": 11
   }
 ]
