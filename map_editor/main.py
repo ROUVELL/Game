@@ -7,7 +7,7 @@ from config import Config
 class App:
     def __init__(self):  # Потім вікно бути йти з Game
         pg.init()
-        self.sc = pg.display.set_mode(Config.SCREEN, pg.NOFRAME)
+        self.sc = pg.display.set_mode(Config.SCREEN, pg.SCALED | pg.FULLSCREEN)
         self.clock = pg.time.Clock()
         self.draw = Drawing(self)
         self.engine = Engine(self)

@@ -9,7 +9,7 @@ from config import Config
 class Game:
     def __init__(self):
         pg.init()
-        self.sc = pg.display.set_mode(Config.SCREEN, pg.NOFRAME)
+        self.sc = pg.display.set_mode(Config.SCREEN, pg.SCALED | pg.FULLSCREEN)
         self.clock = pg.time.Clock()
         self.running = True
         self.start()
