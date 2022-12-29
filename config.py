@@ -39,6 +39,9 @@ class Config:
     EDITING_TAB_POS = (WIDTH - (WIDTH * .20), 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
     AUTO_SAVE = False  # Чи зберігати світ при виході
+    # defaults in editor
+    DRAW_OBJ_RECT = True
+    DRAW_OBJ_INFO = True
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
