@@ -59,9 +59,8 @@ class Parser:
         # Зміна позиції всіх тайлів
         [obj.rect.move_ip(dx * .5, dy * .5) for obj in self.current_world]
 
-    def add_to_world(self, **config):
+    def add_to_world(self, img: pg.Surface, config: dict):
         # Додавання новога тайла до світу. Пересортувати для правильного відображення
-        img = self.cached_images[config['name']]
         self.current_world.append(_Object(img, **config))
         self._sort_world()
 
