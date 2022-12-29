@@ -6,7 +6,7 @@ user32 = ctypes.windll.user32
 
 class Config:
     # window
-    WIDTH, HEIGHT = (user32.GetSystemMetrics(78), user32.GetSystemMetrics(79))  # always fullscreen
+    WIDTH, HEIGHT = (user32.GetSystemMetrics(78) // 2, user32.GetSystemMetrics(79) // 2)  # always fullscreen
     HALF_WIDTH, HALF_HEIGHT = WIDTH // 2, HEIGHT // 2
     DOUBLE_WIDTH, DOUBLE_HEIGHT = WIDTH * 2, HEIGHT * 2
     CENTER = (HALF_WIDTH, HALF_HEIGHT)
@@ -34,7 +34,7 @@ class Config:
     OBJECTS_LIST_POS = (0, 0)
     OBJECTS_LIST_SIZE = (WIDTH * .075, HEIGHT)
     SLIDE_SENSETIVITY = 50  # For sliding imgs list
-    EDITING_TAB_POS = (WIDTH - (WIDTH * .20) - 1, 0)
+    EDITING_TAB_POS = (WIDTH - (WIDTH * .20), 0)
     EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
     AUTO_SAVE = False  # Чи зберігати світ при виході
     # debug
