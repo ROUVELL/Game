@@ -9,6 +9,9 @@ class Drawing:
         ##############
         self._fps_font = pg.font.Font(Config.INFO_FONT, 16)  # Можна було б щось гарніше
         self._info_font = pg.font.Font(Config.INFO_FONT, 8)
+        ##############
+        self.draw_size_info = Config.DRAW_OBJ_RECT
+        self.draw_obj_info = Config.DRAW_OBJ_INFO
 
     def bg(self):
         self._sc.fill('black')
@@ -39,20 +42,29 @@ class Drawing:
         if tiles:
             tile = tiles[0]
             rect = tile.rect
-            pg.draw.rect(self._sc, 'grey', rect, 1)
-            pg.draw.rect(self._sc, 'green', (x, y, 65, 32), 1)
-            self._sc.blits((
-                (self._info_font.render(f'{rect.centery}', 0, 'white'), (rect.centerx - 5, rect.top - 8)),
-                (self._info_font.render(f'{rect.centerx}', 0, 'white'), (rect.left - 10, rect.centery - 5)),
-                (self._info_font.render(f'{rect.width}', 0, 'white'), (rect.centerx - 5, rect.bottom + 2)),
-                (self._info_font.render(f'{rect.height}', 0, 'white'), (rect.right + 2, rect.centery - 5)),
-                (self._info_font.render(f'alpha: {tile.alpha}', 0, 'white'), (x + 10, y + 5)),
-                (self._info_font.render(f'z-index: {tile.zindex}', 0, 'white'), (x + 10, y + 20))))
+            if self.draw_size_info:
+                pg.draw.rect(self._sc, 'grey', rect, 1)
+                self._sc.blit(self._info_font.render(f'{rect.centery}', 0, 'white'), (rect.centerx - 5, rect.top - 8))
+                self._sc.blit(self._info_font.render(f'{rect.centerx}', 0, 'white'), (rect.left - 10, rect.centery - 5))
+                self._sc.blit(self._info_font.render(f'{rect.width}', 0, 'white'), (rect.centerx - 5, rect.bottom + 2))
+                self._sc.blit(self._info_font.render(f'{rect.height}', 0, 'white'), (rect.right + 2, rect.centery - 5))
+            if self.draw_obj_info:
+                pg.draw.rect(self._sc, 'green', (x, y, 65, 32), 1)
+                self._sc.blit(self._info_font.render(f'alpha: {tile.alpha}', 0, 'white'), (x + 10, y + 5))
+                self._sc.blit(self._info_font.render(f'z-index: {tile.zindex}', 0, 'white'), (x + 10, y + 20))
 
     def info(self):
         self._world_info()
-        if self.app.engine.focus_on_world: self._tile_info()
-        # TODO: Квадрат куда поставиться вибраний тайл
+        if self.app.engine.focus_on_world:
+            obj = self.app.engine.objects_list.selected_obj
+            if obj:
+                img = obj.image.copy()
+                img.set_alpha(180)
+                w, h = img.get_size()
+                x, y = pg.mouse.get_pos()
+                pos = (x - w // 2, y - h // 2)
+                self._sc.blit(img, pos)
+            self._tile_info()
 
     def fps(self):
         self._sc.blit(self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR), Config.FPS_POS)
