@@ -25,6 +25,8 @@ class Config:
     # paths
     DIR = os.path.dirname(__file__)
     RESOUCES = f'{DIR}/resources/'
+    FONTS = f'{RESOUCES}fonts/'
+    INFO_FONT = f'{FONTS}Mystery Font.ttf'
     STATIC = f'{RESOUCES}static/'
     ANIMATION = f'{RESOUCES}animation/'
     PLAYER_ANIM = f'{ANIMATION}player/'
