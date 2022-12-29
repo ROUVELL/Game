@@ -7,8 +7,8 @@ class Drawing:
         self.app = app
         self._sc = app.sc
         ##############
-        self._fps_font = pg.font.SysFont('arial', 18)  # Можна було б щось гарніше
-        self._info_font = pg.font.SysFont('arial', 12)
+        self._fps_font = pg.font.Font(Config.INFO_FONT, 16)  # Можна було б щось гарніше
+        self._info_font = pg.font.Font(Config.INFO_FONT, 8)
 
     def bg(self):
         self._sc.fill('black')
@@ -27,7 +27,7 @@ class Drawing:
         # К-сть об'єктів та позиція миші
         obj_count = len(self.app.engine.parser.current_world)
         x, y = pg.mouse.get_pos()
-        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}', True, 'white')
+        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}', 0, 'white')
         dx = Config.HALF_WIDTH - (render.get_size()[0] // 2)
         self._sc.blit(render, (dx, Config.HEIGHT - 30))
 
@@ -37,14 +37,17 @@ class Drawing:
         # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
         tiles = [obj for obj in self.app.engine.parser.current_world[::-1] if obj.rect.collidepoint(x, y)]
         if tiles:
-            pg.draw.rect(self._sc, 'green', (x, y, 200, 170), 1)
             tile = tiles[0]
+            rect = tile.rect
+            pg.draw.rect(self._sc, 'grey', rect, 1)
+            pg.draw.rect(self._sc, 'green', (x, y, 65, 32), 1)
             self._sc.blits((
-                (self._info_font.render(tile.name.partition('.')[0], True, 'darkgrey'), (x + 10, y + 15)),
-                (self._info_font.render(f'size: {tile.rect.size}', True, 'white'), (x + 10, y + 45)),
-                (self._info_font.render(f'pos: {tile.rect.center}', True, 'white'), (x + 10, y + 75)),
-                (self._info_font.render(f'alpha: {tile.alpha}', True, 'white'), (x + 10, y + 105)),
-                (self._info_font.render(f'z-index: {tile.zindex}', True, 'white'), (x + 10, y + 135))), doreturn=False)
+                (self._info_font.render(f'{rect.centery}', 0, 'white'), (rect.centerx - 5, rect.top - 8)),
+                (self._info_font.render(f'{rect.centerx}', 0, 'white'), (rect.left - 10, rect.centery - 5)),
+                (self._info_font.render(f'{rect.width}', 0, 'white'), (rect.centerx - 5, rect.bottom + 2)),
+                (self._info_font.render(f'{rect.height}', 0, 'white'), (rect.right + 2, rect.centery - 5)),
+                (self._info_font.render(f'alpha: {tile.alpha}', 0, 'white'), (x + 10, y + 5)),
+                (self._info_font.render(f'z-index: {tile.zindex}', 0, 'white'), (x + 10, y + 20))))
 
     def info(self):
         self._world_info()
@@ -52,7 +55,7 @@ class Drawing:
         # TODO: Квадрат куда поставиться вибраний тайл
 
     def fps(self):
-        self._sc.blit(self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', True, Config.FPS_COLOR), Config.FPS_POS)
+        self._sc.blit(self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR), Config.FPS_POS)
 
     def all(self):
         self.bg()
