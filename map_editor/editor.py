@@ -21,58 +21,64 @@ class __Tab:
         #     pg.draw.rect(self._engine.app.sc, 'green', self._rect, 1, 10)
 
 
+class _ObjectListItem:
+    def __init__(self, img: pg.Surface, name: str, pos: tuple, alpha: bool = True, zindex: int = 1):
+        self.name = name
+        self.image = img
+        self.rect = img.get_rect(center=pos)
+        self.alpha = alpha
+        self.zindex = zindex
+        if self.alpha: self.image.convert_alpha()
+
+
 class ObjectsList(__Tab):
     def __init__(self, engine):
         super().__init__(engine, Config.OBJECTS_LIST_SIZE, Config.OBJECTS_LIST_POS)
-        self.selected_obj = None  # !!! Tут лежить індекс !!!
-        self._get_imgs_and_rects()
+        self.selected_obj = None  # !!! Tут лежить об'єкт !!!
+        self.items = set()
+        self._get_items()
 
-    def _get_imgs_and_rects(self):
+    def _get_items(self):
         # TODO: Виправити цей мазохізм інакше я поїду кукушкою
-        # Зберігаємо оригінальні картинки, збільшені, їхні імена та ректи
-        # Оригінальні потрібні при додавані до світу, змаштабовані для відображення в списку, а ректи для відображені на правильній позиції
-        self._original_imgs = [img for img in self._engine.parser.cached_images.values()]
-        self.names_list = [name for name in self._engine.parser.cached_images.keys()]
-        self.imgs_list = self._original_imgs.copy()
+        self.items = set()
+        x = Config.OBJECTS_LIST_SIZE[0] // 2
         offset = 0
-        self._rects_list = []
-        for img in self.imgs_list:
-            h = img.get_height()
-            offset += h // 2 + 80
-            self._rects_list.append(img.get_rect(center=(Config.OBJECTS_LIST_SIZE[0] // 2, offset + 20)))
-        # Всі списки збігаються між собою
+        for name, img in self._engine.parser.cached_images.items():
+            offset += img.get_height() + 10
+            self.items.add(_ObjectListItem(img, name, (x, offset)))
+            offset += 10
 
     def slide_list(self, offset: int):
         # Прокручеємо список якщо наведені на нього мишкою
-        [rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for rect in self._rects_list]
+        [obj.rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for obj in self.items]
 
     def _select_obj(self):
         # Беремо індекс вибраного об'єкта зі списка
         x, y = pg.mouse.get_pos()
-        for i, rect in enumerate(self._rects_list):
-            if rect.collidepoint(x, y):
-                self.selected_obj = i
+        for obj in self.items:
+            if obj.rect.collidepoint(x, y):
+                self.selected_obj = obj
                 return
 
     def add_selected_to_world(self, pos: tuple):
         # Додаємо вибраний об'єкт до світу
         if self.selected_obj is None: return
         # якщо не наведені на жодну з вкладок
-        if not (self.in_focus or self._engine.editor.in_focus):
-            img = self._original_imgs[self.selected_obj]
-            w, h = img.get_size()
-            self._engine.parser.add_to_world(
-                name=self.names_list[self.selected_obj],
-                size=(w, h),  # Дефолт, в едіторі можна буде міняти
-                pos=pos,  # Центер картинки == позиція мишки
-                alpha=True,  # Можна відключити в едіторі
-                zindex=1  # TODO: Щось придумати щоб нові об'єкти не були під старими
-            )
+        if self._engine.focus_on_world:
+            obj = self.selected_obj
+            config = {
+                'name': obj.name,
+                'size': obj.rect.size,
+                'pos': pos,
+                'alpha': obj.alpha,
+                'zindex': obj.zindex
+            }
+            self._engine.parser.add_to_world(obj.image, config)
 
     def draw(self):
         self._sc.fill('black')
-        [self._sc.blit(img, self._rects_list[i]) for i, img in enumerate(self.imgs_list)]
-        if self.selected_obj is not None: pg.draw.rect(self._sc, 'red', self._rects_list[self.selected_obj].inflate(10, 10), 2)
+        [self._sc.blit(obj.image, obj.rect) for obj in self.items]
+        if self.selected_obj is not None: pg.draw.rect(self._sc, 'red', self.selected_obj.rect.inflate(10, 10), 1)
         self._draw_on_screen()
 
     def update(self):
