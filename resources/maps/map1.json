@@ -9,7 +9,7 @@
       50,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -22,7 +22,7 @@
       178,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -35,7 +35,7 @@
       50,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -48,7 +48,7 @@
       50,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -61,7 +61,7 @@
       690,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -74,7 +74,7 @@
       690,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -87,7 +87,7 @@
       818,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -100,7 +100,7 @@
       946,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -113,7 +113,7 @@
       818,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -126,7 +126,7 @@
       946,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -139,7 +139,7 @@
       178,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -152,7 +152,7 @@
       178,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -165,7 +165,7 @@
       306,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -178,7 +178,7 @@
       434,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -191,7 +191,7 @@
       306,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -204,7 +204,7 @@
       434,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -217,7 +217,7 @@
       562,
       286
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -230,7 +230,7 @@
       562,
       478
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -243,7 +243,7 @@
       946,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -256,7 +256,7 @@
       818,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -269,7 +269,7 @@
       690,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -282,7 +282,7 @@
       562,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -295,7 +295,7 @@
       434,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   },
   {
@@ -308,7 +308,7 @@
       306,
       94
     ],
-    "alpha": 1,
+    "alpha": false,
     "zindex": 1
   }
 ]
