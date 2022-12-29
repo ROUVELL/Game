@@ -2,337 +2,12 @@
   {
     "name": "bowl.png",
     "size": [
-      64,
-      108
-    ],
-    "pos": [
-      523,
-      713
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bottom.png",
-    "size": [
-      64,
-      44
-    ],
-    "pos": [
-      642,
-      335
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bottomright.png",
-    "size": [
-      40,
-      36
-    ],
-    "pos": [
-      697,
-      327
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-center.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      638,
-      271
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bottomleft.png",
-    "size": [
-      36,
-      34
-    ],
-    "pos": [
-      587,
-      331
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-left.png",
-    "size": [
-      44,
-      64
-    ],
-    "pos": [
-      579,
-      272
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-right.png",
-    "size": [
-      48,
-      64
-    ],
-    "pos": [
-      697,
-      272
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-top.png",
-    "size": [
-      64,
-      48
-    ],
-    "pos": [
-      635,
-      212
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-topleft.png",
-    "size": [
-      36,
-      40
-    ],
-    "pos": [
-      580,
-      215
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-topright.png",
-    "size": [
-      40,
-      40
-    ],
-    "pos": [
-      691,
-      214
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bottomright-reversed.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      938,
-      318
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bottomleft-reversed.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      857,
-      316
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-topleft-reversed.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      858,
-      237
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-topright-reversed.png",
-    "size": [
-      64,
-      64
-    ],
-    "pos": [
-      939,
-      238
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bigpiece.png",
-    "size": [
-      30,
-      32
-    ],
-    "pos": [
-      274,
-      339
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-smallpiece.png",
-    "size": [
-      30,
-      26
-    ],
-    "pos": [
-      177,
-      340
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-smallpiece-2x.png",
-    "size": [
-      60,
-      52
-    ],
-    "pos": [
-      175,
-      264
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "grass-bigpiece-2x.png",
-    "size": [
-      60,
-      64
-    ],
-    "pos": [
-      273,
-      266
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "big-white-stone.png",
-    "size": [
       32,
-      32
+      54
     ],
     "pos": [
-      238,
-      673
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "small-white-stone.png",
-    "size": [
-      32,
-      32
-    ],
-    "pos": [
-      319,
-      674
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "mushroom-good.png",
-    "size": [
-      28,
-      28
-    ],
-    "pos": [
-      276,
-      551
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "mushroom-bad.png",
-    "size": [
-      28,
-      28
-    ],
-    "pos": [
-      340,
-      552
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "mushroom-good-2x.png",
-    "size": [
-      56,
-      56
-    ],
-    "pos": [
-      273,
-      478
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "mushroom-bad-2x.png",
-    "size": [
-      56,
-      56
-    ],
-    "pos": [
-      339,
-      480
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "small-white-stone-2x.png",
-    "size": [
-      62,
-      62
-    ],
-    "pos": [
-      321,
-      750
-    ],
-    "alpha": true,
-    "zindex": 1
-  },
-  {
-    "name": "big-white-stone-2x.png",
-    "size": [
-      62,
-      62
-    ],
-    "pos": [
-      238,
-      750
+      179,
+      194
     ],
     "alpha": true,
     "zindex": 1
@@ -340,25 +15,51 @@
   {
     "name": "paving-stones-2x.png",
     "size": [
-      256,
-      384
+      128,
+      192
     ],
     "pos": [
-      1360,
-      667
+      456,
+      395
     ],
     "alpha": true,
     "zindex": 1
   },
   {
-    "name": "paving-stones.png",
+    "name": "paving-stones-2x.png",
     "size": [
       128,
       192
     ],
     "pos": [
-      1121,
-      662
+      328,
+      393
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      326,
+      207
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      16,
+      16
+    ],
+    "pos": [
+      306,
+      266
     ],
     "alpha": true,
     "zindex": 1
@@ -366,12 +67,38 @@
   {
     "name": "sakura-1.png",
     "size": [
-      214,
-      256
+      107,
+      128
     ],
     "pos": [
-      1362,
-      621
+      318,
+      221
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "mushroom-good.png",
+    "size": [
+      14,
+      14
+    ],
+    "pos": [
+      410,
+      453
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "mushroom-bad.png",
+    "size": [
+      14,
+      14
+    ],
+    "pos": [
+      449,
+      454
     ],
     "alpha": true,
     "zindex": 1
@@ -379,12 +106,350 @@
   {
     "name": "sakura-2.png",
     "size": [
-      178,
-      256
+      89,
+      128
     ],
     "pos": [
-      756,
-      897
+      432,
+      401
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bottom.png",
+    "size": [
+      32,
+      22
+    ],
+    "pos": [
+      673,
+      153
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bottomleft.png",
+    "size": [
+      18,
+      17
+    ],
+    "pos": [
+      645,
+      149
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bottomright.png",
+    "size": [
+      20,
+      18
+    ],
+    "pos": [
+      701,
+      149
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-center.png",
+    "size": [
+      32,
+      32
+    ],
+    "pos": [
+      671,
+      122
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-left.png",
+    "size": [
+      22,
+      32
+    ],
+    "pos": [
+      642,
+      121
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-right.png",
+    "size": [
+      24,
+      32
+    ],
+    "pos": [
+      702,
+      119
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-top.png",
+    "size": [
+      32,
+      24
+    ],
+    "pos": [
+      670,
+      89
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-topleft.png",
+    "size": [
+      18,
+      20
+    ],
+    "pos": [
+      642,
+      93
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-topright.png",
+    "size": [
+      20,
+      20
+    ],
+    "pos": [
+      698,
+      90
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-topright-reversed.png",
+    "size": [
+      32,
+      32
+    ],
+    "pos": [
+      693,
+      219
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-topleft-reversed.png",
+    "size": [
+      32,
+      32
+    ],
+    "pos": [
+      656,
+      218
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bottomright-reversed.png",
+    "size": [
+      32,
+      32
+    ],
+    "pos": [
+      692,
+      257
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bottomleft-reversed.png",
+    "size": [
+      32,
+      32
+    ],
+    "pos": [
+      655,
+      255
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "big-white-stone-2x.png",
+    "size": [
+      31,
+      31
+    ],
+    "pos": [
+      105,
+      93
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "big-white-stone.png",
+    "size": [
+      16,
+      16
+    ],
+    "pos": [
+      138,
+      94
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bigpiece.png",
+    "size": [
+      15,
+      16
+    ],
+    "pos": [
+      141,
+      45
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-bigpiece-2x.png",
+    "size": [
+      30,
+      32
+    ],
+    "pos": [
+      103,
+      45
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-smallpiece-2x.png",
+    "size": [
+      30,
+      26
+    ],
+    "pos": [
+      204,
+      42
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      242,
+      41
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "mushroom-bad-2x.png",
+    "size": [
+      28,
+      28
+    ],
+    "pos": [
+      97,
+      140
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "mushroom-bad.png",
+    "size": [
+      14,
+      14
+    ],
+    "pos": [
+      138,
+      143
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "mushroom-good-2x.png",
+    "size": [
+      28,
+      28
+    ],
+    "pos": [
+      95,
+      185
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "mushroom-good.png",
+    "size": [
+      14,
+      14
+    ],
+    "pos": [
+      137,
+      188
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      225,
+      437
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "small-white-stone-2x.png",
+    "size": [
+      31,
+      31
+    ],
+    "pos": [
+      89,
+      240
+    ],
+    "alpha": true,
+    "zindex": 1
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      16,
+      16
+    ],
+    "pos": [
+      127,
+      241
     ],
     "alpha": true,
     "zindex": 1
@@ -392,14 +457,27 @@
   {
     "name": "bowl.png",
     "size": [
-      64,
-      108
+      32,
+      54
     ],
     "pos": [
-      598,
-      713
+      219,
+      195
     ],
     "alpha": true,
-    "zindex": 11
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      451,
+      203
+    ],
+    "alpha": true,
+    "zindex": 1
   }
 ]
