@@ -6,8 +6,8 @@
       192
     ],
     "pos": [
-      50,
-      94
+      76,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -19,8 +19,8 @@
       192
     ],
     "pos": [
-      178,
-      94
+      204,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -32,8 +32,8 @@
       192
     ],
     "pos": [
-      50,
-      286
+      76,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -45,8 +45,8 @@
       192
     ],
     "pos": [
-      50,
-      478
+      76,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -58,8 +58,8 @@
       192
     ],
     "pos": [
-      690,
-      286
+      716,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -71,8 +71,8 @@
       192
     ],
     "pos": [
-      690,
-      478
+      716,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -84,8 +84,8 @@
       192
     ],
     "pos": [
-      818,
-      286
+      844,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -97,8 +97,8 @@
       192
     ],
     "pos": [
-      946,
-      286
+      972,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -110,8 +110,8 @@
       192
     ],
     "pos": [
-      818,
-      478
+      844,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -123,8 +123,8 @@
       192
     ],
     "pos": [
-      946,
-      478
+      972,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -136,8 +136,8 @@
       192
     ],
     "pos": [
-      178,
-      286
+      204,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -149,8 +149,8 @@
       192
     ],
     "pos": [
-      178,
-      478
+      204,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -162,8 +162,8 @@
       192
     ],
     "pos": [
-      306,
-      286
+      332,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -175,8 +175,8 @@
       192
     ],
     "pos": [
-      434,
-      286
+      460,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -188,8 +188,8 @@
       192
     ],
     "pos": [
-      306,
-      478
+      332,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -201,8 +201,8 @@
       192
     ],
     "pos": [
-      434,
-      478
+      460,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -214,8 +214,8 @@
       192
     ],
     "pos": [
-      562,
-      286
+      588,
+      273
     ],
     "alpha": false,
     "zindex": 1
@@ -227,8 +227,8 @@
       192
     ],
     "pos": [
-      562,
-      478
+      588,
+      465
     ],
     "alpha": false,
     "zindex": 1
@@ -240,8 +240,8 @@
       192
     ],
     "pos": [
-      946,
-      94
+      972,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -253,8 +253,8 @@
       192
     ],
     "pos": [
-      818,
-      94
+      844,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -266,8 +266,8 @@
       192
     ],
     "pos": [
-      690,
-      94
+      716,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -279,8 +279,8 @@
       192
     ],
     "pos": [
-      562,
-      94
+      588,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -292,8 +292,8 @@
       192
     ],
     "pos": [
-      434,
-      94
+      460,
+      81
     ],
     "alpha": false,
     "zindex": 1
@@ -305,10 +305,218 @@
       192
     ],
     "pos": [
-      306,
-      94
+      332,
+      81
     ],
     "alpha": false,
     "zindex": 1
+  },
+  {
+    "name": "sakura-2.png",
+    "size": [
+      89,
+      128
+    ],
+    "pos": [
+      201,
+      101
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "sakura-1.png",
+    "size": [
+      107,
+      128
+    ],
+    "pos": [
+      715,
+      99
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      16,
+      16
+    ],
+    "pos": [
+      231,
+      125
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "small-white-stone.png",
+    "size": [
+      16,
+      16
+    ],
+    "pos": [
+      149,
+      138
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "mushroom-good.png",
+    "size": [
+      14,
+      14
+    ],
+    "pos": [
+      706,
+      124
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "mushroom-bad.png",
+    "size": [
+      14,
+      14
+    ],
+    "pos": [
+      752,
+      127
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bowl.png",
+    "size": [
+      32,
+      54
+    ],
+    "pos": [
+      333,
+      259
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bowl.png",
+    "size": [
+      32,
+      54
+    ],
+    "pos": [
+      590,
+      261
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "big-white-stone.png",
+    "size": [
+      16,
+      16
+    ],
+    "pos": [
+      159,
+      157
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      577,
+      291
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      612,
+      266
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      615,
+      282
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      566,
+      261
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-bigpiece-2x.png",
+    "size": [
+      30,
+      32
+    ],
+    "pos": [
+      302,
+      284
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      346,
+      292
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grass-smallpiece.png",
+    "size": [
+      15,
+      13
+    ],
+    "pos": [
+      360,
+      256
+    ],
+    "alpha": true,
+    "zindex": 2
   }
 ]
