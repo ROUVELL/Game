@@ -12,6 +12,7 @@ class Engine:
         self.editor = Editor(self)
         ##########
         self.focus_on_world = self._check_focus()
+        self.preview = False
 
     def _check_events(self):
         for event in pg.event.get():
@@ -19,14 +20,16 @@ class Engine:
                 if event.key == pg.K_ESCAPE:
                     if Config.AUTO_SAVE: self.parser.save_world()
                     exit()
+                if event.key == pg.K_p: self.preview = not self.preview
                 if event.key == pg.K_s: self.parser.save_world()
-            if event.type == pg.MOUSEBUTTONUP:
+            if event.type == pg.MOUSEBUTTONUP and not self.preview:
                 if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
                 if event.button == 3:
                     # Shift + RKM - видалити всі об'єкти
                     if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
                     else: self.parser.delete_from_world(event.pos)
-            if event.type == pg.MOUSEWHEEL and self.objects_list.in_focus: self.objects_list.slide_list(event.y)
+            if event.type == pg.MOUSEWHEEL and self.objects_list.in_focus and not self.preview:
+                self.objects_list.slide_list(event.y)
 
     def _check_focus(self):
         # True якщо не наведені не на одну з вкладок
@@ -41,6 +44,6 @@ class Engine:
     def update(self):
         self._check_events()
         self._mouse_control()
-        if not self._check_focus():  # Оновлюємо якщо не наведені на світ
+        if not self._check_focus() and not self.preview:  # Оновлюємо якщо не наведені на світ
             self.objects_list.update()
             self.editor.update()
