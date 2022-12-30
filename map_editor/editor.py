@@ -22,12 +22,12 @@ class __Tab:
 
 
 class _ObjectListItem:
-    def __init__(self, img: pg.Surface, name: str, pos: tuple, alpha: bool = True, zindex: int = 1):
+    def __init__(self, img: pg.Surface, name: str, pos: tuple):
         self.name = name
-        self.image = img.convert_alpha() if alpha else img.convert()
+        self.image = img.convert_alpha()
         self.rect = img.get_rect(center=pos)
-        self.alpha = alpha
-        self.zindex = zindex
+        self.alpha = True
+        self.zindex = 1
 
 
 class ObjectsList(__Tab):
@@ -38,21 +38,20 @@ class ObjectsList(__Tab):
         self._get_items()
 
     def _get_items(self):
-        # TODO: Виправити цей мазохізм інакше я поїду кукушкою
-        self.items = set()
         x = Config.OBJECTS_LIST_SIZE[0] // 2
-        offset = 0
+        offset = 20
         for name, img in self._engine.parser.cached_images.items():
-            offset += img.get_height() + 10
+            dh = img.get_height() // 2
+            offset += dh
             self.items.add(_ObjectListItem(img, name, (x, offset)))
-            offset += 10
+            offset += dh + 10
 
     def slide_list(self, offset: int):
         # Прокручеємо список якщо наведені на нього мишкою
         [obj.rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for obj in self.items]
 
     def _select_obj(self):
-        # Беремо індекс вибраного об'єкта зі списка
+        # Беремо об'єкт зі списка
         x, y = pg.mouse.get_pos()
         for obj in self.items:
             if obj.rect.collidepoint(x, y):
