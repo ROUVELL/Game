@@ -7,7 +7,7 @@ class Drawing:
         self.app = app
         self._sc = app.sc
         ##############
-        self._fps_font = pg.font.Font(Config.INFO_FONT, 16)  # Можна було б щось гарніше
+        self._fps_font = pg.font.Font(Config.INFO_FONT, 16)
         self._info_font = pg.font.Font(Config.INFO_FONT, 8)
         ##############
         self.draw_size_info = Config.DRAW_OBJ_RECT
@@ -23,8 +23,9 @@ class Drawing:
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
 
     def tabs(self):
-        self.app.engine.objects_list.draw()
-        self.app.engine.editor.draw()
+        if not self.app.engine.preview:
+            self.app.engine.objects_list.draw()
+            self.app.engine.editor.draw()
 
     def _world_info(self):
         # К-сть об'єктів та позиція миші
@@ -55,6 +56,7 @@ class Drawing:
 
     def info(self):
         self._world_info()
+        if self.app.engine.preview: return
         if self.app.engine.focus_on_world:
             obj = self.app.engine.objects_list.selected_obj
             if obj:
