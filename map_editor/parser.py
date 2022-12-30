@@ -8,13 +8,12 @@ class _Object:
     def __init__(self, img: pg.Surface, **config):
         self.name = config['name']
         # Зберігаємо оригінальну картинку для коректного маштабування
-        self._orig_image = img
+        self._orig_image = img.convert_alpha() if config['alpha'] else img.convert()
         self._orig_rect = img.get_rect(center=config['pos'])
         #################
         self.alpha = config['alpha']
         self.zindex = config['zindex']
         self._get_image_and_rect(config['size'], config['pos'])
-        if self.alpha: self.image.convert_alpha()
 
     def _get_image_and_rect(self, size: tuple, pos: tuple):
         # Після маштабування потрібно оновлювати картинку і позицію

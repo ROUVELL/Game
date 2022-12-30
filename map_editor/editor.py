@@ -24,11 +24,10 @@ class __Tab:
 class _ObjectListItem:
     def __init__(self, img: pg.Surface, name: str, pos: tuple, alpha: bool = True, zindex: int = 1):
         self.name = name
-        self.image = img
+        self.image = img.convert_alpha() if alpha else img.convert()
         self.rect = img.get_rect(center=pos)
         self.alpha = alpha
         self.zindex = zindex
-        if self.alpha: self.image.convert_alpha()
 
 
 class ObjectsList(__Tab):
