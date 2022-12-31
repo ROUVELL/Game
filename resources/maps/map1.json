@@ -6,310 +6,362 @@
       192
     ],
     "pos": [
-      9,
+      29,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      157,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      29,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      29,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      669,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      669,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      797,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      925,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      797,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      925,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      157,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      157,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      285,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      413,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      285,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      413,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      541,
+      284
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      541,
+      476
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      925,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      797,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      669,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      541,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      413,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "paving-stones-2x.png",
+    "size": [
+      128,
+      192
+    ],
+    "pos": [
+      285,
+      92
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "name": "lion-statue.png",
+    "size": [
+      48,
       88
     ],
-    "alpha": false,
-    "zindex": 1
+    "pos": [
+      290,
+      72
+    ],
+    "alpha": true,
+    "zindex": 2
   },
   {
-    "name": "paving-stones-2x.png",
+    "name": "lion-statue.png",
     "size": [
-      128,
-      192
-    ],
-    "pos": [
-      137,
+      48,
       88
     ],
-    "alpha": false,
-    "zindex": 1
+    "pos": [
+      550,
+      76
+    ],
+    "alpha": true,
+    "zindex": 2
   },
   {
-    "name": "paving-stones-2x.png",
+    "name": "jack's-lamp.png",
     "size": [
-      128,
-      192
+      25,
+      24
     ],
     "pos": [
-      9,
-      280
+      288,
+      120
     ],
-    "alpha": false,
-    "zindex": 1
+    "alpha": true,
+    "zindex": 2
   },
   {
-    "name": "paving-stones-2x.png",
+    "name": "jack's-lamp.png",
     "size": [
-      128,
-      192
+      25,
+      24
     ],
     "pos": [
-      9,
-      472
+      552,
+      123
     ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      649,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      649,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      777,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      905,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      777,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      905,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      137,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      137,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      265,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      393,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      265,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      393,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      521,
-      280
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      521,
-      472
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      905,
-      88
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      777,
-      88
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      649,
-      88
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      521,
-      88
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      393,
-      88
-    ],
-    "alpha": false,
-    "zindex": 1
-  },
-  {
-    "name": "paving-stones-2x.png",
-    "size": [
-      128,
-      192
-    ],
-    "pos": [
-      265,
-      88
-    ],
-    "alpha": false,
-    "zindex": 1
+    "alpha": true,
+    "zindex": 2
   },
   {
     "name": "sakura-2.png",
@@ -318,8 +370,8 @@
       128
     ],
     "pos": [
-      134,
-      108
+      154,
+      112
     ],
     "alpha": true,
     "zindex": 2
@@ -331,8 +383,8 @@
       128
     ],
     "pos": [
-      648,
-      106
+      668,
+      110
     ],
     "alpha": true,
     "zindex": 2
@@ -344,8 +396,8 @@
       16
     ],
     "pos": [
-      164,
-      132
+      184,
+      136
     ],
     "alpha": true,
     "zindex": 2
@@ -357,8 +409,8 @@
       16
     ],
     "pos": [
-      82,
-      145
+      102,
+      149
     ],
     "alpha": true,
     "zindex": 2
@@ -370,8 +422,8 @@
       14
     ],
     "pos": [
-      639,
-      131
+      659,
+      135
     ],
     "alpha": true,
     "zindex": 2
@@ -383,8 +435,8 @@
       14
     ],
     "pos": [
-      685,
-      134
+      705,
+      138
     ],
     "alpha": true,
     "zindex": 2
@@ -396,8 +448,8 @@
       54
     ],
     "pos": [
-      266,
-      266
+      286,
+      270
     ],
     "alpha": true,
     "zindex": 2
@@ -409,8 +461,8 @@
       54
     ],
     "pos": [
-      523,
-      268
+      543,
+      272
     ],
     "alpha": true,
     "zindex": 2
@@ -422,8 +474,8 @@
       16
     ],
     "pos": [
-      92,
-      164
+      112,
+      168
     ],
     "alpha": true,
     "zindex": 2
@@ -435,8 +487,8 @@
       13
     ],
     "pos": [
-      510,
-      298
+      530,
+      302
     ],
     "alpha": true,
     "zindex": 2
@@ -448,8 +500,8 @@
       13
     ],
     "pos": [
-      545,
-      273
+      565,
+      277
     ],
     "alpha": true,
     "zindex": 2
@@ -461,8 +513,8 @@
       13
     ],
     "pos": [
-      548,
-      289
+      568,
+      293
     ],
     "alpha": true,
     "zindex": 2
@@ -474,8 +526,8 @@
       13
     ],
     "pos": [
-      499,
-      268
+      519,
+      272
     ],
     "alpha": true,
     "zindex": 2
@@ -487,8 +539,8 @@
       32
     ],
     "pos": [
-      235,
-      291
+      255,
+      295
     ],
     "alpha": true,
     "zindex": 2
@@ -500,8 +552,8 @@
       13
     ],
     "pos": [
-      279,
-      299
+      299,
+      303
     ],
     "alpha": true,
     "zindex": 2
@@ -513,8 +565,281 @@
       13
     ],
     "pos": [
-      293,
-      263
+      313,
+      267
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "forge.png",
+    "size": [
+      29,
+      31
+    ],
+    "pos": [
+      176,
+      442
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "combat-dummy.png",
+    "size": [
+      59,
+      55
+    ],
+    "pos": [
+      768,
+      247
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bush.png",
+    "size": [
+      24,
+      64
+    ],
+    "pos": [
+      328,
+      72
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bush.png",
+    "size": [
+      24,
+      64
+    ],
+    "pos": [
+      509,
+      75
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "barrel.png",
+    "size": [
+      28,
+      38
+    ],
+    "pos": [
+      127,
+      384
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "barrel.png",
+    "size": [
+      28,
+      38
+    ],
+    "pos": [
+      149,
+      393
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "barrel.png",
+    "size": [
+      28,
+      38
+    ],
+    "pos": [
+      128,
+      406
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "empty-bucket.png",
+    "size": [
+      21,
+      24
+    ],
+    "pos": [
+      179,
+      404
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grain-bag-2.png",
+    "size": [
+      32,
+      25
+    ],
+    "pos": [
+      116,
+      469
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grain-bag-2.png",
+    "size": [
+      32,
+      25
+    ],
+    "pos": [
+      105,
+      483
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grain-bag.png",
+    "size": [
+      31,
+      25
+    ],
+    "pos": [
+      131,
+      482
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "grain-bag.png",
+    "size": [
+      31,
+      25
+    ],
+    "pos": [
+      120,
+      498
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "pile-of-logs.png",
+    "size": [
+      30,
+      32
+    ],
+    "pos": [
+      114,
+      334
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "pile-of-logs.png",
+    "size": [
+      30,
+      32
+    ],
+    "pos": [
+      140,
+      321
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "pile-of-logs.png",
+    "size": [
+      30,
+      32
+    ],
+    "pos": [
+      139,
+      341
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "water-bucket.png",
+    "size": [
+      21,
+      24
+    ],
+    "pos": [
+      195,
+      417
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "combat-dummy.png",
+    "size": [
+      59,
+      55
+    ],
+    "pos": [
+      843,
+      248
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "combat-dummy.png",
+    "size": [
+      59,
+      55
+    ],
+    "pos": [
+      915,
+      248
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bag.png",
+    "size": [
+      32,
+      31
+    ],
+    "pos": [
+      178,
+      494
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bag.png",
+    "size": [
+      32,
+      31
+    ],
+    "pos": [
+      207,
+      487
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "name": "bag.png",
+    "size": [
+      32,
+      31
+    ],
+    "pos": [
+      205,
+      512
     ],
     "alpha": true,
     "zindex": 2
