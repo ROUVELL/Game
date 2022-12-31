@@ -32,6 +32,7 @@ class Config:
     PLAYER_ANIM = f'{ANIMATION}player/'
     MAPS = f'{RESOUCES}maps/'
     CURRENT_MAP = f'{MAPS}map1.json'
+    UI = f'{RESOUCES}UI/'
     # editor
     OBJECTS_LIST_POS = (0, 0)
     OBJECTS_LIST_SIZE = (WIDTH * .075, HEIGHT)
