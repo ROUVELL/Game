@@ -31,7 +31,8 @@ class Drawing:
         # К-сть об'єктів та позиція миші
         obj_count = len(self.app.engine.parser.current_world)
         x, y = pg.mouse.get_pos()
-        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}', 0, 'white')
+        zindex = self.app.engine.objects_list.curr_zindex
+        render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}  Current z-index: {zindex}', 0, 'white')
         dx = Config.HALF_WIDTH - (render.get_size()[0] // 2)
         self._sc.blit(render, (dx, Config.HEIGHT - 30))
 
