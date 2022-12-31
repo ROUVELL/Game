@@ -83,7 +83,7 @@ class ObjectsList(__Tab):
         if keys[0] and self.in_focus: self._select_obj()
 
 
-class Editor(__Tab):
+class ObjectEditor(__Tab):
     def __init__(self, engine):
         super().__init__(engine, Config.EDITING_TAB_SIZE, Config.EDITING_TAB_POS)
 
