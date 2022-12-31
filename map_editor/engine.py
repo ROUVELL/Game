@@ -22,6 +22,8 @@ class Engine:
                     exit()
                 if event.key == pg.K_p: self.preview = not self.preview
                 if event.key == pg.K_s: self.parser.save_world()
+                if event.key == pg.K_UP: self.objects_list.curr_zindex += 1
+                if event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
             if event.type == pg.MOUSEBUTTONUP and not self.preview:
                 if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
                 if event.button == 3 and self.focus_on_world:
