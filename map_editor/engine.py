@@ -1,6 +1,6 @@
 import pygame as pg
-from parser import Parser
-from editor import ObjectsList, Editor
+from map_editor.parser import Parser
+from map_editor.editor import ObjectsList, ObjectEditor
 from config import Config
 
 
@@ -9,7 +9,7 @@ class Engine:
         self.app = app
         self.parser = Parser(self)
         self.objects_list = ObjectsList(self)
-        self.editor = Editor(self)
+        self.object_editor = ObjectEditor(self)
         ##########
         self.focus_on_world = self._check_focus()
         self.preview = False
@@ -19,7 +19,7 @@ class Engine:
             if event.type == pg.KEYUP:
                 if event.key == pg.K_ESCAPE:
                     if Config.AUTO_SAVE: self.parser.save_world()
-                    exit()
+                    self.app.running = False
                 if event.key == pg.K_p: self.preview = not self.preview
                 if event.key == pg.K_s: self.parser.save_world()
                 if event.key == pg.K_UP: self.objects_list.curr_zindex += 1
@@ -35,7 +35,7 @@ class Engine:
 
     def _check_focus(self):
         # True якщо не наведені не на одну з вкладок
-        self.focus_on_world = not (self.objects_list.check_focus() or self.editor.check_focus())
+        self.focus_on_world = not (self.objects_list.check_focus() or self.object_editor.check_focus())
         return self.focus_on_world
 
     def _mouse_control(self):
@@ -48,4 +48,4 @@ class Engine:
         self._mouse_control()
         if not self._check_focus() and not self.preview:  # Оновлюємо якщо не наведені на світ
             self.objects_list.update()
-            self.editor.update()
+            self.object_editor.update()
