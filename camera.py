@@ -1,5 +1,5 @@
 import pygame as pg
-from Game.config import Config
+from config import Config
 
 
 class Camera:

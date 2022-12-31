@@ -1,7 +1,7 @@
 import pygame as pg
 import json
 import os
-from Game.config import Config
+from config import Config
 
 
 class Texture:
