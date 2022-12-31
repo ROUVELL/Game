@@ -20,17 +20,17 @@ class Engine:
                 if event.key == pg.K_ESCAPE:
                     if Config.AUTO_SAVE: self.parser.save_world()
                     self.app.running = False
-                if event.key == pg.K_p: self.preview = not self.preview
-                if event.key == pg.K_s: self.parser.save_world()
-                if event.key == pg.K_UP: self.objects_list.curr_zindex += 1
-                if event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
-            if event.type == pg.MOUSEBUTTONUP and not self.preview:
+                elif event.key == pg.K_p: self.preview = not self.preview
+                elif event.key == pg.K_s: self.parser.save_world()
+                elif event.key == pg.K_UP: self.objects_list.curr_zindex += 1
+                elif event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
+            elif event.type == pg.MOUSEBUTTONUP and not self.preview:
                 if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
-                if event.button == 3 and self.focus_on_world:
+                elif event.button == 3 and self.focus_on_world:
                     # Shift + RKM - видалити всі об'єкти
                     if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
                     else: self.parser.delete_from_world(event.pos)
-            if event.type == pg.MOUSEWHEEL and self.objects_list.in_focus and not self.preview:
+            elif event.type == pg.MOUSEWHEEL and self.objects_list.in_focus and not self.preview:
                 self.objects_list.slide_list(event.y)
 
     def _check_focus(self):
