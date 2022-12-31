@@ -26,8 +26,6 @@ class _ObjectListItem:
         self.name = name
         self.image = img.convert_alpha()
         self.rect = img.get_rect(center=pos)
-        self.alpha = True
-        self.zindex = 1
 
 
 class ObjectsList(__Tab):
@@ -35,6 +33,7 @@ class ObjectsList(__Tab):
         super().__init__(engine, Config.OBJECTS_LIST_SIZE, Config.OBJECTS_LIST_POS)
         self.selected_obj = None  # !!! Tут лежить об'єкт !!!
         self.items = set()
+        self.curr_zindex = 1
         self._get_items()
 
     def _get_items(self):
@@ -68,8 +67,8 @@ class ObjectsList(__Tab):
                 'name': obj.name,
                 'size': obj.rect.size,
                 'pos': pos,
-                'alpha': obj.alpha,
-                'zindex': obj.zindex
+                'alpha': True,
+                'zindex': self.curr_zindex
             }
             self._engine.parser.add_to_world(obj.image, config)
 
