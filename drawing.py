@@ -1,5 +1,5 @@
 import pygame as pg
-from config import Config
+from Game.config import Config
 
 
 class Drawing:

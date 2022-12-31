@@ -1,9 +1,9 @@
 import pygame as pg
-from world import World
-from player import Player
-from camera import Camera
-from drawing import Drawing
-from config import Config
+from Game.world import World
+from Game.player import Player
+from Game.camera import Camera
+from Game.drawing import Drawing
+from Game.config import Config
 
 
 class Game:
