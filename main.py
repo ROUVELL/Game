@@ -21,7 +21,6 @@ class Game:
         self.draw = Drawing(self)
 
     def run(self):
-        # self.running = self.menu.load_screen()
         while self.running:
             self.clock.tick(Config.FPS)
             [exit() for event in pg.event.get() if event.type == pg.KEYUP and event.key == pg.K_ESCAPE]
