@@ -6,15 +6,15 @@ class Player:
     def __init__(self, game):
         self._game = game
         # Анімація ходьби по всіх сторонах
-        self._front_animation = self._load_animation_by_name('front')
-        self._back_animation = self._load_animation_by_name('back')
-        self._left_animation = self._load_animation_by_name('left')
-        self._right_animation = self._load_animation_by_name('right')
+        self._down_anim = self._load_animation_by_name('down')
+        self._up_anim = self._load_animation_by_name('up')
+        self._left_anim = self._load_animation_by_name('left')
+        self._right_anim = self._load_animation_by_name('right')
         # Час останнього оновлення та поточний кадр анімації
         self._last_time = pg.time.get_ticks()
         self._frame = 0
         # Картинка для відображення та рект для контролю позиції і колізій
-        self.image = self._front_animation[self._frame]
+        self.image = self._down_anim[self._frame]
         self.rect = self.image.get_rect(center=Config.CENTER)
         self.zindex = 10
         #####################
@@ -25,8 +25,8 @@ class Player:
     @staticmethod
     def _load_animation_by_name(name: str):
         # Завантаження анімації
-        return [pg.transform.scale(pg.image.load(f'{Config.PLAYER_ANIM}{name}-{i}.png').convert_alpha(), Config.PLAYER_SIZE)
-                for i in range(9)]
+        return [pg.image.load(f'{Config.PLAYER_ANIM}{name}-{i}.png').convert_alpha() for i in range(9)]
+        # return [pg.transform.scale(img, (img.get_width() * .94, img.get_height() * .9298)) for img in anim]
 
     def _check_animation_time(self):
         # Перевірка чи не пора змінювати кадр
@@ -42,10 +42,10 @@ class Player:
 
         # Зміна картинки в залежності від руху
         match self.direction:
-            case 'down': self.image = self._front_animation[self._frame]
-            case 'up': self.image = self._back_animation[self._frame]
-            case 'left': self.image = self._left_animation[self._frame]
-            case 'right': self.image = self._right_animation[self._frame]
+            case 'down':  self.image = self._down_anim[self._frame]
+            case 'up':    self.image = self._up_anim[self._frame]
+            case 'left':  self.image = self._left_anim[self._frame]
+            case 'right': self.image = self._right_anim[self._frame]
 
     def _movement(self):
         # Рух
