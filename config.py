@@ -18,9 +18,6 @@ class Config:
     # camera
     CAMERA_RECT = (WIDTH * .1, HEIGHT * .1, WIDTH * .8, HEIGHT * .8)
     # player
-    PLAYER_SIZE = (WIDTH * .0219, HEIGHT * .0704)  # 42, 76
-    PLAYER_RECT = (WIDTH * .0198, HEIGHT * .0333)  # 38, 36  # not using
-    PLAYER_POS = (HALF_WIDTH - PLAYER_RECT[0] * .5, HALF_HEIGHT - PLAYER_RECT[1] * .5)  # not using
     PLAYER_SPEED = WIDTH / 480  # 4
     # paths
     DIR = os.path.dirname(__file__)
