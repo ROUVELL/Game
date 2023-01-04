@@ -18,6 +18,9 @@ class Engine:
         for event in pg.event.get():
             if event.type == pg.KEYUP:
                 if event.key == pg.K_ESCAPE:
+                    if self.objects_list.selected_obj and not self.preview:
+                        self.objects_list.selected_obj = None
+                        continue
                     if Config.AUTO_SAVE: self.parser.save_world()
                     self.app.running = False
                 elif event.key == pg.K_p: self.preview = not self.preview
