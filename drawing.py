@@ -13,10 +13,11 @@ class Drawing:
         self._sc.fill('black')
 
     def _world(self):
-        [self._sc.blit(obj.image, obj.rect) for obj in self._game.world.world]
+        [self._sc.blit(obj.image, obj.rect) for obj in self._game.world.textures]
 
-    def _player(self):
-        self._game.sc.blit(self._game.player.image, self._game.player.rect)
+    def _sprites(self):
+        sprites = sorted([*self._game.world.sprites, self._game.player], key=lambda obj: obj.rect.centery)
+        [self._sc.blit(obj.image, obj.rect) for obj in sprites]
 
     def _debug(self):
         if Config.DRAW_TEXTURE_RECT: [pg.draw.rect(self._sc, 'grey', obj.rect, 1) for obj in self._game.world.world]
@@ -31,6 +32,6 @@ class Drawing:
     def all(self):
         self._bg()
         self._world()
-        self._player()
+        self._sprites()
         self._debug()
         self._fps()
