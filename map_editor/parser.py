@@ -64,7 +64,7 @@ class Parser:
 
     def offset(self, dx: int, dy: int):
         # Зміна позиції всіх тайлів
-        [obj.rect.move_ip(dx * .5, dy * .5) for obj in self.current_world]
+        [obj.rect.move_ip(dx, dy) for obj in self.current_world]
 
     def add_to_world(self, img: pg.Surface, config: dict):
         # Додавання новога тайла до світу. Пересортувати для правильного відображення
