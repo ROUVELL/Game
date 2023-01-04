@@ -45,7 +45,7 @@ class Engine:
     def _mouse_control(self):
         ox, oy = pg.mouse.get_rel()
         keys = pg.mouse.get_pressed()
-        if keys[1]: self.parser.offset(ox, oy)
+        if keys[1]: self.parser.offset(ox * .5, oy * .5)
 
     def update(self):
         self._check_events()
