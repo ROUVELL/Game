@@ -43,5 +43,6 @@ class Config:
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
+    DRAW_SPRITE_RECT = False
     DRAW_CAMERA_RECT = False
     DRAW_SCREEN_CENTER = False
