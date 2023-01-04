@@ -56,6 +56,12 @@ class Parser:
                 self.current_world.append(_Object(img, **obj))
         self._sort_world()
 
+    def get_collided_rect(self, x: int, y: int) -> _Object | None:
+        # Повертає об'ект на який падає точка
+        tiles = self.current_world[::-1]
+        for tile in tiles:
+            if tile.rect.collidepoint(x, y): return tile
+
     def offset(self, dx: int, dy: int):
         # Зміна позиції всіх тайлів
         [obj.rect.move_ip(dx * .5, dy * .5) for obj in self.current_world]
