@@ -4,7 +4,7 @@ import os
 from config import Config
 
 
-class Texture:
+class _Object:
     def __init__(self, img: pg.Surface, **config):
         self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), config['size'])
         self.rect = self.image.get_rect(center=config['pos'])
@@ -13,7 +13,8 @@ class Texture:
 
 class World:
     def __init__(self):
-        self.world = set()
+        self.textures = []
+        self.sprites = []
         self._cache_images()
         self.parse_world()
 
@@ -26,9 +27,13 @@ class World:
         with open(path) as map_:
             for obj in json.load(map_):
                 img = self.cached_images[obj['name']]
-                self.world.add(Texture(img, **obj))
-        self.world = sorted(self.world, key=lambda obj: obj.zindex)
+                match obj['type']:
+                    case 'texture': self.textures.append(_Object(img, **obj))
+                    case 'sprite': self.sprites.append(_Object(img, **obj))
+                    case _: raise TypeError(f"Unknown type of {obj['name']}")
+        self.textures = sorted(self.textures, key=lambda obj: obj.zindex)
+        self.sprites = sorted(self.sprites, key=lambda obj: obj.zindex)
 
     def offset_world(self, dx: int, dy: int):
         # Рухаємо весь світ
-        [obj.rect.move_ip(dx, dy) for obj in self.world]
+        [obj.rect.move_ip(dx, dy) for obj in [*self.textures, *self.sprites]]
