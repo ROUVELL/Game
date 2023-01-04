@@ -25,12 +25,9 @@ class Engine:
                 elif event.key == pg.K_UP: self.objects_list.curr_zindex += 1
                 elif event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
                 elif event.key == pg.K_g:
-                    tiles = self.parser.current_world[::-1]
-                    for tile in tiles:
-                        x, y = pg.mouse.get_pos()
-                        if tile.rect.collidepoint(x, y):
-                            tile.type = 'sprite' if tile.type == 'texture' else 'texture'
-                            break
+                    tile = self.parser.get_collided_rect(*pg.mouse.get_pos())
+                    if tile:
+                        tile.type = 'sprite' if tile.type == 'texture' else 'texture'
             elif event.type == pg.MOUSEBUTTONUP and not self.preview:
                 if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
                 elif event.button == 3 and self.focus_on_world:
