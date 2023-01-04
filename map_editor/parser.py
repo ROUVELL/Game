@@ -11,6 +11,7 @@ class _Object:
         self._orig_image = img.convert_alpha() if config['alpha'] else img.convert()
         self._orig_rect = img.get_rect(center=config['pos'])
         #################
+        self.type = config['type']
         self.alpha = config['alpha']
         self.zindex = config['zindex']
         self._get_image_and_rect(config['size'], config['pos'])
@@ -22,6 +23,7 @@ class _Object:
 
     def __repr__(self):
         return {
+            'type': self.type,
             'name': self.name,
             'size': self.rect.size,
             'pos': self.rect.center,
