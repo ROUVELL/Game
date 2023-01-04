@@ -51,9 +51,10 @@ class Drawing:
                 self._sc.blit(self._info_font.render(f'{rect.width}', 0, 'white'), (rect.centerx - 5, rect.bottom + 2))
                 self._sc.blit(self._info_font.render(f'{rect.height}', 0, 'white'), (rect.right + 2, rect.centery - 5))
             if self.draw_obj_info:
-                pg.draw.rect(self._sc, 'green', (x, y, 65, 32), 1)
-                self._sc.blit(self._info_font.render(f'alpha: {tile.alpha}', 0, 'white'), (x + 10, y + 5))
-                self._sc.blit(self._info_font.render(f'z-index: {tile.zindex}', 0, 'white'), (x + 10, y + 20))
+                pg.draw.rect(self._sc, 'green', (x, y, 65, 47), 1)
+                self._sc.blit(self._info_font.render(f'type: {tile.type}', 0, 'white'), (x + 10, y + 5))
+                self._sc.blit(self._info_font.render(f'alpha: {tile.alpha}', 0, 'white'), (x + 10, y + 20))
+                self._sc.blit(self._info_font.render(f'z-index: {tile.zindex}', 0, 'white'), (x + 10, y + 35))
 
     def info(self):
         self._world_info()
