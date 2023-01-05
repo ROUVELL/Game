@@ -87,14 +87,18 @@ class ObjectEditor(__Tab):
     def __init__(self, engine):
         super().__init__(engine, Config.EDITING_TAB_SIZE, Config.EDITING_TAB_POS)
         self.selected_obj = None
+        # Позиція малювання картинки на вкладці
         self._img_pos = self._rect.width // 2, self._rect.height * .1
 
     def check_focus(self) -> bool:
         super().check_focus()
+        # Якщо немає вибраного об'єкта то вкладка не малюється і відповідно
+        # в фокусі бути не може
         if not self.selected_obj: self.in_focus = False
         return self.in_focus
 
     def select_obj(self):
+        # Отримуємо оригінальний об'єкт !!!
         self.selected_obj = self._engine.parser.get_collided_rect()
 
     def draw(self):
