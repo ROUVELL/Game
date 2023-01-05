@@ -45,6 +45,9 @@ class Drawing:
             rect = tile.rect
             if self.draw_size_info:
                 pg.draw.rect(self._sc, 'grey', rect, 1)
+                obj = self.app.engine.object_editor.selected_obj
+                if obj:
+                    pg.draw.rect(self._sc, 'green', obj.rect, 1)
                 self._sc.blit(self._info_font.render(f'{rect.centery}', 0, 'white'), (rect.centerx - 5, rect.top - 8))
                 self._sc.blit(self._info_font.render(f'{rect.centerx}', 0, 'white'), (rect.left - 10, rect.centery - 5))
                 self._sc.blit(self._info_font.render(f'{rect.width}', 0, 'white'), (rect.centerx - 5, rect.bottom + 2))
