@@ -64,6 +64,7 @@ class ObjectsList(__Tab):
         if self._engine.focus_on_world:
             obj = self.selected_obj
             config = {
+                'type': 'texture',
                 'name': obj.name,
                 'size': obj.rect.size,
                 'pos': pos,
