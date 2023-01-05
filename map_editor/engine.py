@@ -53,10 +53,14 @@ class Engine:
 
     def _keyboard_control(self):
         keys = pg.key.get_pressed()
-        if keys[pg.K_w]: self.parser.offset(0, 1)
-        elif keys[pg.K_s]: self.parser.offset(0, -1)
-        if keys[pg.K_a]: self.parser.offset(1, 0)
-        elif keys[pg.K_d]: self.parser.offset(-1, 0)
+        if not self.preview and self.objects_list.in_focus:
+            if keys[pg.K_w]: self.objects_list.slide_list(.2)
+            elif keys[pg.K_s]: self.objects_list.slide_list(-.2)
+            return
+        if keys[pg.K_w]: self.parser.offset(0, 2)
+        elif keys[pg.K_s]: self.parser.offset(0, -2)
+        if keys[pg.K_a]: self.parser.offset(2, 0)
+        elif keys[pg.K_d]: self.parser.offset(-2, 0)
 
     def update(self):
         self._check_events()
