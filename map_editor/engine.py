@@ -24,7 +24,8 @@ class Engine:
                     if Config.AUTO_SAVE: self.parser.save_world()
                     self.app.running = False
                 elif event.key == pg.K_p: self.preview = not self.preview
-                elif event.key == pg.K_s: self.parser.save_world()
+                elif event.key == pg.K_s:
+                    if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.save_world()
                 elif event.key == pg.K_UP: self.objects_list.curr_zindex += 1
                 elif event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
                 elif event.key == pg.K_g:
@@ -50,9 +51,17 @@ class Engine:
         keys = pg.mouse.get_pressed()
         if keys[1]: self.parser.offset(ox * .5, oy * .5)
 
+    def _keyboard_control(self):
+        keys = pg.key.get_pressed()
+        if keys[pg.K_w]: self.parser.offset(0, 1)
+        elif keys[pg.K_s]: self.parser.offset(0, -1)
+        if keys[pg.K_a]: self.parser.offset(1, 0)
+        elif keys[pg.K_d]: self.parser.offset(-1, 0)
+
     def update(self):
         self._check_events()
         self._mouse_control()
+        self._keyboard_control()
         if not self._check_focus() and not self.preview:  # Оновлюємо якщо не наведені на світ
             self.objects_list.update()
             self.object_editor.update()
