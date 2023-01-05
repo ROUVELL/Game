@@ -56,8 +56,9 @@ class Parser:
                 self.current_world.append(_Object(img, **obj))
         self._sort_world()
 
-    def get_collided_rect(self, x: int, y: int) -> _Object | None:
-        # Повертає об'ект на який падає точка
+    def get_collided_rect(self) -> _Object | None:
+        # Повертає об'ект на який наведена мишка
+        x, y = pg.mouse.get_pos()
         tiles = self.current_world[::-1]
         for tile in tiles:
             if tile.rect.collidepoint(x, y): return tile
