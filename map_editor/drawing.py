@@ -25,7 +25,8 @@ class Drawing:
     def tabs(self):
         if not self.app.engine.preview:
             self.app.engine.objects_list.draw()
-            self.app.engine.object_editor.draw()
+            if self.app.engine.object_editor.selected_obj:
+                self.app.engine.object_editor.draw()
 
     def _world_info(self):
         # К-сть об'єктів та позиція миші

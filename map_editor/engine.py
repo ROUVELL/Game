@@ -72,4 +72,5 @@ class Engine:
         self._keyboard_control()
         if not self._check_focus() and not self.preview:  # Оновлюємо якщо не наведені на світ
             self.objects_list.update()
-            self.object_editor.update()
+            if self.object_editor.selected_obj:
+                self.object_editor.update()
