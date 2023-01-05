@@ -18,8 +18,9 @@ class Engine:
         for event in pg.event.get():
             if event.type == pg.KEYUP:
                 if event.key == pg.K_ESCAPE:
-                    if self.objects_list.selected_obj and not self.preview:
+                    if not self.preview and (self.objects_list.selected_obj or self.object_editor.selected_obj):
                         self.objects_list.selected_obj = None
+                        self.object_editor.selected_obj = None
                         continue
                     if Config.AUTO_SAVE: self.parser.save_world()
                     self.app.running = False
@@ -33,7 +34,9 @@ class Engine:
                     if tile:
                         tile.type = 'sprite' if tile.type == 'texture' else 'texture'
             elif event.type == pg.MOUSEBUTTONUP and not self.preview:
-                if event.button == 1: self.objects_list.add_selected_to_world(event.pos)
+                if event.button == 1:
+                    if self.objects_list.selected_obj: self.objects_list.add_selected_to_world(event.pos)
+                    elif self.focus_on_world: self.object_editor.select_obj()
                 elif event.button == 3 and self.focus_on_world:
                     # Shift + RKM - видалити всі об'єкти
                     if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
