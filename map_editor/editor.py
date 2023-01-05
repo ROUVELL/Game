@@ -45,7 +45,7 @@ class ObjectsList(__Tab):
             self.items.add(_ObjectListItem(img, name, (x, offset)))
             offset += dh + 10
 
-    def slide_list(self, offset: int):
+    def slide_list(self, offset: int | float):
         # Прокручеємо список якщо наведені на нього мишкою
         [obj.rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for obj in self.items]
 
