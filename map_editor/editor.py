@@ -59,7 +59,6 @@ class ObjectsList(__Tab):
 
     def add_selected_to_world(self, pos: tuple):
         # Додаємо вибраний об'єкт до світу
-        if self.selected_obj is None: return
         # якщо не наведені на жодну з вкладок
         if self._engine.focus_on_world:
             obj = self.selected_obj
@@ -87,8 +86,16 @@ class ObjectsList(__Tab):
 class ObjectEditor(__Tab):
     def __init__(self, engine):
         super().__init__(engine, Config.EDITING_TAB_SIZE, Config.EDITING_TAB_POS)
+        self.selected_obj = None
+        self._img_pos = self._rect.width // 2, self._rect.height * .1
+
+    def select_obj(self):
+        self.selected_obj = self._engine.parser.get_collided_rect()
 
     def draw(self):
+        self._sc.fill('black')
+        if self.selected_obj:
+            self._sc.blit(self.selected_obj.image, self.selected_obj.image.get_rect(center=self._img_pos))
         self._draw_on_screen()
 
     def update(self):
