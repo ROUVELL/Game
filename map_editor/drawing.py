@@ -40,7 +40,7 @@ class Drawing:
         # Показує інформацію про наведений мишею тайл
         x, y = pg.mouse.get_pos()
         # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
-        tile = self.app.engine.parser.get_collided_rect(x, y)
+        tile = self.app.engine.parser.get_collided_rect()
         if tile:
             rect = tile.rect
             if self.draw_size_info:

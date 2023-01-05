@@ -29,7 +29,7 @@ class Engine:
                 elif event.key == pg.K_UP: self.objects_list.curr_zindex += 1
                 elif event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
                 elif event.key == pg.K_g:
-                    tile = self.parser.get_collided_rect(*pg.mouse.get_pos())
+                    tile = self.parser.get_collided_rect()
                     if tile:
                         tile.type = 'sprite' if tile.type == 'texture' else 'texture'
             elif event.type == pg.MOUSEBUTTONUP and not self.preview:
