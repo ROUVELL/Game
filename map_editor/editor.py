@@ -11,7 +11,7 @@ class __Tab:
         ###############
         self.in_focus = False  # Чи наведена мишка
 
-    def check_focus(self):
+    def check_focus(self) -> bool:
         self.in_focus = self._rect.collidepoint(*pg.mouse.get_pos())
         return self.in_focus
 
@@ -89,13 +89,17 @@ class ObjectEditor(__Tab):
         self.selected_obj = None
         self._img_pos = self._rect.width // 2, self._rect.height * .1
 
+    def check_focus(self) -> bool:
+        super().check_focus()
+        if not self.selected_obj: self.in_focus = False
+        return self.in_focus
+
     def select_obj(self):
         self.selected_obj = self._engine.parser.get_collided_rect()
 
     def draw(self):
         self._sc.fill('black')
-        if self.selected_obj:
-            self._sc.blit(self.selected_obj.image, self.selected_obj.image.get_rect(center=self._img_pos))
+        self._sc.blit(self.selected_obj.image, self.selected_obj.image.get_rect(center=self._img_pos))
         self._draw_on_screen()
 
     def update(self):
