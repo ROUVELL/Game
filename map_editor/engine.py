@@ -25,7 +25,7 @@ class Engine:
                     self.app.running = False
                 elif event.key == pg.K_p: self.preview = not self.preview
                 elif event.key == pg.K_s:
-                    if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.save_world()
+                    if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
                 elif event.key == pg.K_UP: self.objects_list.curr_zindex += 1
                 elif event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
                 elif event.key == pg.K_g:
@@ -53,6 +53,7 @@ class Engine:
 
     def _keyboard_control(self):
         keys = pg.key.get_pressed()
+        if keys[pg.K_LCTRL]: return
         if not self.preview and self.objects_list.in_focus:
             if keys[pg.K_w]: self.objects_list.slide_list(.2)
             elif keys[pg.K_s]: self.objects_list.slide_list(-.2)
