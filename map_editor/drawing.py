@@ -31,8 +31,9 @@ class Drawing:
         obj_count = len(self.engine.parser.current_world)
         x, y = pg.mouse.get_pos()
         zindex = self.engine.objects_list.curr_zindex
-        text = f'Total objects: {obj_count}  Mouse position: {x, y}  Current z-index: {zindex}'
-        pos = (Config.HALF_WIDTH - 128, Config.HEIGHT - 30)
+        type_ = self.engine.objects_list.curr_type
+        text = f'Total objects: {obj_count}  Mouse position: {x, y}  Current type: {type_}  Current z-index: {zindex}'
+        pos = (Config.HALF_WIDTH - 164, Config.HEIGHT - 30)
         self._text(text, pos)
 
     def _tile_info(self):
