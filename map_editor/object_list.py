@@ -20,6 +20,7 @@ class ObjectsList:
         self.selected_obj = None  # !!! Tут лежить об'єкт !!!
         self._items = set()
         self.curr_zindex = 1
+        self.curr_type = 'texture'
         self._get_items()
 
     def _get_items(self):
@@ -47,7 +48,7 @@ class ObjectsList:
         # Додаємо вибраний об'єкт до світу
         obj = self.selected_obj
         config = {
-                'type': 'texture',
+                'type': self.curr_type,
                 'name': obj.name,
                 'size': obj.rect.size,
                 'pos': pos,
