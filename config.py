@@ -33,13 +33,8 @@ class Config:
     # editor
     OBJECTS_LIST_POS = (0, 0)
     OBJECTS_LIST_SIZE = (WIDTH * .075, HEIGHT)
-    SLIDE_SENSETIVITY = 50  # For sliding imgs list
-    EDITING_TAB_POS = (WIDTH - (WIDTH * .20), 0)
-    EDITING_TAB_SIZE = (WIDTH * .20, HEIGHT)
+    SLIDE_SENSETIVITY = 30  # For sliding imgs list
     AUTO_SAVE = False  # Чи зберігати світ при виході
-    # defaults in editor
-    DRAW_OBJ_RECT = True
-    DRAW_OBJ_INFO = True
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False

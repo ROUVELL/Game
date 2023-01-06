@@ -1,7 +1,7 @@
 import pygame as pg
 from map_editor.drawing import Drawing
 from map_editor.parser import Parser
-from map_editor.tabs import ObjectsList, ObjectEditor
+from map_editor.object_list import ObjectsList
 from config import Config
 
 from time import sleep
@@ -13,7 +13,6 @@ class Engine:
         self.draw = Drawing(self)
         self.parser = Parser(self)
         self.objects_list = ObjectsList(self)
-        self.object_editor = ObjectEditor(self)
         ##########
         self.focus_on_world = False
         self.preview = False
@@ -26,9 +25,8 @@ class Engine:
         # RSHIFT and RCTRL - curr index +- 1
         match event.key:
             case pg.K_ESCAPE:
-                if not self.preview and (self.objects_list.selected_obj or self.object_editor.selected_obj):
+                if not self.preview and self.objects_list.selected_obj:
                     self.objects_list.selected_obj = None
-                    self.object_editor.selected_obj = None
                     return
                 if Config.AUTO_SAVE: self.parser.save_world()
                 self.app.running = False
@@ -50,17 +48,15 @@ class Engine:
         # LKM - add selected obj to world / select obj from world
         # RKM - delete one collided obj
         # LSHIFT + RKM - delete all collided objs
-        if event.type == pg.MOUSEBUTTONUP:
+        if event.type == pg.MOUSEBUTTONUP and self.focus_on_world:
             if event.button == 1:
                 if self.objects_list.selected_obj: self.objects_list.add_selected_to_world(event.pos)
-                elif self.focus_on_world: self.object_editor.select_obj()
-            elif event.button == 3 and self.focus_on_world:
+            elif event.button == 3:
                 if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
                 else: self.parser.delete_from_world(event.pos)
 
-        elif event.type == pg.MOUSEWHEEL:
-            if self.objects_list.in_focus: self.objects_list.slide_list(event.y)
-            # elif self.object_editor.in_focus: self.object_editor.scale_obj(event.y)
+        elif event.type == pg.MOUSEWHEEL and not self.focus_on_world:
+            self.objects_list.slide_list(event.y)
 
     def _check_events(self):
         for event in pg.event.get():
@@ -71,7 +67,7 @@ class Engine:
 
     def _check_focus(self):
         # True якщо не наведені не на одну з вкладок
-        self.focus_on_world = not (self.objects_list.check_focus() or self.object_editor.check_focus())
+        self.focus_on_world = not self.objects_list.check_focus()
 
     def _mouse_control(self):
         ox, oy = pg.mouse.get_rel()
@@ -95,6 +91,5 @@ class Engine:
             self._keyboard_control()
         if not self.preview:
             self.objects_list.update()
-            self.object_editor.update()
 
         self.draw.all()
