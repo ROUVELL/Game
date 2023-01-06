@@ -3,9 +3,9 @@ from config import Config
 
 
 class Drawing:
-    def __init__(self, app):
-        self.app = app
-        self._sc = app.sc
+    def __init__(self, engine):
+        self.engine = engine
+        self._sc = pg.display.get_surface()
         ##############
         self._fps_font = pg.font.Font(Config.INFO_FONT, 16)
         self._info_font = pg.font.Font(Config.INFO_FONT, 8)
@@ -17,22 +17,22 @@ class Drawing:
         self._sc.fill('black')
 
     def world(self):
-        for obj in self.app.engine.parser.current_world:
+        for obj in self.engine.parser.current_world:
             self._sc.blit(obj.image, obj.rect)
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
 
     def tabs(self):
-        if not self.app.engine.preview:
-            self.app.engine.objects_list.draw()
-            if self.app.engine.object_editor.selected_obj:
-                self.app.engine.object_editor.draw()
+        if not self.engine.preview:
+            self.engine.objects_list.draw()
+            if self.engine.object_editor.selected_obj:
+                self.engine.object_editor.draw()
 
     def _world_info(self):
         # К-сть об'єктів та позиція миші
-        obj_count = len(self.app.engine.parser.current_world)
+        obj_count = len(self.engine.parser.current_world)
         x, y = pg.mouse.get_pos()
-        zindex = self.app.engine.objects_list.curr_zindex
+        zindex = self.engine.objects_list.curr_zindex
         render = self._info_font.render(f'Total objects: {obj_count}  Mouse position: {x, y}  Current z-index: {zindex}', 0, 'white')
         dx = Config.HALF_WIDTH - (render.get_size()[0] // 2)
         self._sc.blit(render, (dx, Config.HEIGHT - 30))
@@ -41,12 +41,12 @@ class Drawing:
         # Показує інформацію про наведений мишею тайл
         x, y = pg.mouse.get_pos()
         # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
-        tile = self.app.engine.parser.get_collided_rect()
+        tile = self.engine.parser.get_collided_rect()
         if tile:
             rect = tile.rect
             if self.draw_size_info:
                 pg.draw.rect(self._sc, 'grey', rect, 1)
-                obj = self.app.engine.object_editor.selected_obj
+                obj = self.engine.object_editor.selected_obj
                 if obj:
                     pg.draw.rect(self._sc, 'green', obj.rect, 1)
                 self._sc.blit(self._info_font.render(f'{rect.centery}', 0, 'white'), (rect.centerx - 5, rect.top - 8))
@@ -61,9 +61,9 @@ class Drawing:
 
     def info(self):
         self._world_info()
-        if self.app.engine.preview: return
-        if self.app.engine.focus_on_world:
-            obj = self.app.engine.objects_list.selected_obj
+        if self.engine.preview: return
+        if self.engine.focus_on_world:
+            obj = self.engine.objects_list.selected_obj
             if obj:
                 img = obj.image.copy()
                 img.set_alpha(180)
@@ -74,7 +74,7 @@ class Drawing:
             self._tile_info()
 
     def fps(self):
-        self._sc.blit(self._fps_font.render(f'{self.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR), Config.FPS_POS)
+        self._sc.blit(self._fps_font.render(f'{self.engine.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR), Config.FPS_POS)
 
     def all(self):
         self.bg()

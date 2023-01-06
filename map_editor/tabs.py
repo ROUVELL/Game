@@ -108,7 +108,7 @@ class ObjectEditor(__Tab):
         # Отримуємо оригінальний об'єкт !!!
         self.selected_obj = self._engine.parser.get_collided_rect()
 
-    def keyboard_control(self):
+    def _keyboard_control(self):
         keys = pg.key.get_pressed()
         if keys[pg.K_UP]: self.selected_obj.rect.move_ip(0, -1)
         elif keys[pg.K_DOWN]: self.selected_obj.rect.move_ip(0, 1)
@@ -122,4 +122,4 @@ class ObjectEditor(__Tab):
 
     def update(self):
         if self.selected_obj:
-            self.keyboard_control()
+            self._keyboard_control()

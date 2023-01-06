@@ -1,12 +1,16 @@
 import pygame as pg
+from map_editor.drawing import Drawing
 from map_editor.parser import Parser
 from map_editor.tabs import ObjectsList, ObjectEditor
 from config import Config
+
+from time import sleep
 
 
 class Engine:
     def __init__(self, app):
         self.app = app
+        self.draw = Drawing(self)
         self.parser = Parser(self)
         self.objects_list = ObjectsList(self)
         self.object_editor = ObjectEditor(self)
@@ -54,8 +58,9 @@ class Engine:
                 if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
                 else: self.parser.delete_from_world(event.pos)
 
-        elif event.type == pg.MOUSEWHEEL and self.objects_list.in_focus:
-            self.objects_list.slide_list(event.y)
+        elif event.type == pg.MOUSEWHEEL:
+            if self.objects_list.in_focus: self.objects_list.slide_list(event.y)
+            # elif self.object_editor.in_focus: self.object_editor.scale_obj(event.y)
 
     def _check_events(self):
         for event in pg.event.get():
@@ -82,7 +87,7 @@ class Engine:
         if keys[pg.K_a]: self.parser.offset(2, 0)
         elif keys[pg.K_d]: self.parser.offset(-2, 0)
 
-    def update(self):
+    def update_and_draw(self):
         self._check_focus()
         self._check_events()
         if self.focus_on_world:
@@ -91,3 +96,5 @@ class Engine:
         if not self.preview:
             self.objects_list.update()
             self.object_editor.update()
+
+        self.draw.all()
