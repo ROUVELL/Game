@@ -23,6 +23,7 @@ class Engine:
         # g - change type of collided obj (texture/sprite)
         # LCTRL + s - save world
         # RSHIFT and RCTRL - curr index +- 1
+        # TAB - change current type between 'rexture' and 'sprite'
         match event.key:
             case pg.K_ESCAPE:
                 if not self.preview and self.objects_list.selected_obj:
@@ -38,6 +39,8 @@ class Engine:
                 self.objects_list.curr_zindex += 1
             case pg.K_RCTRL:
                 self.objects_list.curr_zindex -= 1
+            case pg.K_TAB:
+                self.objects_list.curr_type = 'sprite' if self.objects_list.curr_type == 'texture' else 'texture'
             case pg.K_g:
                 if self.preview: return
                 tile = self.parser.get_collided_rect()
