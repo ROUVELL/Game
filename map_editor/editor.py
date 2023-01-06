@@ -72,6 +72,11 @@ class ObjectsList(__Tab):
             }
             self._engine.parser.add_to_world(obj.image, config)
 
+    def keyboard_control(self):
+        keys = pg.key.get_pressed()
+        if keys[pg.K_w]: self.slide_list(.2)
+        elif keys[pg.K_s]: self.slide_list(-.2)
+
     def draw(self):
         self._sc.fill('black')
         [self._sc.blit(obj.image, obj.rect) for obj in self.items]
@@ -80,6 +85,7 @@ class ObjectsList(__Tab):
 
     def update(self):
         if self.in_focus:
+            self.keyboard_control()
             keys = pg.mouse.get_pressed()
             if keys[0]: self._select_obj()
 

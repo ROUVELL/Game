@@ -56,10 +56,7 @@ class Engine:
     def _keyboard_control(self):
         keys = pg.key.get_pressed()
         if keys[pg.K_LCTRL]: return
-        if not self.preview and self.objects_list.in_focus:
-            if keys[pg.K_w]: self.objects_list.slide_list(.2)
-            elif keys[pg.K_s]: self.objects_list.slide_list(-.2)
-            return
+
         if keys[pg.K_w]: self.parser.offset(0, 2)
         elif keys[pg.K_s]: self.parser.offset(0, -2)
         if keys[pg.K_a]: self.parser.offset(2, 0)
@@ -68,8 +65,9 @@ class Engine:
     def update(self):
         self._check_focus()
         self._check_events()
-        self._mouse_control()
-        self._keyboard_control()
+        if self.focus_on_world:
+            self._mouse_control()
+            self._keyboard_control()
         if not self.preview:  # Оновлюємо якщо не наведені на світ
             self.objects_list.update()
             self.object_editor.update()
