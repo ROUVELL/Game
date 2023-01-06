@@ -45,6 +45,7 @@ class Player:
             case 'up':    self.image = self._up_anim[self._frame]
             case 'left':  self.image = self._left_anim[self._frame]
             case 'right': self.image = self._right_anim[self._frame]
+        self.rect = self.image.get_rect(center=self.rect.center)
 
     def _movement(self):
         # Рух
