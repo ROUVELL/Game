@@ -27,8 +27,8 @@ class Engine:
                 elif event.key == pg.K_p: self.preview = not self.preview
                 elif event.key == pg.K_s:
                     if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
-                elif event.key == pg.K_UP: self.objects_list.curr_zindex += 1
-                elif event.key == pg.K_DOWN: self.objects_list.curr_zindex -= 1
+                elif event.key == pg.K_RSHIFT: self.objects_list.curr_zindex += 1
+                elif event.key == pg.K_RCTRL: self.objects_list.curr_zindex -= 1
                 elif event.key == pg.K_g:
                     tile = self.parser.get_collided_rect()
                     if tile:
@@ -47,7 +47,6 @@ class Engine:
     def _check_focus(self):
         # True якщо не наведені не на одну з вкладок
         self.focus_on_world = not (self.objects_list.check_focus() or self.object_editor.check_focus())
-        return self.focus_on_world
 
     def _mouse_control(self):
         ox, oy = pg.mouse.get_rel()
@@ -67,10 +66,10 @@ class Engine:
         elif keys[pg.K_d]: self.parser.offset(-2, 0)
 
     def update(self):
+        self._check_focus()
         self._check_events()
         self._mouse_control()
         self._keyboard_control()
-        if not self._check_focus() and not self.preview:  # Оновлюємо якщо не наведені на світ
+        if not self.preview:  # Оновлюємо якщо не наведені на світ
             self.objects_list.update()
-            if self.object_editor.selected_obj:
-                self.object_editor.update()
+            self.object_editor.update()
