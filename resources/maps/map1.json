@@ -7,8 +7,8 @@
       192
     ],
     "pos": [
-      29,
-      92
+      106,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -21,8 +21,8 @@
       192
     ],
     "pos": [
-      157,
-      92
+      234,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -35,8 +35,8 @@
       192
     ],
     "pos": [
-      29,
-      284
+      106,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -49,8 +49,8 @@
       192
     ],
     "pos": [
-      29,
-      476
+      106,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -63,8 +63,8 @@
       192
     ],
     "pos": [
-      669,
-      284
+      746,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -77,8 +77,8 @@
       192
     ],
     "pos": [
-      669,
-      476
+      746,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -91,8 +91,8 @@
       192
     ],
     "pos": [
-      797,
-      284
+      874,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -105,8 +105,8 @@
       192
     ],
     "pos": [
-      925,
-      284
+      1002,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -119,8 +119,8 @@
       192
     ],
     "pos": [
-      797,
-      476
+      874,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -133,8 +133,8 @@
       192
     ],
     "pos": [
-      925,
-      476
+      234,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -147,8 +147,8 @@
       192
     ],
     "pos": [
-      157,
-      284
+      234,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -161,8 +161,8 @@
       192
     ],
     "pos": [
-      157,
-      476
+      362,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -175,8 +175,8 @@
       192
     ],
     "pos": [
-      285,
-      284
+      490,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -189,8 +189,8 @@
       192
     ],
     "pos": [
-      413,
-      284
+      362,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -203,8 +203,8 @@
       192
     ],
     "pos": [
-      285,
-      476
+      490,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -217,8 +217,8 @@
       192
     ],
     "pos": [
-      413,
-      476
+      618,
+      288
     ],
     "alpha": false,
     "zindex": 1
@@ -231,8 +231,8 @@
       192
     ],
     "pos": [
-      541,
-      284
+      618,
+      480
     ],
     "alpha": false,
     "zindex": 1
@@ -245,8 +245,8 @@
       192
     ],
     "pos": [
-      541,
-      476
+      1002,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -259,8 +259,8 @@
       192
     ],
     "pos": [
-      925,
-      92
+      874,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -273,8 +273,8 @@
       192
     ],
     "pos": [
-      797,
-      92
+      746,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -287,8 +287,8 @@
       192
     ],
     "pos": [
-      669,
-      92
+      618,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -301,8 +301,8 @@
       192
     ],
     "pos": [
-      541,
-      92
+      490,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -315,8 +315,8 @@
       192
     ],
     "pos": [
-      413,
-      92
+      362,
+      96
     ],
     "alpha": false,
     "zindex": 1
@@ -329,8 +329,330 @@
       192
     ],
     "pos": [
-      285,
-      92
+      1002,
+      480
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      11,
+      528
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      10,
+      432
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      10,
+      336
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      10,
+      240
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      10,
+      144
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      10,
+      48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      10,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      74,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      138,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      202,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      266,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      1034,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      330,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      394,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      458,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      522,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      586,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      650,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      714,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      778,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      842,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      906,
+      -48
+    ],
+    "alpha": false,
+    "zindex": 1
+  },
+  {
+    "type": "texture",
+    "name": "paving-stones.png",
+    "size": [
+      64,
+      96
+    ],
+    "pos": [
+      970,
+      -48
     ],
     "alpha": false,
     "zindex": 1
@@ -343,21 +665,7 @@
       88
     ],
     "pos": [
-      290,
-      72
-    ],
-    "alpha": true,
-    "zindex": 2
-  },
-  {
-    "type": "sprite",
-    "name": "lion-statue.png",
-    "size": [
-      48,
-      88
-    ],
-    "pos": [
-      550,
+      367,
       76
     ],
     "alpha": true,
@@ -365,14 +673,14 @@
   },
   {
     "type": "sprite",
-    "name": "jack's-lamp.png",
+    "name": "lion-statue.png",
     "size": [
-      25,
-      24
+      48,
+      88
     ],
     "pos": [
-      288,
-      120
+      627,
+      80
     ],
     "alpha": true,
     "zindex": 2
@@ -385,8 +693,22 @@
       24
     ],
     "pos": [
-      552,
-      123
+      365,
+      124
+    ],
+    "alpha": true,
+    "zindex": 2
+  },
+  {
+    "type": "sprite",
+    "name": "jack's-lamp.png",
+    "size": [
+      25,
+      24
+    ],
+    "pos": [
+      629,
+      127
     ],
     "alpha": true,
     "zindex": 2
@@ -399,8 +721,8 @@
       128
     ],
     "pos": [
-      154,
-      112
+      231,
+      116
     ],
     "alpha": true,
     "zindex": 2
@@ -413,8 +735,8 @@
       128
     ],
     "pos": [
-      668,
-      110
+      745,
+      114
     ],
     "alpha": true,
     "zindex": 2
@@ -427,8 +749,8 @@
       16
     ],
     "pos": [
-      184,
-      136
+      261,
+      140
     ],
     "alpha": true,
     "zindex": 2
@@ -441,8 +763,8 @@
       16
     ],
     "pos": [
-      102,
-      149
+      179,
+      153
     ],
     "alpha": true,
     "zindex": 2
@@ -455,8 +777,8 @@
       14
     ],
     "pos": [
-      659,
-      135
+      736,
+      139
     ],
     "alpha": true,
     "zindex": 2
@@ -469,8 +791,8 @@
       14
     ],
     "pos": [
-      705,
-      138
+      782,
+      142
     ],
     "alpha": true,
     "zindex": 2
@@ -483,8 +805,8 @@
       54
     ],
     "pos": [
-      286,
-      270
+      363,
+      274
     ],
     "alpha": true,
     "zindex": 2
@@ -497,8 +819,8 @@
       54
     ],
     "pos": [
-      543,
-      272
+      620,
+      276
     ],
     "alpha": true,
     "zindex": 2
@@ -511,8 +833,8 @@
       16
     ],
     "pos": [
-      112,
-      168
+      189,
+      172
     ],
     "alpha": true,
     "zindex": 2
@@ -525,8 +847,8 @@
       13
     ],
     "pos": [
-      530,
-      302
+      607,
+      306
     ],
     "alpha": true,
     "zindex": 2
@@ -539,8 +861,8 @@
       13
     ],
     "pos": [
-      565,
-      277
+      642,
+      281
     ],
     "alpha": true,
     "zindex": 2
@@ -553,8 +875,8 @@
       13
     ],
     "pos": [
-      568,
-      293
+      645,
+      297
     ],
     "alpha": true,
     "zindex": 2
@@ -567,8 +889,8 @@
       13
     ],
     "pos": [
-      519,
-      272
+      596,
+      276
     ],
     "alpha": true,
     "zindex": 2
@@ -581,8 +903,8 @@
       32
     ],
     "pos": [
-      255,
-      295
+      332,
+      299
     ],
     "alpha": true,
     "zindex": 2
@@ -595,8 +917,8 @@
       13
     ],
     "pos": [
-      299,
-      303
+      376,
+      307
     ],
     "alpha": true,
     "zindex": 2
@@ -609,8 +931,8 @@
       13
     ],
     "pos": [
-      313,
-      267
+      390,
+      271
     ],
     "alpha": true,
     "zindex": 2
@@ -623,8 +945,8 @@
       31
     ],
     "pos": [
-      176,
-      442
+      253,
+      446
     ],
     "alpha": true,
     "zindex": 2
@@ -637,8 +959,8 @@
       55
     ],
     "pos": [
-      768,
-      247
+      845,
+      251
     ],
     "alpha": true,
     "zindex": 2
@@ -651,8 +973,8 @@
       64
     ],
     "pos": [
-      328,
-      72
+      405,
+      76
     ],
     "alpha": true,
     "zindex": 2
@@ -665,8 +987,8 @@
       64
     ],
     "pos": [
-      509,
-      75
+      586,
+      79
     ],
     "alpha": true,
     "zindex": 2
@@ -679,8 +1001,8 @@
       38
     ],
     "pos": [
-      127,
-      384
+      204,
+      388
     ],
     "alpha": true,
     "zindex": 2
@@ -693,8 +1015,8 @@
       38
     ],
     "pos": [
-      149,
-      393
+      226,
+      397
     ],
     "alpha": true,
     "zindex": 2
@@ -707,8 +1029,8 @@
       38
     ],
     "pos": [
-      128,
-      406
+      205,
+      410
     ],
     "alpha": true,
     "zindex": 2
@@ -721,8 +1043,8 @@
       24
     ],
     "pos": [
-      179,
-      404
+      256,
+      408
     ],
     "alpha": true,
     "zindex": 2
@@ -735,8 +1057,8 @@
       25
     ],
     "pos": [
-      116,
-      469
+      193,
+      473
     ],
     "alpha": true,
     "zindex": 2
@@ -749,8 +1071,8 @@
       25
     ],
     "pos": [
-      105,
-      483
+      182,
+      487
     ],
     "alpha": true,
     "zindex": 2
@@ -763,8 +1085,8 @@
       25
     ],
     "pos": [
-      131,
-      482
+      208,
+      486
     ],
     "alpha": true,
     "zindex": 2
@@ -777,8 +1099,8 @@
       25
     ],
     "pos": [
-      120,
-      498
+      197,
+      502
     ],
     "alpha": true,
     "zindex": 2
@@ -791,8 +1113,8 @@
       32
     ],
     "pos": [
-      114,
-      334
+      191,
+      338
     ],
     "alpha": true,
     "zindex": 2
@@ -805,8 +1127,8 @@
       32
     ],
     "pos": [
-      140,
-      321
+      217,
+      325
     ],
     "alpha": true,
     "zindex": 2
@@ -819,8 +1141,8 @@
       32
     ],
     "pos": [
-      139,
-      341
+      216,
+      345
     ],
     "alpha": true,
     "zindex": 2
@@ -833,8 +1155,8 @@
       24
     ],
     "pos": [
-      195,
-      417
+      272,
+      421
     ],
     "alpha": true,
     "zindex": 2
@@ -847,8 +1169,8 @@
       55
     ],
     "pos": [
-      843,
-      248
+      920,
+      252
     ],
     "alpha": true,
     "zindex": 2
@@ -861,8 +1183,8 @@
       55
     ],
     "pos": [
-      915,
-      248
+      992,
+      252
     ],
     "alpha": true,
     "zindex": 2
@@ -875,8 +1197,8 @@
       31
     ],
     "pos": [
-      178,
-      494
+      255,
+      498
     ],
     "alpha": true,
     "zindex": 2
@@ -889,8 +1211,8 @@
       31
     ],
     "pos": [
-      207,
-      487
+      284,
+      491
     ],
     "alpha": true,
     "zindex": 2
@@ -903,8 +1225,8 @@
       31
     ],
     "pos": [
-      205,
-      512
+      282,
+      516
     ],
     "alpha": true,
     "zindex": 2

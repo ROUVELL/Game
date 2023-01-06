@@ -88,38 +88,3 @@ class ObjectsList(__Tab):
             self.keyboard_control()
             keys = pg.mouse.get_pressed()
             if keys[0]: self._select_obj()
-
-
-class ObjectEditor(__Tab):
-    def __init__(self, engine):
-        super().__init__(engine, Config.EDITING_TAB_SIZE, Config.EDITING_TAB_POS)
-        self.selected_obj = None
-        # Позиція малювання картинки на вкладці
-        self._img_pos = self._rect.width // 2, self._rect.height * .1
-
-    def check_focus(self) -> bool:
-        super().check_focus()
-        # Якщо немає вибраного об'єкта то вкладка не малюється і відповідно
-        # в фокусі бути не може
-        if not self.selected_obj: self.in_focus = False
-        return self.in_focus
-
-    def select_obj(self):
-        # Отримуємо оригінальний об'єкт !!!
-        self.selected_obj = self._engine.parser.get_collided_rect()
-
-    def _keyboard_control(self):
-        keys = pg.key.get_pressed()
-        if keys[pg.K_UP]: self.selected_obj.rect.move_ip(0, -1)
-        elif keys[pg.K_DOWN]: self.selected_obj.rect.move_ip(0, 1)
-        if keys[pg.K_LEFT]: self.selected_obj.rect.move_ip(-1, 0)
-        elif keys[pg.K_RIGHT]: self.selected_obj.rect.move_ip(1, 0)
-
-    def draw(self):
-        self._sc.fill('black')
-        self._sc.blit(self.selected_obj.image, self.selected_obj.image.get_rect(center=self._img_pos))
-        self._draw_on_screen()
-
-    def update(self):
-        if self.selected_obj:
-            self._keyboard_control()
