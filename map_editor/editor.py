@@ -79,8 +79,9 @@ class ObjectsList(__Tab):
         self._draw_on_screen()
 
     def update(self):
-        keys = pg.mouse.get_pressed()
-        if keys[0] and self.in_focus: self._select_obj()
+        if self.in_focus:
+            keys = pg.mouse.get_pressed()
+            if keys[0]: self._select_obj()
 
 
 class ObjectEditor(__Tab):
@@ -101,10 +102,18 @@ class ObjectEditor(__Tab):
         # Отримуємо оригінальний об'єкт !!!
         self.selected_obj = self._engine.parser.get_collided_rect()
 
+    def keyboard_control(self):
+        keys = pg.key.get_pressed()
+        if keys[pg.K_UP]: self.selected_obj.rect.move_ip(0, -1)
+        elif keys[pg.K_DOWN]: self.selected_obj.rect.move_ip(0, 1)
+        if keys[pg.K_LEFT]: self.selected_obj.rect.move_ip(-1, 0)
+        elif keys[pg.K_RIGHT]: self.selected_obj.rect.move_ip(1, 0)
+
     def draw(self):
         self._sc.fill('black')
         self._sc.blit(self.selected_obj.image, self.selected_obj.image.get_rect(center=self._img_pos))
         self._draw_on_screen()
 
     def update(self):
-        pass
+        if self.selected_obj:
+            self.keyboard_control()
