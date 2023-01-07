@@ -1,6 +1,8 @@
 import pygame as pg
 from config import Config
 
+from math import atan, pi
+
 
 class Player:
     def __init__(self, game):
@@ -18,6 +20,7 @@ class Player:
         self.rect = self.image.get_rect(center=Config.CENTER)
         #####################
         self.direction = 'down'  # Напрям руху
+        self.angle = 0       # Кут миші
         self.moving = False  # Чи рухаємось
         self.attack = False  # Чи атакуємо
         self.speed = Config.PLAYER_SPEED  # Початкова швидкість
@@ -90,6 +93,13 @@ class Player:
 
         self.rect.move_ip(offset)
 
+    def _check_view_direction(self):
+        mx, my = pg.mouse.get_pos()
+        px, py = self.rect.center
+        dx, dy = mx - px, my - py
+        # TODO: Знайти кут за позюцією мишки
+
+
     def _check_attack(self):
         if self.attack: return
         keys = pg.mouse.get_pressed()
@@ -98,6 +108,7 @@ class Player:
 
     def update(self):
         self._movement()
+        self._check_view_direction()
         self._check_attack()
         self._check_curr_animation()
         self._animate()
