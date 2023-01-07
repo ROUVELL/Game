@@ -6,10 +6,10 @@ class Player:
     def __init__(self, game):
         self._game = game
         # Анімація ходьби по всіх сторонах
-        self._down_anim = self._load_animation_by_name('down')
-        self._up_anim = self._load_animation_by_name('up')
-        self._left_anim = self._load_animation_by_name('left')
-        self._right_anim = self._load_animation_by_name('right')
+        self._down_anim = self._load_animation_by_name('walking', 'down')
+        self._up_anim = self._load_animation_by_name('walking', 'up')
+        self._left_anim = self._load_animation_by_name('walking', 'left')
+        self._right_anim = self._load_animation_by_name('walking', 'right')
         # Час останнього оновлення та поточний кадр анімації
         self._last_time = pg.time.get_ticks()
         self._frame = 0
@@ -22,10 +22,9 @@ class Player:
         self.speed = Config.PLAYER_SPEED  # Початкова швидкість
 
     @staticmethod
-    def _load_animation_by_name(name: str):
+    def _load_animation_by_name(directory: str, name: str):
         # Завантаження анімації
-        return [pg.image.load(f'{Config.PLAYER_ANIM}{name}-{i}.png').convert_alpha() for i in range(9)]
-        # return [pg.transform.scale(img, (img.get_width() * .94, img.get_height() * .9298)) for img in anim]
+        return [pg.image.load(f'{Config.PLAYER_ANIM}{directory}/{name}-{i}.png').convert_alpha() for i in range(9)]
 
     def _check_animation_time(self):
         # Перевірка чи не пора змінювати кадр
