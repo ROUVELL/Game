@@ -91,8 +91,9 @@ class Parser:
             self.sprites = []
             self.parse_world()
 
-    def add_to_world(self, img: pg.Surface, config: dict):
-        # Додавання новога тайла до світу. Пересортувати для правильного відображення
+    def add_to_world(self, **config):
+        # Додавання новога об'єкта до світу. Пересортувати для правильного відображення
+        img = config['image']
         match config['type']:
             case 'texture':
                 self.textures.append(_Object(img, self.textures, **config))
