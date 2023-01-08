@@ -9,6 +9,8 @@ class Drawing:
         ##############
         self._fps_font = pg.font.Font(Config.INFO_FONT, 16)
         self._info_font = pg.font.Font(Config.INFO_FONT, 8)
+        ##############
+        self.draw_axis = not Config.DRAW_COORDINATE_AXIS
 
     def bg(self):
         self._sc.fill('black')
@@ -19,7 +21,7 @@ class Drawing:
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
 
-        if not Config.DRAW_COORDINATE_AXIS:
+        if self.draw_axis:
             x, y = self.engine.parser.origin
             w, h = Config.SCREEN
             pg.draw.line(self._sc, 'gray', (0, y), (w, y))
@@ -38,9 +40,14 @@ class Drawing:
         x, y = pg.math.Vector2(pg.mouse.get_pos()) - self.engine.parser.origin
         zindex = self.engine.objects_list.curr_zindex
         type_ = self.engine.objects_list.curr_type
+
         text = f'Total objects: {obj_count}  Mouse position: {x, y}  Current type: {type_}  Current z-index: {zindex}'
         pos = (Config.HALF_WIDTH - 164, Config.HEIGHT - 30)
         self._text(text, pos)
+
+        color = 'red' if self.engine.parser.changed else 'green'
+        pg.draw.rect(self._sc, color, (pos[0] - 15, pos[1], 6, 6))
+
 
     def _tile_info(self):
         # Показує інформацію про наведений мишею тайл
