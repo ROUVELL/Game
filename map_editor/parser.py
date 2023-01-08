@@ -113,6 +113,7 @@ class Parser:
 
     def save_world(self):
         # Збереження світу
-        with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
-            map_.write(json.dumps([tile.get_parr(self.origin) for tile in self.get_world()], indent=2))
+        if self.changed:
+            with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
+                map_.write(json.dumps([tile.get_parr(self.origin) for tile in self.get_world()], indent=2))
         self.changed = False
