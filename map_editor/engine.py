@@ -22,6 +22,7 @@ class Engine:
         # p - preview
         # g - change type of collided obj (texture/sprite)
         # x - draw origin axis
+        # z - draw tiles grid
         # LCTRL + s - save world
         # LCTRL + r - restore world
         # RSHIFT and RCTRL - curr index +- 1
@@ -37,6 +38,8 @@ class Engine:
                 self.preview = not self.preview
             case pg.K_x:
                 self.draw.draw_axis = not self.draw.draw_axis
+            case pg.K_z:
+                self.draw.draw_tiles_grid = not self.draw.draw_tiles_grid
             case pg.K_s:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
             case pg.K_r:
@@ -64,8 +67,12 @@ class Engine:
                 if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_collided_obj(event.pos, all_=True)
                 else: self.parser.delete_collided_obj(event.pos)
 
-        elif event.type == pg.MOUSEWHEEL and not self.focus_on_world:
-            self.objects_list.slide_list(event.y)
+        elif event.type == pg.MOUSEWHEEL:
+            if self.focus_on_world:
+                size = self.draw.tile_size
+                size = size // 2 if event.y < 0 else size * 2
+                self.draw.tile_size = max(min(size, 256), 16)
+            else: self.objects_list.slide_list(event.y)
 
     def _check_events(self):
         for event in pg.event.get():
