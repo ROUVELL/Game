@@ -17,7 +17,7 @@ class Engine:
         self.focus_on_world = False
         self.preview = False
         ##########
-        if Config.AUTOSAVE: pg.time.set_timer(pg.event.Event(pg.USEREVENT + 0), int(Config.AUTOSAVE_DELEY * 1000), -1)
+        if Config.AUTOSAVE: pg.time.set_timer(pg.USEREVENT, int(Config.AUTOSAVE_DELEY * 1000), -1)
 
     def _key_event(self, event: pg.event.Event):
         # ESC - clear seleced obj. in tabs / exit
