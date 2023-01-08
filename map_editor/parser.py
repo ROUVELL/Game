@@ -1,7 +1,9 @@
 import pygame as pg
+from pygame import Vector2 as vec
+from config import Config
+
 import json
 import os
-from config import Config
 
 
 class _Object:
@@ -21,12 +23,13 @@ class _Object:
         self.image = pg.transform.scale(self._orig_image, size)
         self.rect = self.image.get_rect(center=pos)  # Щоб розтягувати в якусь одну сторону не міняючи позиції
 
-    def __repr__(self):
+    def get_parr(self, origin: vec) -> dict:
+        pos = list(vec(self.rect.center) - origin)
         return {
             'type': self.type,
             'name': self.name,
             'size': self.rect.size,
-            'pos': self.rect.center,
+            'pos': pos,
             'alpha': self.alpha,
             'zindex': self.zindex
         }
@@ -37,6 +40,7 @@ class Parser:
         self._engine = engine
         self.cached_images = dict()
         self.current_world = []
+        self.origin = vec(Config.CENTER)
         self._cache_images()
         self.parse_world()
 
@@ -51,8 +55,10 @@ class Parser:
     def parse_world(self, path: str = Config.CURRENT_MAP):
         # Відкриваємо вибрану карту, зберігаємо кожен тайл і відсортовуємо
         with open(path) as map_:
-            for obj in json.load(map_):
+            world = json.load(map_)
+            for obj in world:
                 img = self.cached_images[obj['name']]
+                obj['pos'] = vec(obj['pos']) + self.origin
                 self.current_world.append(_Object(img, **obj))
         self._sort_world()
 
@@ -65,6 +71,8 @@ class Parser:
 
     def offset(self, dx: int, dy: int):
         # Зміна позиції всіх тайлів
+        self.origin.x += int(dx)
+        self.origin.y += int(dy)
         [obj.rect.move_ip(dx, dy) for obj in self.current_world]
 
     def add_to_world(self, img: pg.Surface, config: dict):
@@ -83,4 +91,4 @@ class Parser:
     def save_world(self):
         # Збереження світу
         with open(Config.CURRENT_MAP, 'w', encoding='utf-8') as map_:
-            map_.write(json.dumps([tile.__repr__() for tile in self.current_world], indent=2))
+            map_.write(json.dumps([tile.get_parr(self.origin) for tile in self.current_world], indent=2))
