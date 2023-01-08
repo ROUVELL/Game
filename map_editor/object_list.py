@@ -44,23 +44,25 @@ class ObjectsList:
                 self.selected_obj = obj
                 return
 
-    def add_selected_to_world(self, pos: tuple):
+    def add_selected_to_world(self, pos: tuple[int | int]):
         # Додаємо вибраний об'єкт до світу
         obj = self.selected_obj
-        config = {
-                'type': self.curr_type,
-                'name': obj.name,
-                'size': obj.rect.size,
-                'pos': pos,
-                'alpha': True,
-                'zindex': self.curr_zindex
-            }
-        self._parser.add_to_world(obj.image, config)
+        self._parser.add_to_world(
+            image=obj.image,
+            type=self.curr_type,
+            name=obj.name,
+            size=obj.rect.size,
+            pos=pos,
+            alpha=True,
+            zindex=self.curr_zindex
+        )
 
     def _keyboard_control(self):
         keys = pg.key.get_pressed()
-        if keys[pg.K_w]: self.slide_list(.2)
-        elif keys[pg.K_s]: self.slide_list(-.2)
+        if keys[pg.K_w]:
+            self.slide_list(.2)
+        elif keys[pg.K_s]:
+            self.slide_list(-.2)
 
     def check_focus(self) -> bool:
         self.in_focus = self._rect.collidepoint(*pg.mouse.get_pos())
