@@ -4,8 +4,6 @@ from map_editor.parser import Parser
 from map_editor.object_list import ObjectsList
 from config import Config
 
-from time import sleep
-
 
 class Engine:
     def __init__(self, app):
