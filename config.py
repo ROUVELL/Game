@@ -41,4 +41,4 @@ class Config:
     DRAW_SPRITE_RECT = False
     DRAW_CAMERA_RECT = False
     DRAW_SCREEN_CENTER = False
-    DRAW_COORDINATE_AXIS = True
+    DRAW_COORDINATE_AXIS = False
