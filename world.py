@@ -1,5 +1,4 @@
 import pygame as pg
-from pygame import Vector2 as vec
 from config import Config
 
 import json
@@ -17,7 +16,7 @@ class World:
     def __init__(self):
         self.textures = []
         self.sprites = []
-        self.origin = vec(Config.CENTER)
+        self.origin = pg.Vector2(Config.CENTER)
         self._cache_images()
         self.parse_world()
 
@@ -30,7 +29,7 @@ class World:
         with open(path) as map_:
             for obj in json.load(map_):
                 img = self.cached_images[obj['name']]
-                obj['pos'] = vec(obj['pos']) + self.origin
+                obj['pos'] = pg.Vector2(obj['pos']) + self.origin
                 match obj['type']:
                     case 'texture': self.textures.append(_Object(img, **obj))
                     case 'sprite': self.sprites.append(_Object(img, **obj))
@@ -38,8 +37,8 @@ class World:
         self.textures = sorted(self.textures, key=lambda obj: obj.zindex)
         self.sprites = sorted(self.sprites, key=lambda obj: obj.zindex)
 
-    def offset_world(self, dx: int, dy: int):
+    def offset_world(self, offset: pg.Vector2):
         # Рухаємо весь світ
-        self.origin.x += dx
-        self.origin.y += dy
-        [obj.rect.move_ip(dx, dy) for obj in [*self.textures, *self.sprites]]
+        self.origin.x += offset.x
+        self.origin.y += offset.y
+        [obj.rect.move_ip(offset) for obj in [*self.textures, *self.sprites]]
