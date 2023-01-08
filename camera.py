@@ -18,11 +18,11 @@ class Camera:
         elif camera.right < player.right: ox = camera.right - player.right
         if camera.top > player.top: oy = camera.top - player.top
         elif camera.bottom < player.bottom: oy = camera.bottom - player.bottom
-        return ox, oy
+        return pg.Vector2(ox, oy)
 
     def update(self):
         if not self.rect.contains(self._target):  # Чи не виходить ігрок за межі камери
             offset = self._check_collide_and_get_offset()
 
             self._target.rect.move_ip(offset)
-            self._world.offset_world(*offset)
+            self._world.offset_world(offset)
