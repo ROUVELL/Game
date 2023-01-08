@@ -16,6 +16,13 @@ class Engine:
         ##########
         self.focus_on_world = False
         self.preview = False
+        ##########
+        if Config.AUTOSAVE:
+            pg.time.set_timer(
+                pg.event.Event(pg.USEREVENT + 0),
+                Config.AUTOSAVE_DELEY * 1000,
+                -1
+            )
 
     def _key_event(self, event: pg.event.Event):
         # ESC - clear seleced obj. in tabs / exit
@@ -32,7 +39,7 @@ class Engine:
                 if not self.preview and self.objects_list.selected_obj:
                     self.objects_list.selected_obj = None
                     return
-                if Config.AUTO_SAVE: self.parser.save_world()
+                if Config.AUTOSAVE_ON_EXIT: self.parser.save_world()
                 self.app.running = False
             case pg.K_p:
                 self.preview = not self.preview
@@ -64,15 +71,18 @@ class Engine:
             if event.button == 1:
                 if self.objects_list.selected_obj: self.objects_list.add_selected_to_world(event.pos)
             elif event.button == 3:
-                if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_collided_obj(event.pos, all_=True)
-                else: self.parser.delete_collided_obj(event.pos)
+                if pg.key.get_pressed()[pg.K_LSHIFT]:
+                    self.parser.delete_collided_obj(event.pos, all_=True)
+                else:
+                    self.parser.delete_collided_obj(event.pos)
 
         elif event.type == pg.MOUSEWHEEL:
             if self.focus_on_world:
                 size = self.draw.tile_size
                 size = size // 2 if event.y < 0 else size * 2
                 self.draw.tile_size = max(min(size, 256), 16)
-            else: self.objects_list.slide_list(event.y)
+            else:
+                self.objects_list.slide_list(event.y)
 
     def _check_events(self):
         for event in pg.event.get():
@@ -80,6 +90,8 @@ class Engine:
                 self._key_event(event)
             elif event.type in [pg.MOUSEBUTTONUP, pg.MOUSEWHEEL] and not self.preview:
                 self._mouse_events(event)
+            elif event.type == pg.USEREVENT:
+                self.parser.save_world()
 
     def _check_focus(self):
         # True якщо не наведені не на одну з вкладок
@@ -94,10 +106,14 @@ class Engine:
         keys = pg.key.get_pressed()
         if keys[pg.K_LCTRL]: return
 
-        if keys[pg.K_w]: self.parser.offset(0, 2)
-        elif keys[pg.K_s]: self.parser.offset(0, -2)
-        if keys[pg.K_a]: self.parser.offset(2, 0)
-        elif keys[pg.K_d]: self.parser.offset(-2, 0)
+        if keys[pg.K_w]:
+            self.parser.offset(0, 2)
+        elif keys[pg.K_s]:
+            self.parser.offset(0, -2)
+        if keys[pg.K_a]:
+            self.parser.offset(2, 0)
+        elif keys[pg.K_d]:
+            self.parser.offset(-2, 0)
 
     def update_and_draw(self):
         self._check_focus()
