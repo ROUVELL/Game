@@ -9,23 +9,50 @@ class Drawing:
         ##############
         self._fps_font = pg.font.Font(Config.INFO_FONT, 16)
         self._info_font = pg.font.Font(Config.INFO_FONT, 8)
-        ##############
+        # Поверхня для малювання сітки
+        self.grid_surf = pg.Surface(Config.SCREEN)
+        self.grid_surf.set_colorkey('black')
+        self.grid_surf.set_alpha(50)
         self.draw_axis = not Config.DRAW_COORDINATE_AXIS
+        self.draw_tiles_grid = True
+        self.tile_size = 32
 
     def bg(self):
         self._sc.fill('black')
 
+    def _axis(self):
+        x, y = self.engine.parser.origin
+        w, h = Config.SCREEN
+        pg.draw.line(self._sc, 'gray', (0, y), (w, y))
+        pg.draw.line(self._sc, 'gray', (x, 0), (x, h))
+
+    def _grid(self):
+        cols = Config.WIDTH // self.tile_size
+        rows = Config.HEIGHT // self.tile_size
+        origin = self.engine.parser.origin
+
+        offset = pg.Vector2(
+            x=origin.x - int(origin.x / self.tile_size) * self.tile_size,
+            y=origin.y - int(origin.y / self.tile_size) * self.tile_size)
+
+        self.grid_surf.fill('black')
+        for col in range(cols + 1):
+            x = offset.x + col * self.tile_size
+            pg.draw.line(self.grid_surf, 'darkgrey', (x, 0), (x, Config.HEIGHT))
+
+        for row in range(rows + 1):
+            y = offset.y + row * self.tile_size
+            pg.draw.line(self.grid_surf, 'darkgrey', (0, y), (Config.WIDTH, y))
+
+        self._sc.blit(self.grid_surf, (0, 0))
+
     def world(self):
+        if self.draw_tiles_grid: self._grid()
         for obj in self.engine.parser.get_world():
             self._sc.blit(obj.image, obj.rect)
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
-
-        if self.draw_axis:
-            x, y = self.engine.parser.origin
-            w, h = Config.SCREEN
-            pg.draw.line(self._sc, 'gray', (0, y), (w, y))
-            pg.draw.line(self._sc, 'gray', (x, 0), (x, h))
+        if self.draw_axis: self._axis()
 
     def tab(self):
         if not self.engine.preview:
@@ -47,7 +74,6 @@ class Drawing:
 
         color = 'red' if self.engine.parser.changed else 'green'
         pg.draw.rect(self._sc, color, (pos[0] - 15, pos[1], 6, 6))
-
 
     def _tile_info(self):
         # Показує інформацію про наведений мишею тайл
@@ -82,7 +108,8 @@ class Drawing:
             self._tile_info()
 
     def fps(self):
-        self._sc.blit(self._fps_font.render(f'{self.engine.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR), Config.FPS_POS)
+        self._sc.blit(self._fps_font.render(f'{self.engine.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR),
+                      Config.FPS_POS)
 
     def all(self):
         self.bg()
