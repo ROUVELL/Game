@@ -14,12 +14,12 @@ class Drawing:
         self._sc.fill('black')
 
     def world(self):
-        for obj in self.engine.parser.current_world:
+        for obj in self.engine.parser.get_world():
             self._sc.blit(obj.image, obj.rect)
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
 
-        if Config.DRAW_COORDINATE_AXIS:
+        if not Config.DRAW_COORDINATE_AXIS:
             x, y = self.engine.parser.origin
             w, h = Config.SCREEN
             pg.draw.line(self._sc, 'gray', (0, y), (w, y))
@@ -34,7 +34,7 @@ class Drawing:
 
     def _world_info(self):
         # К-сть об'єктів, позиція миші та поточний z індекс
-        obj_count = len(self.engine.parser.current_world)
+        obj_count = len(self.engine.parser.get_world())
         x, y = pg.math.Vector2(pg.mouse.get_pos()) - self.engine.parser.origin
         zindex = self.engine.objects_list.curr_zindex
         type_ = self.engine.objects_list.curr_type
@@ -46,7 +46,7 @@ class Drawing:
         # Показує інформацію про наведений мишею тайл
         x, y = pg.mouse.get_pos()
         # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
-        obj = self.engine.parser.get_collided_rect()
+        obj = self.engine.parser.get_collided_obj()
         origin = self.engine.parser.origin
         if obj:
             rect = obj.rect
