@@ -26,7 +26,7 @@ class World:
         self.cached_images = {name: pg.image.load(Config.STATIC + name) for name in os.listdir(Config.STATIC)}
 
     def parse_world(self, path: str = Config.CURRENT_MAP):
-        # Відкриваємь вибрану карту, створюємо список тайлів та відсортовуємо його по z індексу
+        # Відкриваємо вибрану карту, створюємо список тайлів та відсортовуємо його по z індексу
         with open(path) as map_:
             for obj in json.load(map_):
                 img = self.cached_images[obj['name']]
@@ -34,7 +34,7 @@ class World:
                 match obj['type']:
                     case 'texture': self.textures.append(_Object(img, **obj))
                     case 'sprite': self.sprites.append(_Object(img, **obj))
-                    case _: raise TypeError(f"Unknown type of {obj}")
+                    case _: raise TypeError(f"Unknown object: {obj}")
         self.textures = sorted(self.textures, key=lambda obj: obj.zindex)
         self.sprites = sorted(self.sprites, key=lambda obj: obj.zindex)
 
