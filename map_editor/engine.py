@@ -21,6 +21,7 @@ class Engine:
         # ESC - clear seleced obj. in tabs / exit
         # p - preview
         # g - change type of collided obj (texture/sprite)
+        # x - draw origin axis
         # LCTRL + s - save world
         # LCTRL + r - restore world
         # RSHIFT and RCTRL - curr index +- 1
@@ -34,6 +35,8 @@ class Engine:
                 self.app.running = False
             case pg.K_p:
                 self.preview = not self.preview
+            case pg.K_x:
+                self.draw.draw_axis = not self.draw.draw_axis
             case pg.K_s:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
             case pg.K_r:
