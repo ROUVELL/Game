@@ -1,7 +1,9 @@
 import pygame as pg
+from pygame import Vector2 as vec
+from config import Config
+
 import json
 import os
-from config import Config
 
 
 class _Object:
@@ -15,6 +17,7 @@ class World:
     def __init__(self):
         self.textures = []
         self.sprites = []
+        self.origin = vec(Config.CENTER)
         self._cache_images()
         self.parse_world()
 
@@ -27,13 +30,16 @@ class World:
         with open(path) as map_:
             for obj in json.load(map_):
                 img = self.cached_images[obj['name']]
+                obj['pos'] = vec(obj['pos']) + self.origin
                 match obj['type']:
                     case 'texture': self.textures.append(_Object(img, **obj))
                     case 'sprite': self.sprites.append(_Object(img, **obj))
-                    case _: raise TypeError(f"Unknown type of {obj['name']}")
+                    case _: raise TypeError(f"Unknown type of {obj}")
         self.textures = sorted(self.textures, key=lambda obj: obj.zindex)
         self.sprites = sorted(self.sprites, key=lambda obj: obj.zindex)
 
     def offset_world(self, dx: int, dy: int):
         # Рухаємо весь світ
+        self.origin.x += dx
+        self.origin.y += dy
         [obj.rect.move_ip(dx, dy) for obj in [*self.textures, *self.sprites]]
