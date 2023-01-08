@@ -75,7 +75,7 @@ class Drawing:
         color = 'red' if self.engine.parser.changed else 'green'
         pg.draw.rect(self._sc, color, (pos[0] - 15, pos[1], 6, 6))
 
-    def _tile_info(self):
+    def _obj_info(self):
         # Показує інформацію про наведений мишею тайл
         x, y = pg.mouse.get_pos()
         # Беремо всі тайли на які навелись, по z індексу від верхніх до нижніх
@@ -83,7 +83,7 @@ class Drawing:
         origin = self.engine.parser.origin
         if obj:
             rect = obj.rect
-            pg.draw.rect(self._sc, 'grey', rect, 1)
+            pg.draw.rect(self._sc, 'orange', rect, 1)
             self._text(rect.centery - origin.y, (rect.centerx - 5, rect.top - 8))
             self._text(rect.centerx - origin.x, (rect.left - 10, rect.centery - 5))
             self._text(rect.width, (rect.centerx - 5, rect.bottom + 2))
@@ -105,7 +105,7 @@ class Drawing:
                 x, y = pg.mouse.get_pos()
                 pos = (x - w // 2, y - h // 2)
                 self._sc.blit(img, pos)
-            self._tile_info()
+            self._obj_info()
 
     def fps(self):
         self._sc.blit(self._fps_font.render(f'{self.engine.app.clock.get_fps(): .1f}', 0, Config.FPS_COLOR),
