@@ -8,7 +8,6 @@ class Config:
     # window
     WIDTH, HEIGHT = (user32.GetSystemMetrics(78) // 2, user32.GetSystemMetrics(79) // 2)  # always fullscreen
     HALF_WIDTH, HALF_HEIGHT = WIDTH // 2, HEIGHT // 2
-    DOUBLE_WIDTH, DOUBLE_HEIGHT = WIDTH * 2, HEIGHT * 2
     CENTER = (HALF_WIDTH, HALF_HEIGHT)
     SCREEN = (WIDTH, HEIGHT)
     # fps
@@ -34,7 +33,9 @@ class Config:
     OBJECTS_LIST_POS = (0, 0)
     OBJECTS_LIST_SIZE = (WIDTH * .075, HEIGHT)
     SLIDE_SENSETIVITY = 30  # For sliding imgs list
-    AUTO_SAVE = False  # Чи зберігати світ при виході
+    AUTOSAVE_ON_EXIT = False  # Чи зберігати світ при виході
+    AUTOSAVE = False
+    AUTOSAVE_DELEY = 15  # sec
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
