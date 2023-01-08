@@ -8,7 +8,7 @@ class Editor:
         pg.init()
         self.sc = pg.display.set_mode(Config.SCREEN, pg.SCALED | pg.FULLSCREEN)
         cursor = pg.image.load(f'{Config.UI}cursor1.png').convert_alpha()
-        pg.mouse.set_cursor(pg.Cursor((4, 4), cursor))
+        pg.mouse.set_cursor(pg.Cursor((5, 5), cursor))
         self.clock = pg.time.Clock()
         self.engine = Engine(self)
         self.running = True
