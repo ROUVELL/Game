@@ -12,6 +12,7 @@ class Engine:
         self.parser = Parser(self)
         self.objects_list = ObjectsList(self)
         ##########
+        # TODO: Виділення мишкою області на світі як на робочому столі віндовс
         self.focus_on_world = False
         self.preview = False
         ##########
