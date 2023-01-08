@@ -36,10 +36,11 @@ class Config:
     AUTOSAVE_ON_EXIT = False  # Чи зберігати світ при виході
     AUTOSAVE = False
     AUTOSAVE_DELEY = 15  # sec
+    DRAW_COORDINATE_AXIS = False
+    DRAW_TILE_GRID = False
     # debug
     DRAW_PLAYER_RECT = False
     DRAW_TEXTURE_RECT = False
     DRAW_SPRITE_RECT = False
     DRAW_CAMERA_RECT = False
     DRAW_SCREEN_CENTER = False
-    DRAW_COORDINATE_AXIS = False
