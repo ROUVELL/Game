@@ -28,7 +28,6 @@ class _Object:
         return {
             'type': self.type,
             'name': self.name,
-            'size': self.rect.size,
             'pos': pos,
             'alpha': self.alpha,
             'zindex': self.zindex

@@ -7,7 +7,7 @@ import os
 
 class _Object:
     def __init__(self, img: pg.Surface, **config):
-        self.image = pg.transform.scale(img.convert_alpha() if config['alpha'] else img.convert(), config['size'])
+        self.image = img.convert_alpha() if config['alpha'] else img.convert()
         self.rect = self.image.get_rect(center=config['pos'])
         self.zindex = config['zindex']
 
@@ -34,8 +34,8 @@ class World:
                     case 'texture': self.textures.append(_Object(img, **obj))
                     case 'sprite': self.sprites.append(_Object(img, **obj))
                     case _: raise TypeError(f"Unknown object: {obj}")
-        self.textures = sorted(self.textures, key=lambda obj: obj.zindex)
-        self.sprites = sorted(self.sprites, key=lambda obj: obj.zindex)
+        self.textures.sort(key=lambda obj: obj.zindex)
+        self.sprites.sort(key=lambda obj: obj.zindex)
 
     def offset_world(self, offset: pg.Vector2):
         # Рухаємо весь світ

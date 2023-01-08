@@ -51,7 +51,6 @@ class ObjectsList:
             image=obj.image,
             type=self.curr_type,
             name=obj.name,
-            size=obj.rect.size,
             pos=pos,
             alpha=True,
             zindex=self.curr_zindex
