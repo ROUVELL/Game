@@ -22,6 +22,7 @@ class Engine:
         # p - preview
         # g - change type of collided obj (texture/sprite)
         # LCTRL + s - save world
+        # LCTRL + r - restore world
         # RSHIFT and RCTRL - curr index +- 1
         # TAB - change current type between 'rexture' and 'sprite'
         match event.key:
@@ -35,6 +36,8 @@ class Engine:
                 self.preview = not self.preview
             case pg.K_s:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
+            case pg.K_r:
+                if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.restore_world()
             case pg.K_RSHIFT:
                 self.objects_list.curr_zindex += 1
             case pg.K_RCTRL:
@@ -43,7 +46,7 @@ class Engine:
                 self.objects_list.curr_type = 'sprite' if self.objects_list.curr_type == 'texture' else 'texture'
             case pg.K_g:
                 if self.preview: return
-                tile = self.parser.get_collided_rect()
+                tile = self.parser.get_collided_obj()
                 if tile:
                     tile.type = 'sprite' if tile.type == 'texture' else 'texture'
 
@@ -55,8 +58,8 @@ class Engine:
             if event.button == 1:
                 if self.objects_list.selected_obj: self.objects_list.add_selected_to_world(event.pos)
             elif event.button == 3:
-                if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_from_world(event.pos, True)
-                else: self.parser.delete_from_world(event.pos)
+                if pg.key.get_pressed()[pg.K_LSHIFT]: self.parser.delete_collided_obj(event.pos, all_=True)
+                else: self.parser.delete_collided_obj(event.pos)
 
         elif event.type == pg.MOUSEWHEEL and not self.focus_on_world:
             self.objects_list.slide_list(event.y)
