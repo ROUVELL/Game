@@ -73,9 +73,9 @@ class Engine:
 
         elif event.type == pg.MOUSEWHEEL:
             if self.focus_on_world:
-                size = self.draw.tile_size
+                size = self.draw.grid_size
                 size = size // 2 if event.y < 0 else size * 2
-                self.draw.tile_size = max(min(size, 256), 16)
+                self.draw.grid_size = max(min(size, 256), 16)
             else:
                 self.objects_list.slide_list(event.y)
 
