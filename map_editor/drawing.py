@@ -33,13 +33,13 @@ class Drawing:
             x=origin.x - int(origin.x / self.grid_size) * self.grid_size,
             y=origin.y - int(origin.y / self.grid_size) * self.grid_size)
 
-        self.grid_surf.fill('black')
+        self._grid_surf.fill('black')
         for col in range(cols + 1):
-            x = offset.x + col * self.tile_size
+            x = offset.x + col * self.grid_size
             pg.draw.line(self._grid_surf, 'darkgrey', (x, 0), (x, Config.HEIGHT))
 
         for row in range(rows + 1):
-            y = offset.y + row * self.tile_size
+            y = offset.y + row * self.grid_size
             pg.draw.line(self._grid_surf, 'darkgrey', (0, y), (Config.WIDTH, y))
 
         self._sc.blit(self._grid_surf, (0, 0))
@@ -58,7 +58,7 @@ class Drawing:
     def _world_info(self):
         # К-сть об'єктів, позиція миші та поточний z індекс
         obj_count = len(self._engine.parser.get_world())
-        x, y = pg.math.Vector2(pg.mouse.get_pos()) - self.engine.parser.origin
+        x, y = pg.math.Vector2(pg.mouse.get_pos()) - self._engine.parser.origin
         zindex = self._engine.objects_list.curr_zindex
         type_ = self._engine.objects_list.curr_type
 
