@@ -17,7 +17,6 @@ class Drawing:
         self.draw_axis = not Config.DRAW_COORDINATE_AXIS
         self.draw_tiles_grid = Config.DRAW_TILE_GRID
 
-
     def _axis(self):
         x, y = self._engine.parser.origin
         w, h = Config.SCREEN
@@ -44,6 +43,13 @@ class Drawing:
 
         self._sc.blit(self._grid_surf, (0, 0))
 
+    def _selected_rect(self):
+        rect = self._engine.selected_rect
+        surf = pg.Surface(rect.size)
+        surf.set_alpha(20)
+        surf.fill('lightgreen')
+        self._sc.blit(surf, rect)
+
     def _text(self, text, pos: tuple[int | int]):
         self._sc.blit(self._info_font.render(str(text), 0, 'white'), pos)
 
@@ -54,6 +60,8 @@ class Drawing:
         text = f'Autosave: {auto_save}   Preview: {preview}   FPS: {fps}'
         pos = (Config.HALF_WIDTH - 80, 14)
         self._text(text, pos)
+        color = 'red' if self._engine.parser.changed else 'green'
+        pg.draw.rect(self._sc, color, (pos[0] - 15, pos[1], 6, 6))
 
     def _world_info(self):
         # К-сть об'єктів, позиція миші, поточний z індекс та тип
@@ -61,13 +69,11 @@ class Drawing:
         x, y = pg.math.Vector2(pg.mouse.get_pos()) - self._engine.parser.origin
         zindex = self._engine.objects_list.curr_zindex
         type_ = self._engine.objects_list.curr_type
+        selected = self._engine.selected_rect.size if self._engine.select_triger else None
 
-        text = f'Total objects: {obj_count}   Mouse position: {x, y}   Current type: {type_}   Current z-index: {zindex}'
-        pos = (Config.HALF_WIDTH - 164, Config.HEIGHT - 30)
+        text = f'Total objects: {obj_count}   Mouse position: {int(x), int(y)}   Selected: {selected}   Current type: {type_}   Current z-index: {zindex}'
+        pos = (Config.HALF_WIDTH - 210, Config.HEIGHT - 20)
         self._text(text, pos)
-
-        color = 'red' if self._engine.parser.changed else 'green'
-        pg.draw.rect(self._sc, color, (pos[0] - 15, pos[1], 6, 6))
 
     def _obj_info(self):
         # Показує інформацію про наведений мишею тайл
@@ -94,6 +100,7 @@ class Drawing:
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
         if self.draw_axis: self._axis()
+        if self._engine.select_triger: self._selected_rect()
 
     def info(self):
         self._engine_info()
