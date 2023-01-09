@@ -12,8 +12,6 @@ class Engine:
         self.parser = Parser(self)
         self.objects_list = ObjectsList(self)
         ##########
-        # TODO: Виділення мишкою області на світі як на робочому столі віндовс
-        ##########
         self.start_point = None
         self.selected_rect = None
         ##########
@@ -25,6 +23,7 @@ class Engine:
 
     def _key_event(self, event: pg.event.Event):
         # ESC - clear seleced obj. in tabs / exit
+        # o - move to origin
         # p - preview
         # g - change type of collided obj (texture/sprite)
         # x - draw origin axis
@@ -40,6 +39,8 @@ class Engine:
                     return
                 if Config.AUTOSAVE_ON_EXIT: self.parser.save_world()
                 self.app.running = False
+            case pg.K_o:
+                self.parser.origin = pg.Vector2(Config.CENTER)
             case pg.K_p:
                 self.preview = not self.preview
             case pg.K_x:
