@@ -92,7 +92,7 @@ class Parser:
 
     def add_to_world(self, **config):
         # Додавання новога об'єкта до світу. Пересортувати для правильного відображення
-        img = config['image']
+        img = self.cached_images[config['name']]
         match config['type']:
             case 'texture':
                 self.textures.append(_Object(img, self.textures, **config))

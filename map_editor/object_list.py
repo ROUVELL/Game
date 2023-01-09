@@ -25,7 +25,7 @@ class ObjectsList:
 
     def _get_items(self):
         x = self._rect.width // 2
-        offset = 20
+        offset = 10
         for name, img in self._parser.cached_images.items():
             dh = img.get_height() // 2
             offset += dh
@@ -48,7 +48,6 @@ class ObjectsList:
         # Додаємо вибраний об'єкт до світу
         obj = self.selected_obj
         self._parser.add_to_world(
-            image=obj.image,
             type=self.curr_type,
             name=obj.name,
             pos=pos,
