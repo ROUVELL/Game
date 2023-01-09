@@ -13,8 +13,13 @@ class Engine:
         self.objects_list = ObjectsList(self)
         ##########
         # TODO: Виділення мишкою області на світі як на робочому столі віндовс
+        ##########
+        self.start_point = None
+        self.selected_rect = None
+        ##########
         self.focus_on_world = False
         self.preview = False
+        self.select_triger = False
         ##########
         if Config.AUTOSAVE: pg.time.set_timer(pg.USEREVENT, int(Config.AUTOSAVE_DELEY * 1000), -1)
 
@@ -64,6 +69,7 @@ class Engine:
         if event.type == pg.MOUSEBUTTONUP and self.focus_on_world:
             if event.button == 1:
                 if self.objects_list.selected_obj: self.objects_list.add_selected_to_world(event.pos)
+                self.select_triger = False
             elif event.button == 3:
                 if pg.key.get_pressed()[pg.K_LSHIFT]:
                     self.parser.delete_collided_obj(event.pos, all_=True)
@@ -91,10 +97,31 @@ class Engine:
         # True якщо не наведені не на одну з вкладок
         self.focus_on_world = not self.objects_list.check_focus()
 
+    def _select(self):
+        pos = pg.Vector2(pg.mouse.get_pos())
+        if not self.select_triger:
+            self.select_triger = True
+            self.start_point = pos
+        x, y = self.start_point
+        w, h = pos - self.start_point
+        if w >= 0 and h >= 0:
+            self.selected_rect = pg.Rect((x, y), (w, h))
+        elif w < 0 and h < 0:
+            self.selected_rect = pg.Rect((x + w, y + h), (-w, -h))
+        elif w < 0 <= h:
+            self.selected_rect = pg.Rect((x + w, y), (-w, h))
+        elif h < 0 <= w:
+            self.selected_rect = pg.Rect((x, y + h), (w, -h))
+
     def _mouse_control(self):
         ox, oy = pg.mouse.get_rel()
         keys = pg.mouse.get_pressed()
         if keys[1]: self.parser.offset(ox * .5, oy * .5)
+        if keys[0]:
+            if not self.objects_list.selected_obj:
+                self._select()
+            else: self.select_triger = False
+
 
     def _keyboard_control(self):
         keys = pg.key.get_pressed()
