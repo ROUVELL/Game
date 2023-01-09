@@ -18,6 +18,7 @@ class Engine:
         self.focus_on_world = False
         self.preview = False
         self.select_triger = False
+        self.selected_objs = []
         ##########
         if Config.AUTOSAVE: pg.time.set_timer(pg.USEREVENT, int(Config.AUTOSAVE_DELEY * 1000), -1)
 
@@ -113,6 +114,9 @@ class Engine:
             self.selected_rect = pg.Rect((x + w, y), (-w, h))
         elif h < 0 <= w:
             self.selected_rect = pg.Rect((x, y + h), (w, -h))
+        world = self.parser.get_world()
+        for i in self.selected_rect.collidelistall([obj.rect for obj in world]):
+            self.selected_objs.append(world[i])
 
     def _mouse_control(self):
         ox, oy = pg.mouse.get_rel()
@@ -121,7 +125,9 @@ class Engine:
         if keys[0]:
             if not self.objects_list.selected_obj:
                 self._select()
-            else: self.select_triger = False
+            else:
+                self.selected_objs = []
+                self.select_triger = False
 
 
     def _keyboard_control(self):
