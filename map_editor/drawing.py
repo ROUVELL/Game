@@ -43,7 +43,9 @@ class Drawing:
 
         self._sc.blit(self._grid_surf, (0, 0))
 
-    def _selected_rect(self):
+    def _selected_objs_and_rect(self):
+        for obj in self._engine.selected_objs:
+            pg.draw.rect(self._sc, 'black', obj.rect, 1)
         rect = self._engine.selected_rect
         surf = pg.Surface(rect.size)
         surf.set_alpha(20)
@@ -100,7 +102,7 @@ class Drawing:
             if Config.DRAW_TEXTURE_RECT: pg.draw.rect(self._sc, 'grey', obj.rect, 1)
         if Config.DRAW_SCREEN_CENTER: pg.draw.circle(self._sc, 'red', Config.CENTER, 3)
         if self.draw_axis: self._axis()
-        if self._engine.select_triger: self._selected_rect()
+        if self._engine.select_triger: self._selected_objs_and_rect()
 
     def info(self):
         self._engine_info()
