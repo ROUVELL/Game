@@ -56,7 +56,7 @@ class Drawing:
         self._text(text, pos)
 
     def _world_info(self):
-        # К-сть об'єктів, позиція миші та поточний z індекс
+        # К-сть об'єктів, позиція миші, поточний z індекс та тип
         obj_count = len(self._engine.parser.get_world())
         x, y = pg.math.Vector2(pg.mouse.get_pos()) - self._engine.parser.origin
         zindex = self._engine.objects_list.curr_zindex
