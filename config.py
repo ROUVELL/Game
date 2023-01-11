@@ -24,6 +24,7 @@ class Config:
     FONTS = f'{RESOUCES}fonts/'
     INFO_FONT = f'{FONTS}Mystery Font.ttf'
     STATIC = f'{RESOUCES}static/'
+    STATIC_CONFIG = f'{RESOUCES}static_config.json'
     ANIMATION = f'{RESOUCES}animation/'
     PLAYER_ANIM = f'{ANIMATION}player/'
     MAPS = f'{RESOUCES}maps/'
