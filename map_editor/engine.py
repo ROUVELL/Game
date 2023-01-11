@@ -13,7 +13,7 @@ class Engine:
         self.objects_list = ObjectsList(self)
         ##########
         self.start_point = None
-        self.selected_rect = None
+        self.selected_rect = pg.Rect(0, 0, 0, 0)
         ##########
         self.focus_on_world = False
         self.preview = False
@@ -23,7 +23,7 @@ class Engine:
         if Config.AUTOSAVE: pg.time.set_timer(pg.USEREVENT, int(Config.AUTOSAVE_DELEY * 1000), -1)
 
     def _key_event(self, event: pg.event.Event):
-        # ESC - clear seleced obj. in tabs / exit
+        # ESC - clear selected objs / clear seleced obj. in tab / exit
         # o - move to origin
         # p - preview
         # g - change type of collided obj (texture/sprite)
@@ -35,9 +35,13 @@ class Engine:
         # TAB - change current type between 'rexture' and 'sprite'
         match event.key:
             case pg.K_ESCAPE:
-                if not self.preview and self.objects_list.selected_obj:
-                    self.objects_list.selected_obj = None
-                    return
+                if not self.preview:
+                    if self.objects_list.selected_obj:
+                        self.objects_list.selected_obj = None
+                        return
+                    if self.selected_objs:
+                        self.selected_objs.clear()
+                        return
                 if Config.AUTOSAVE_ON_EXIT: self.parser.save_world()
                 self.app.running = False
             case pg.K_o:
@@ -114,34 +118,43 @@ class Engine:
             self.selected_rect = pg.Rect((x + w, y), (-w, h))
         elif h < 0 <= w:
             self.selected_rect = pg.Rect((x, y + h), (w, -h))
-        world = self.parser.get_world()
-        for i in self.selected_rect.collidelistall([obj.rect for obj in world]):
-            self.selected_objs.append(world[i])
+        self.selected_objs.clear()
+        for obj in self.parser.get_world():
+            if self.selected_rect.contains(obj.rect):
+                self.selected_objs.append(obj)
 
     def _mouse_control(self):
-        ox, oy = pg.mouse.get_rel()
+        offset = pg.Vector2(pg.mouse.get_rel())
         keys = pg.mouse.get_pressed()
-        if keys[1]: self.parser.offset(ox * .5, oy * .5)
+        if keys[1]: self.parser.offset(offset * .5)
         if keys[0]:
             if not self.objects_list.selected_obj:
-                self._select()
+                if not self.select_triger and self.selected_rect.collidepoint(pg.mouse.get_pos()):
+                    [obj.rect.move_ip(offset * .5) for obj in self.selected_objs]
+                    self.selected_rect.move_ip(offset * .5)
+                else:
+                    self._select()
             else:
-                self.selected_objs = []
                 self.select_triger = False
-
 
     def _keyboard_control(self):
         keys = pg.key.get_pressed()
         if keys[pg.K_LCTRL]: return
 
+        offset = pg.Vector2()
         if keys[pg.K_w]:
-            self.parser.offset(0, 2)
+            offset.y = -2
         elif keys[pg.K_s]:
-            self.parser.offset(0, -2)
+            offset.y = 2
         if keys[pg.K_a]:
-            self.parser.offset(2, 0)
+            offset.x = -2
         elif keys[pg.K_d]:
-            self.parser.offset(-2, 0)
+            offset.x = 2
+
+        if self.selected_objs:
+            [obj.rect.move_ip(offset) for obj in self.selected_objs]
+            self.selected_rect.move_ip(offset)
+        else: self.parser.offset(-offset)
 
     def update_and_draw(self):
         self._check_focus()
