@@ -9,9 +9,6 @@ class Drawing:
         ##############
         self._fps_font = pg.font.SysFont('arial', 20)
 
-    def _bg(self):
-        self._sc.fill('black')
-
     def _world(self):
         [self._sc.blit(obj.image, obj.rect) for obj in self._game.world.textures]
 
@@ -36,7 +33,7 @@ class Drawing:
         self._sc.blit(fps, Config.FPS_POS)
 
     def all(self):
-        self._bg()
+        self._sc.fill('black')
         self._world()
         self._sprites()
         self._debug()

@@ -3,7 +3,7 @@ from config import Config
 
 
 class _ObjectListItem:
-    def __init__(self, img: pg.Surface, name: str, pos: tuple):
+    def __init__(self, img: pg.Surface, name: str, pos: tuple[int, int]):
         self.name = name
         self.image = img.convert_alpha()
         self.rect = img.get_rect(center=pos)
@@ -44,7 +44,7 @@ class ObjectsList:
                 self.selected_obj = obj
                 return
 
-    def add_selected_to_world(self, pos: tuple[int | int]):
+    def add_selected_to_world(self, pos: tuple[int, int]):
         # Додаємо вибраний об'єкт до світу
         obj = self.selected_obj
         self._parser.add_to_world(
@@ -66,8 +66,8 @@ class ObjectsList:
         self.in_focus = self._rect.collidepoint(*pg.mouse.get_pos())
         return self.in_focus
 
-    def draw(self, sc):
-        self._sc.fill('black')
+    def draw(self, sc: pg.Surface):
+        self._sc.fill((20, 0, 0))
         [self._sc.blit(obj.image, obj.rect) for obj in self._items]
         if self.selected_obj:
             pg.draw.rect(self._sc, 'red', self.selected_obj.rect.inflate(10, 10), 1)

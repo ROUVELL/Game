@@ -22,7 +22,8 @@ class World:
 
     def _cache_images(self):
         # Кешування всіх статичних тайлів
-        self.cached_images = {name: pg.image.load(Config.STATIC + name) for name in os.listdir(Config.STATIC)}
+        self.cached_images = {name: pg.image.load(Config.STATIC + name)
+                              for name in os.listdir(Config.STATIC)}
 
     def parse_world(self, path: str = Config.CURRENT_MAP):
         # Відкриваємо вибрану карту, створюємо список тайлів та відсортовуємо його по z індексу
@@ -39,6 +40,5 @@ class World:
 
     def offset_world(self, offset: pg.Vector2):
         # Рухаємо весь світ
-        self.origin.x += offset.x
-        self.origin.y += offset.y
+        self.origin += offset
         [obj.rect.move_ip(offset) for obj in [*self.textures, *self.sprites]]

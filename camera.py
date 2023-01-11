@@ -9,7 +9,7 @@ class Camera:
         self._target = game.player
         self.rect = pg.Rect(Config.CAMERA_RECT)
 
-    def _check_collide_and_get_offset(self) -> tuple:
+    def _get_offset(self) -> pg.Vector2:
         # Колізія з камерою і зміщення в залежності від неї
         ox = oy = 0
         camera, player = self.rect, self._target.rect
@@ -22,7 +22,6 @@ class Camera:
 
     def update(self):
         if not self.rect.contains(self._target):  # Чи не виходить ігрок за межі камери
-            offset = self._check_collide_and_get_offset()
-
+            offset = self._get_offset()
             self._target.rect.move_ip(offset)
             self._world.offset_world(offset)

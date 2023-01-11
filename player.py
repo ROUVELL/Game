@@ -6,15 +6,15 @@ class Player:
     def __init__(self, game):
         self._game = game
         # Анімація ходьби по всіх сторонах
-        self.walk_anim = self._load_animation('walking', 8)
+        self._walk_anim = self._load_animation('walking', 8)
         # Анімація стрільби з лука
-        self.bow_anim = self._load_animation('bow', 13)
+        self._bow_anim = self._load_animation('bow', 13)
         # Час останнього оновлення та поточний кадр анімації
         self._last_time = pg.time.get_ticks()
         self._frame = 0
         # Картинка для відображення та рект для контролю позиції і колізій
-        self.curr_animation = self.walk_anim
-        self.image = self.curr_animation['down'][self._frame]
+        self._curr_animation = self._walk_anim
+        self.image = self._curr_animation['down'][self._frame]
         self.rect = self.image.get_rect(center=Config.CENTER)
         #####################
         self.direction = 'down'  # Напрям руху
@@ -23,7 +23,7 @@ class Player:
         self.speed = Config.PLAYER_SPEED  # Початкова швидкість
 
     @staticmethod
-    def _load_animation(directory: str, lenght: int) -> dict[str: list | int]:
+    def _load_animation(directory: str, lenght: int) -> dict[str: list[pg.Surface, ...] | int]:
         # Завантаження анімації
         res = {'lenght': lenght}
         for name in ['up', 'right', 'left', 'down']:
@@ -40,9 +40,9 @@ class Player:
 
     def _check_curr_animation(self):
         if self.attack:
-            self.curr_animation = self.bow_anim
+            self._curr_animation = self._bow_anim
         elif self.moving:
-            self.curr_animation = self.walk_anim
+            self._curr_animation = self._walk_anim
 
     def _animate(self):
         # Зміна кадру
@@ -50,17 +50,17 @@ class Player:
             if self._check_animation_time():
                 self._frame += 1
         else: self._frame = 0
-        if self._frame == self.curr_animation['lenght']:
+        if self._frame == self._curr_animation['lenght']:
             self._frame = 0
             if self.attack:
                 if pg.mouse.get_pressed()[0]:
                     self._frame = 3
                 else:
                     self.attack = False
-                    self.curr_animation = self.walk_anim
+                    self._curr_animation = self._walk_anim
 
         # Зміна картинки в залежності від руху
-        self.image = self.curr_animation[self.direction][self._frame]
+        self.image = self._curr_animation[self.direction][self._frame]
         self.rect = self.image.get_rect(center=self.rect.center)
 
     def _movement(self):

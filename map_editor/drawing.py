@@ -55,7 +55,7 @@ class Drawing:
         if self._engine.select_triger or self._engine.selected_objs:
             pg.draw.rect(self._sc, 'skyblue', rect, 1)
 
-    def _text(self, text, pos: tuple[int | int]):
+    def _text(self, text, pos: tuple[int, int]):
         self._sc.blit(self._info_font.render(str(text), 0, 'white'), pos)
 
     def _engine_info(self):
@@ -80,6 +80,14 @@ class Drawing:
         pos = (Config.HALF_WIDTH - 210, Config.HEIGHT - 20)
         self._text(text, pos)
 
+    def _obj_preview(self):
+        obj = self._engine.objects_list.selected_obj
+        if obj:
+            img = obj.image.copy()
+            img.set_alpha(180)
+            rect = img.get_rect(center=pg.mouse.get_pos())
+            self._sc.blit(img, rect)
+
     def _obj_info(self):
         if self._engine.select_triger:
             return
@@ -91,8 +99,8 @@ class Drawing:
         if obj:
             rect = obj.rect
             pg.draw.rect(self._sc, 'orange', rect, 1)
-            self._text(rect.centery - origin.y, (rect.centerx - 5, rect.top - 8))
-            self._text(rect.centerx - origin.x, (rect.left - 10, rect.centery - 5))
+            self._text(int(rect.centery - origin.y), (rect.centerx - 5, rect.top - 8))
+            self._text(int(rect.centerx - origin.x), (rect.left - 15, rect.centery - 5))
             self._text(rect.width, (rect.centerx - 5, rect.bottom + 2))
             self._text(rect.height, (rect.right + 2, rect.centery - 5))
             pg.draw.rect(self._sc, 'green', (x, y, 65, 47), 1)
@@ -114,14 +122,7 @@ class Drawing:
         self._world_info()
         if self._engine.preview: return
         if self._engine.focus_on_world:
-            obj = self._engine.objects_list.selected_obj
-            if obj:
-                img = obj.image.copy()
-                img.set_alpha(180)
-                w, h = img.get_size()
-                x, y = pg.mouse.get_pos()
-                pos = (x - w // 2, y - h // 2)
-                self._sc.blit(img, pos)
+            self._obj_preview()
             self._obj_info()
 
     def tab(self):

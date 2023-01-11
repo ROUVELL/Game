@@ -49,7 +49,8 @@ class Parser:
 
     def _cache_images(self):
         # Кешуємо всі статичні картинки
-        for name in os.listdir(Config.STATIC): self.cached_images[name] = pg.image.load(Config.STATIC + name)
+        self.cached_images = {name: pg.image.load(Config.STATIC + name)
+                              for name in os.listdir(Config.STATIC)}
 
     def parse_world(self, path: str = Config.CURRENT_MAP):
         # Відкриваємо вибрану карту, зберігаємо кожен тайл і відсортовуємо
@@ -66,7 +67,7 @@ class Parser:
         self.sprites.sort(key=lambda obj: obj.zindex)
         self.changed = False
 
-    def get_world(self) -> list[_Object]:
+    def get_world(self) -> list[_Object, ...]:
         # Повертає копію світу
         return [*self.textures, *self.sprites]
 
@@ -77,10 +78,9 @@ class Parser:
         for tile in tiles:
             if tile.rect.collidepoint(x, y): return tile
 
-    def offset(self, ofsset: pg.Vector2):
+    def offset(self, ofsset: vec):
         # Зміна позиції всіх тайлів
-        self.origin.x += ofsset.x
-        self.origin.y += ofsset.y
+        self.origin += ofsset
         [obj.rect.move_ip(ofsset) for obj in self.get_world()]
 
     def restore_world(self):
@@ -102,7 +102,7 @@ class Parser:
                 self.sprites.sort(key=lambda obj: obj.zindex)
         self.changed = True
 
-    def delete_collided_obj(self, pos: tuple[int | int], all_: bool = False):
+    def delete_collided_obj(self, pos: tuple[int, int], all_: bool = False):
         # Видалення одного або всіх об'єктів по позиції
         # Перевертаємо список щоб спочатку видялялися верхні
         for tile in sorted(self.get_world(), key=lambda obj: obj.zindex):
