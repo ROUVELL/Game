@@ -77,11 +77,11 @@ class Parser:
         for tile in tiles:
             if tile.rect.collidepoint(x, y): return tile
 
-    def offset(self, dx: int, dy: int):
+    def offset(self, ofsset: pg.Vector2):
         # Зміна позиції всіх тайлів
-        self.origin.x += int(dx)
-        self.origin.y += int(dy)
-        [obj.rect.move_ip(dx, dy) for obj in self.get_world()]
+        self.origin.x += ofsset.x
+        self.origin.y += ofsset.y
+        [obj.rect.move_ip(ofsset) for obj in self.get_world()]
 
     def restore_world(self):
         # Відновлюмо світ якщо щось змінили
