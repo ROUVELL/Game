@@ -49,7 +49,7 @@ class Parser:
 
     def _cache_images(self):
         # Кешуємо всі статичні картинки
-        self.cached_images = {name: pg.image.load(Config.STATIC + name)
+        self.cached_images = {name.split('.')[0]: pg.image.load(Config.STATIC + name)
                               for name in os.listdir(Config.STATIC)}
 
     def parse_world(self, path: str = Config.CURRENT_MAP):

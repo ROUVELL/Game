@@ -73,10 +73,9 @@ class Drawing:
         obj_count = len(self._engine.parser.get_world())
         x, y = pg.math.Vector2(pg.mouse.get_pos()) - self._engine.parser.origin
         zindex = self._engine.objects_list.curr_zindex
-        type_ = self._engine.objects_list.curr_type
         selected = self._engine.selected_rect.size if self._engine.select_triger else None
 
-        text = f'Total objects: {obj_count}   Mouse position: {int(x), int(y)}   Selected: {selected}   Current type: {type_}   Current z-index: {zindex}'
+        text = f'Total objects: {obj_count}   Mouse position: {int(x), int(y)}   Selected: {selected}   Current z-index: {zindex}'
         pos = (Config.HALF_WIDTH - 210, Config.HEIGHT - 20)
         self._text(text, pos)
 

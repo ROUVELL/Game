@@ -1,57 +1,102 @@
 import pygame as pg
 from config import Config
 
+import json
 
-class _ObjectListItem:
-    def __init__(self, img: pg.Surface, name: str, pos: tuple[int, int]):
+
+class _ObjectsGroupItem:
+    def __init__(self, img: pg.Surface, name: str):
         self.name = name
         self.image = img.convert_alpha()
-        self.rect = img.get_rect(center=pos)
 
 
-class ObjectsList:
+class _ObjectsGroup:
+    def __init__(self, name: str, pos: tuple[int, int], obj: _ObjectsGroupItem):
+        self.name = name
+        ##########
+        self.rect = pg.Rect(0, 0, Config.OBJECTS_LIST_SIZE[0], Config.OBJECTS_LIST_SIZE[0])
+        self.rect.center = pos
+        ##########
+        self.curr_obj = obj
+        self._items = []
+        self._index = 0
+        self._in_focus = False
+        if obj:
+            self.add_objs(obj)
+
+    def add_objs(self, objs: list[_ObjectsGroupItem, ...] | _ObjectsGroupItem):
+        # Додає один або декілька об'єктів до групи
+        assert isinstance(objs, (list, _ObjectsGroupItem))
+        if isinstance(objs, list):
+            [self._items.append(obj) for obj in objs]
+        else: self._items.append(objs)
+
+    def draw(self, sc: pg.Surface):
+        img = self.curr_obj.image
+        rect = img.get_rect(center=self.rect.center)
+        if self._in_focus:
+            pg.draw.rect(sc, 'red', rect.inflate(10, 10), 1)
+        sc.blit(img, rect)
+
+    def update(self):
+        self._in_focus = False
+        self.curr_obj = self._items[self._index]
+        if self.rect.collidepoint(pg.mouse.get_pos()):
+            self._in_focus = True
+
+
+class ObjectsTab:
     def __init__(self, engine):
         self._parser = engine.parser
         self._sc = pg.Surface(Config.OBJECTS_LIST_SIZE)
         self._sc.set_alpha(200)
         self._rect = self._sc.get_rect(topleft=Config.OBJECTS_LIST_POS)
         #############
+        config = open(Config.STATIC_CONFIG, encoding='utf-8')
+        self._static_config = json.load(config)
+        config.close()
+        #############
         self.in_focus = False  # Чи наведена мишка
         self.selected_obj = None  # !!! Tут лежить об'єкт !!!
-        self._items = set()
+        self._items = dict()  # Список груп
         self.curr_zindex = 1
-        self.curr_type = 'texture'
         self._get_items()
 
     def _get_items(self):
-        x = self._rect.width // 2
-        offset = 10
+        # Початкові координати та зміщення по вертикалі
+        x = y = self._rect.width // 2
+        offset = self._rect.width + 5
+        # Проходимо циклом по всіх статичних фотках
         for name, img in self._parser.cached_images.items():
-            dh = img.get_height() // 2
-            offset += dh
-            self._items.add(_ObjectListItem(img, name, (x, offset)))
-            offset += dh + 10
+            # Буремо назву групи, якщо такої ще не існує - створюємо
+            group_name = self._static_config[name]['group']
+            if group_name not in self._items:
+                self._items[group_name] = _ObjectsGroup(name=group_name, pos=(x, y), obj=_ObjectsGroupItem(img=img, name=name))
+                y += offset
+
+            self._items[group_name].add_objs(_ObjectsGroupItem(img=img, name=name))
 
     def slide_list(self, offset: int | float):
         # Прокручеємо список якщо наведені на нього мишкою
-        [obj.rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for obj in self._items]
+        [group.rect.move_ip(0, offset * Config.SLIDE_SENSETIVITY) for group in self._items.values()]
 
     def _select_obj(self):
         # Беремо об'єкт зі списка
         x, y = pg.mouse.get_pos()
-        for obj in self._items:
-            if obj.rect.collidepoint(x, y):
-                self.selected_obj = obj
+        for group in self._items.values():
+            if group.rect.collidepoint(x, y):
+                self.selected_obj = group.curr_obj
                 return
 
     def add_selected_to_world(self, pos: tuple[int, int]):
         # Додаємо вибраний об'єкт до світу
         obj = self.selected_obj
+        parr = self._static_config[obj.name]
         self._parser.add_to_world(
-            type=self.curr_type,
+            type=parr['type'],
             name=obj.name,
             pos=pos,
-            alpha=True,
+            alpha=parr['alpha'],
             zindex=self.curr_zindex
         )
 
@@ -68,15 +113,11 @@ class ObjectsList:
 
     def draw(self, sc: pg.Surface):
         self._sc.fill((20, 0, 0))
-        [self._sc.blit(obj.image, obj.rect) for obj in self._items]
-        if self.selected_obj:
-            pg.draw.rect(self._sc, 'red', self.selected_obj.rect.inflate(10, 10), 1)
-        sc.blit(self._sc, self._rect)
-        if self.in_focus:
-            pg.draw.rect(sc, 'green', self._rect, 1, 2)
+        [group.draw(sc) for group in self._items.values()]
 
     def update(self):
         if self.in_focus:
             self._keyboard_control()
+            [group.update() for group in self._items.values()]
             keys = pg.mouse.get_pressed()
             if keys[0]: self._select_obj()

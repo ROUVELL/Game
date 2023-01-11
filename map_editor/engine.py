@@ -1,7 +1,7 @@
 import pygame as pg
 from map_editor.drawing import Drawing
 from map_editor.parser import Parser
-from map_editor.object_list import ObjectsList
+from map_editor.objects_tab import ObjectsTab
 from config import Config
 
 
@@ -10,7 +10,7 @@ class Engine:
         self.app = app
         self.draw = Drawing(self)
         self.parser = Parser(self)
-        self.objects_list = ObjectsList(self)
+        self.objects_list = ObjectsTab(self)
         ##########
         self.start_point = None
         self.selected_rect = pg.Rect(0, 0, 0, 0)
@@ -26,14 +26,12 @@ class Engine:
         # ESC - clear selected objs / clear seleced obj. in tab / exit
         # o - move to origin
         # p - preview
-        # g - change type of collided obj (texture/sprite)
         # x - draw origin axis
         # z - draw tiles grid
         # DELETE - remove selected objs. from world
         # LCTRL + s - save world
         # LCTRL + r - restore world
         # RSHIFT and RCTRL - curr index +- 1
-        # TAB - change current type between 'rexture' and 'sprite'
         match event.key:
             case pg.K_ESCAPE:
                 if not self.preview:
@@ -64,13 +62,6 @@ class Engine:
                 self.objects_list.curr_zindex += 1
             case pg.K_RCTRL:
                 self.objects_list.curr_zindex -= 1
-            case pg.K_TAB:
-                self.objects_list.curr_type = 'sprite' if self.objects_list.curr_type == 'texture' else 'texture'
-            case pg.K_g:
-                if self.preview: return
-                tile = self.parser.get_collided_obj()
-                if tile:
-                    tile.type = 'sprite' if tile.type == 'texture' else 'texture'
 
     def _mouse_events(self, event: pg.event.Event):
         # LKM - add selected obj to world / select obj from world
@@ -130,7 +121,9 @@ class Engine:
     def _mouse_control(self):
         offset = pg.Vector2(pg.mouse.get_rel())
         keys = pg.mouse.get_pressed()
-        if keys[1]: self.parser.offset(offset * .5)
+        if keys[1]:
+            self.parser.offset(offset * .5)
+            self.selected_rect.move_ip(offset * .5)
         if keys[0]:
             if not self.objects_list.selected_obj:
                 if not self.select_triger and self.selected_rect.collidepoint(pg.mouse.get_pos()):
