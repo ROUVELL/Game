@@ -29,6 +29,7 @@ class Engine:
         # g - change type of collided obj (texture/sprite)
         # x - draw origin axis
         # z - draw tiles grid
+        # DELETE - remove selected objs. from world
         # LCTRL + s - save world
         # LCTRL + r - restore world
         # RSHIFT and RCTRL - curr index +- 1
@@ -56,6 +57,9 @@ class Engine:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
             case pg.K_r:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.restore_world()
+            case pg.K_DELETE:
+                [obj.kill() for obj in self.selected_objs]
+                self.selected_objs.clear()
             case pg.K_RSHIFT:
                 self.objects_list.curr_zindex += 1
             case pg.K_RCTRL:
