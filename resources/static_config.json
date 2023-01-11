@@ -1,0 +1,242 @@
+{
+  "apple": {
+    "group": "food",
+    "type": "texture",
+    "alpha": true
+  },
+  "bag": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "barrel": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "big-white-stone-2x": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "big-white-stone": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "bowl": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "bush": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "combat-dummy": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "empty-bucket": {
+    "group": "tools",
+    "type": "texture",
+    "alpha": true
+  },
+  "forge": {
+    "group": "tools",
+    "type": "sprite",
+    "alpha": true
+  },
+  "grain-bag-2": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "grain-bag": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "grass-1": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": false
+  },
+  "grass-2": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": false
+  },
+  "grass-3": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": false
+  },
+  "grass-bigpiece-2x": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-bigpiece": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-bottom": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-bottomleft-reversed": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-bottomleft": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-bottomright-reversed": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-bottomright": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-center": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": false
+  },
+  "grass-left": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-right": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-smallpiece-2x": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-smallpiece": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-top": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-topleft-reversed": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-topleft": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-topright-reversed": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "grass-topright": {
+    "group": "grass-tiles",
+    "type": "texture",
+    "alpha": true
+  },
+  "jack's-lamp": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "lion-statue": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "mushroom-bad-2x": {
+    "group": "food",
+    "type": "texture",
+    "alpha": true
+  },
+  "mushroom-bad": {
+    "group": "food",
+    "type": "texture",
+    "alpha": true
+  },
+  "mushroom-good-2x": {
+    "group": "food",
+    "type": "texture",
+    "alpha": true
+  },
+  "mushroom-good": {
+    "group": "food",
+    "type": "texture",
+    "alpha": true
+  },
+  "one-log": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "paving-stones-2x": {
+    "group": "floor",
+    "type": "texture",
+    "alpha": false
+  },
+  "paving-stones": {
+    "group": "floor",
+    "type": "texture",
+    "alpha": false
+  },
+  "pile-of-logs": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "sakura-1": {
+    "group": "trees",
+    "type": "sprite",
+    "alpha": true
+  },
+  "sakura-2": {
+    "group": "trees",
+    "type": "sprite",
+    "alpha": true
+  },
+  "small-white-stone-2x": {
+    "group": "other",
+    "type": "texture",
+    "alpha": true
+  },
+  "small-white-stone": {
+    "group": "other",
+    "type": "texture",
+    "alpha": true
+  },
+  "three-logs": {
+    "group": "other",
+    "type": "sprite",
+    "alpha": true
+  },
+  "water-bucket": {
+    "group": "tools",
+    "type": "texture",
+    "alpha": true
+  }
+}
