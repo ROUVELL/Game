@@ -35,7 +35,7 @@ class _ObjectsGroup:
         img = self.curr_obj.image
         rect = img.get_rect(center=self.rect.center)
         if self._in_focus:
-            pg.draw.rect(sc, 'red', rect.inflate(10, 10), 1)
+            pg.draw.rect(sc, 'red', self.rect, 1)
         sc.blit(img, rect)
 
     def update(self):
@@ -75,6 +75,7 @@ class ObjectsTab:
                 y += offset
 
             self._items[group_name].add_objs(_ObjectsGroupItem(img=img, name=name))
+        self._items = dict(sorted(self._items.items(), key=lambda x: x[0]))
 
     def slide_list(self, offset: int | float):
         # Прокручеємо список якщо наведені на нього мишкою
