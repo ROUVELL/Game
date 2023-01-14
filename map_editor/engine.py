@@ -55,6 +55,10 @@ class Engine:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.save_world()
             case pg.K_r:
                 if pg.key.get_pressed()[pg.K_LCTRL]: self.parser.restore_world()
+            case pg.K_a:
+                if not self.focus_on_world: self.objects_list.rotate_group(-1)
+            case pg.K_d:
+                if not self.focus_on_world: self.objects_list.rotate_group(1)
             case pg.K_DELETE:
                 [obj.kill() for obj in self.selected_objs]
                 self.selected_objs.clear()
