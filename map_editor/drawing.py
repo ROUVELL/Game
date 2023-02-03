@@ -1,4 +1,5 @@
 import pygame as pg
+from pygame.gfxdraw import vline, hline
 from config import Config
 
 
@@ -16,8 +17,9 @@ class Drawing:
     def _axis(self):
         x, y = self._engine.parser.origin
         w, h = Config.SCREEN
-        pg.draw.line(self._sc, 'gray', (0, y), (w, y))
-        pg.draw.line(self._sc, 'gray', (x, 0), (x, h))
+
+        vline(self._sc, int(x), 0, h, (100, 100, 100))
+        hline(self._sc, 0, w, int(y), (100, 100, 100))
 
     def _grid(self):
         w, h = Config.WIDTH, Config.HEIGHT
@@ -27,8 +29,8 @@ class Drawing:
             x=origin.x - int(origin.x / self.grid_size) * self.grid_size,
             y=origin.y - int(origin.y / self.grid_size) * self.grid_size)
 
-        [pg.draw.line(self._sc, (30, 30, 30), (dx, 0), (dx, h)) for dx in range(int(offset.x), w, self.grid_size)]
-        [pg.draw.line(self._sc, (30, 30, 30), (0, dy), (w, dy)) for dy in range(int(offset.y), h, self.grid_size)]
+        [vline(self._sc, dx, 0, h, (30, 30, 30)) for dx in range(int(offset.x), w, self.grid_size)]
+        [hline(self._sc, 0, w, dy, (30, 30, 30)) for dy in range(int(offset.y), h, self.grid_size)]
 
     def _selected_objs_and_rect(self):
         for obj in self._engine.selected_objs:
