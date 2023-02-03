@@ -8,10 +8,6 @@ class Drawing:
         self._sc = pg.display.get_surface()
         ##############
         self._info_font = pg.font.Font(Config.INFO_FONT, 8)
-        # Поверхня для малювання сітки та її розмір
-        self._grid_surf = pg.Surface(Config.SCREEN)
-        self._grid_surf.set_colorkey('black')
-        self._grid_surf.set_alpha(50)
         self.grid_size = 32
         ##############
         self.draw_axis = not Config.DRAW_COORDINATE_AXIS
@@ -32,16 +28,13 @@ class Drawing:
             x=origin.x - int(origin.x / self.grid_size) * self.grid_size,
             y=origin.y - int(origin.y / self.grid_size) * self.grid_size)
 
-        self._grid_surf.fill('black')
         for col in range(cols + 1):
             x = offset.x + col * self.grid_size
-            pg.draw.line(self._grid_surf, 'darkgrey', (x, 0), (x, Config.HEIGHT))
+            pg.draw.line(self._sc, (30, 30, 30), (x, 0), (x, Config.HEIGHT))
 
         for row in range(rows + 1):
             y = offset.y + row * self.grid_size
-            pg.draw.line(self._grid_surf, 'darkgrey', (0, y), (Config.WIDTH, y))
-
-        self._sc.blit(self._grid_surf, (0, 0))
+            pg.draw.line(self._sc, (30, 30, 30), (0, y), (Config.WIDTH, y))
 
     def _selected_objs_and_rect(self):
         for obj in self._engine.selected_objs:
