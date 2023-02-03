@@ -15,7 +15,7 @@ class Editor:
 
     def run(self):
         while self.running:
-            self.clock.tick(Config.FPS)
+            self.clock.tick()
             self.engine.update_and_draw()
             pg.display.flip()
 
