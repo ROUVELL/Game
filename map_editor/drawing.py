@@ -20,21 +20,15 @@ class Drawing:
         pg.draw.line(self._sc, 'gray', (x, 0), (x, h))
 
     def _grid(self):
-        cols = Config.WIDTH // self.grid_size
-        rows = Config.HEIGHT // self.grid_size
+        w, h = Config.WIDTH, Config.HEIGHT
         origin = self._engine.parser.origin
 
         offset = pg.Vector2(
             x=origin.x - int(origin.x / self.grid_size) * self.grid_size,
             y=origin.y - int(origin.y / self.grid_size) * self.grid_size)
 
-        for col in range(cols + 1):
-            x = offset.x + col * self.grid_size
-            pg.draw.line(self._sc, (30, 30, 30), (x, 0), (x, Config.HEIGHT))
-
-        for row in range(rows + 1):
-            y = offset.y + row * self.grid_size
-            pg.draw.line(self._sc, (30, 30, 30), (0, y), (Config.WIDTH, y))
+        [pg.draw.line(self._sc, (30, 30, 30), (dx, 0), (dx, h)) for dx in range(int(offset.x), w, self.grid_size)]
+        [pg.draw.line(self._sc, (30, 30, 30), (0, dy), (w, dy)) for dy in range(int(offset.y), h, self.grid_size)]
 
     def _selected_objs_and_rect(self):
         for obj in self._engine.selected_objs:
