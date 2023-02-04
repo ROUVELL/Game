@@ -1,6 +1,7 @@
 import pygame as pg
 from config import Config
 
+from collections import deque
 import json
 
 
@@ -11,16 +12,15 @@ class _ObjectsGroupItem:
 
 
 class _ObjectsGroup:
-    def __init__(self, name: str, pos: tuple[int, int], obj: _ObjectsGroupItem):
+    def __init__(self, name: str, pos: tuple[int, int], obj: _ObjectsGroupItem = None):
         self.name = name
         ##########
         self.rect = pg.Rect(0, 0, Config.OBJECTS_LIST_SIZE[0], Config.OBJECTS_LIST_SIZE[0])
         self.rect.center = pos
         ##########
-        self.curr_obj = obj
-        self._items = []
-        self._index = 0
-        self._in_focus = False
+        self.curr_obj = None
+        self._items = deque()
+        self.in_focus = False
         if obj:
             self.add_objs(obj)
 
@@ -30,19 +30,23 @@ class _ObjectsGroup:
         if isinstance(objs, list):
             [self._items.append(obj) for obj in objs]
         else: self._items.append(objs)
+        self.curr_obj = self._items[0]
+
+    def rotate(self, direction: int):
+        self._items.rotate(direction)
+        self.curr_obj = self._items[0]
 
     def draw(self, sc: pg.Surface):
         img = self.curr_obj.image
         rect = img.get_rect(center=self.rect.center)
-        if self._in_focus:
+        if self.in_focus:
             pg.draw.rect(sc, 'red', self.rect, 1)
         sc.blit(img, rect)
 
     def update(self):
-        self._in_focus = False
-        self.curr_obj = self._items[self._index]
+        self.in_focus = False
         if self.rect.collidepoint(pg.mouse.get_pos()):
-            self._in_focus = True
+            self.in_focus = True
 
 
 class ObjectsTab:
@@ -71,11 +75,10 @@ class ObjectsTab:
             # Буремо назву групи, якщо такої ще не існує - створюємо
             group_name = self._static_config[name]['group']
             if group_name not in self._items:
-                self._items[group_name] = _ObjectsGroup(name=group_name, pos=(x, y), obj=_ObjectsGroupItem(img=img, name=name))
-                y += offset
+                self._items[group_name] = _ObjectsGroup(name=group_name, pos=(x, y))
+                y += offset + 10
 
             self._items[group_name].add_objs(_ObjectsGroupItem(img=img, name=name))
-        self._items = dict(sorted(self._items.items(), key=lambda x: x[0]))
 
     def slide_list(self, offset: int | float):
         # Прокручеємо список якщо наведені на нього мишкою
@@ -112,8 +115,11 @@ class ObjectsTab:
         self.in_focus = self._rect.collidepoint(*pg.mouse.get_pos())
         return self.in_focus
 
+    def rotate_group(self, directrion: int):
+        [group.rotate(directrion) for group in self._items.values() if group.in_focus]
+
     def draw(self, sc: pg.Surface):
-        self._sc.fill((20, 0, 0))
+        self._sc.fill((30, 0, 0))
         [group.draw(sc) for group in self._items.values()]
 
     def update(self):
